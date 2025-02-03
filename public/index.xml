@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://pL4sTiC1337.github.io/</link>
+    <description>Recent content on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Feb 2025 23:43:31 -0500</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Age of Ubiquitous Surveillance: Why Data Privacy Should Matter to You</title>
+      <link>https://pL4sTiC1337.github.io/posts/the-age-of-uts/</link>
+      <pubDate>Sun, 02 Feb 2025 23:43:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/posts/the-age-of-uts/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.shattersec.com/content/images/20250127002121-1733504353470.png&#34; alt=&#34;Data Privacy Reaper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;We live in a world where technology seamlessly integrates into every aspect of our lives. Smartphones, wearables, smart home devices, vehicles, and even our daily internet activities constantly collect data about us. This era of ubiquitous technical surveillance has normalized the idea that our personal information is a commodity. But why should the average person care about data privacy?&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-unseen-costs-of-convenience&#34;&gt;The Unseen Costs of Convenience&lt;/h2&gt;&#xA;&lt;p&gt;Many of us trade privacy for convenience, thinking, “If I have nothing to hide, I have nothing to fear.” However, this mindset overlooks the larger implications. Data collected today can be used in unexpected ways tomorrow—shaping everything from your online experiences to decisions about your creditworthiness, employability, and even healthcare access. What might seem like harmless data today could later be used to profile, manipulate, or discriminate against you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Htb Cozyhosting</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</link>
+      <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://blog.shattersec.com/content/images/20250202100317-Pasted%20image%2020250202082056.png&#34; alt=&#34;HTB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://pL4sTiC1337.github.io/about/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://pL4sTiC1337.github.io/about/about/</guid>
+      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;With over two decades of experience at the intersection of leadership, risk management, and cybersecurity, I&amp;rsquo;ve had the privilege of navigating the high-stakes world of national security. My journey as a counterintelligence special agent has been nothing short of exhilarating, filled with complex national security investigations, cutting-edge technical threat research, and the relentless pursuit of safeguarding our nation&amp;rsquo;s most sensitive assets.&lt;/p&gt;&#xA;&lt;p&gt;In my various roles, I&amp;rsquo;ve orchestrated comprehensive threat and cyber intelligence operations, and led red team engagements that mimic real-world attack scenarios to expose vulnerabilities and bolster security. My expertise in detecting and neutralizing insider threats has proven crucial in maintaining the sanctity of critical infrastructures and organizational assets.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

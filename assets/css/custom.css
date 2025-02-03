@@ -1,0 +1,38 @@
+/* Left side page navigation */
+nav{
+    font-size: 18px;
+}
+
+/* Left side copyright and credits*/
+.footnote{
+    font-size: 10px;
+}
+
+/* Index of posts */
+time{
+    font-size: 18px;
+}
+.entries{
+    font-size: 18px;
+}
+
+/* Individual posts */
+.post{
+    font-size: 18px;
+}
+
+/* Table of contents */
+.article-toc h4{
+    font-size: 18px;
+}
+.article-toc a{
+    font-size: 14px;
+}
+
+/* Code blocks */
+code {
+    font-size: 14px;
+}
+.code-container {
+    font-size: 14px;
+}
