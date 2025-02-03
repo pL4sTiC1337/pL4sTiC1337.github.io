@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://pL4sTiC1337.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jan 2025 16:29:31 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Age of Ubiquitous Surveillance: Why Data Privacy Should Matter to You</title>
-      <link>https://pL4sTiC1337.github.io/posts/the-age-of-uts/</link>
+      <link>http://localhost:1313/posts/the-age-of-uts/</link>
       <pubDate>Sun, 26 Jan 2025 16:29:31 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/posts/the-age-of-uts/</guid>
+      <guid>http://localhost:1313/posts/the-age-of-uts/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://blog.shattersec.com/content/images/20250127002121-1733504353470.png&#34; alt=&#34;Data Privacy Reaper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;We live in a world where technology seamlessly integrates into every aspect of our lives. Smartphones, wearables, smart home devices, vehicles, and even our daily internet activities constantly collect data about us. This era of ubiquitous technical surveillance has normalized the idea that our personal information is a commodity. But why should the average person care about data privacy?&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-unseen-costs-of-convenience&#34;&gt;The Unseen Costs of Convenience&lt;/h2&gt;&#xA;&lt;p&gt;Many of us trade privacy for convenience, thinking, “If I have nothing to hide, I have nothing to fear.” However, this mindset overlooks the larger implications. Data collected today can be used in unexpected ways tomorrow—shaping everything from your online experiences to decisions about your creditworthiness, employability, and even healthcare access. What might seem like harmless data today could later be used to profile, manipulate, or discriminate against you.&lt;/p&gt;</description>
     </item>
   </channel>

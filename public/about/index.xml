@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on </title>
-    <link>https://pL4sTiC1337.github.io/about/</link>
+    <link>http://localhost:1313/about/</link>
     <description>Recent content in About on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://pL4sTiC1337.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://pL4sTiC1337.github.io/about/about/</link>
+      <link>http://localhost:1313/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pL4sTiC1337.github.io/about/about/</guid>
+      <guid>http://localhost:1313/about/about/</guid>
       <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;With over two decades of experience at the intersection of leadership, risk management, and cybersecurity, I&amp;rsquo;ve had the privilege of navigating the high-stakes world of national security. My journey as a counterintelligence special agent has been nothing short of exhilarating, filled with complex national security investigations, cutting-edge technical threat research, and the relentless pursuit of safeguarding our nation&amp;rsquo;s most sensitive assets.&lt;/p&gt;&#xA;&lt;p&gt;In my various roles, I&amp;rsquo;ve orchestrated comprehensive threat and cyber intelligence operations, and led red team engagements that mimic real-world attack scenarios to expose vulnerabilities and bolster security. My expertise in detecting and neutralizing insider threats has proven crucial in maintaining the sanctity of critical infrastructures and organizational assets.&lt;/p&gt;</description>
     </item>
   </channel>
