@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wifi on </title>
+    <link>http://localhost:1313/tags/wifi/</link>
+    <description>Recent content in Wifi on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jan 2025 09:16:46 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Dark Side of WiFi: Why Keeping It On Could Be Your Biggest Mistake</title>
+      <link>http://localhost:1313/posts/dark-side-of-wifi/</link>
+      <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
+      <guid>http://localhost:1313/posts/dark-side-of-wifi/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/wifi-danger.png&#34; alt=&#34;Wifi Dangers&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Your phone could be revealing your home WiFi information—and your location—to hackers without you even realizing it!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the digital age, convenience often comes at the cost of security and privacy. One overlooked yet serious risk is leaving WiFi enabled on personal devices when they are not in use. While having WiFi turned on might seem harmless, it can expose you to numerous cyber threats and privacy invasions. Below, we delve into the dangers of keeping WiFi enabled on your smartphone, laptop, or tablet and why it’s a habit you should reconsider.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

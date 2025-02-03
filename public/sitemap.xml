@@ -23,17 +23,38 @@
     <loc>http://localhost:1313/writeups/</loc>
     <lastmod>2025-02-02T23:42:43-05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-01-30T09:16:46-05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/data-privacy/</loc>
-    <lastmod>2025-01-26T16:29:31-05:00</lastmod>
+    <lastmod>2025-01-30T09:16:46-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-01-26T16:29:31-05:00</lastmod>
+    <lastmod>2025-01-30T09:16:46-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dark-side-of-wifi/</loc>
+    <lastmod>2025-01-30T09:16:46-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/wifi/</loc>
+    <lastmod>2025-01-30T09:16:46-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/the-age-of-uts/</loc>
     <lastmod>2025-01-26T16:29:31-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/uts/</loc>
     <lastmod>2025-01-26T16:29:31-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/badge-cloning/</loc>
+    <lastmod>2025-01-26T09:08:14-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/penetration-testing/</loc>
+    <lastmod>2025-01-26T09:08:14-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rfid/</loc>
+    <lastmod>2025-01-26T09:08:14-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/the-rfid-badge-capture/</loc>
+    <lastmod>2025-01-26T09:08:14-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>

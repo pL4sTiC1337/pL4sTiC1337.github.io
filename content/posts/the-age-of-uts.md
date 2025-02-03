@@ -5,9 +5,11 @@ title = 'The Age of Ubiquitous Surveillance: Why Data Privacy Should Matter to Y
 tags = ['UTS','data privacy']
 hideToc = false
 +++
-![Data Privacy Reaper](https://blog.shattersec.com/content/images/20250127002121-1733504353470.png)
+![Data Privacy Reaper](/images/uts-main.png)
 
 We live in a world where technology seamlessly integrates into every aspect of our lives. Smartphones, wearables, smart home devices, vehicles, and even our daily internet activities constantly collect data about us. This era of ubiquitous technical surveillance has normalized the idea that our personal information is a commodity. But why should the average person care about data privacy? 
+
+<!--more-->
 
 ## The Unseen Costs of Convenience
 

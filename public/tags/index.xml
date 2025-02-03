@@ -30,10 +30,24 @@
       <description></description>
     </item>
     <item>
+      <title>Cybersecurity</title>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Data Privacy</title>
       <link>http://localhost:1313/tags/data-privacy/</link>
-      <pubDate>Sun, 26 Jan 2025 16:29:31 -0500</pubDate>
+      <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
       <guid>http://localhost:1313/tags/data-privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wifi</title>
+      <link>http://localhost:1313/tags/wifi/</link>
+      <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
+      <guid>http://localhost:1313/tags/wifi/</guid>
       <description></description>
     </item>
     <item>
@@ -41,6 +55,27 @@
       <link>http://localhost:1313/tags/uts/</link>
       <pubDate>Sun, 26 Jan 2025 16:29:31 -0500</pubDate>
       <guid>http://localhost:1313/tags/uts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Badge Cloning</title>
+      <link>http://localhost:1313/tags/badge-cloning/</link>
+      <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
+      <guid>http://localhost:1313/tags/badge-cloning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Penetration Testing</title>
+      <link>http://localhost:1313/tags/penetration-testing/</link>
+      <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
+      <guid>http://localhost:1313/tags/penetration-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rfid</title>
+      <link>http://localhost:1313/tags/rfid/</link>
+      <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
+      <guid>http://localhost:1313/tags/rfid/</guid>
       <description></description>
     </item>
   </channel>

