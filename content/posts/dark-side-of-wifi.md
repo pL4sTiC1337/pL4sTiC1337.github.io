@@ -1,7 +1,7 @@
 +++
 date = '2025-01-30T09:16:46-05:00'
 draft = false
-title = 'The Dark Side of WiFi: Why Keeping It On Could Be Your Biggest Mistake'
+title = 'The Dark Side of WiFi'                     # 'Why Keeping It On Could Be Your Biggest Mistake'
 tags = ['wifi','data privacy','cybersecurity']
 hideToc = false
 +++
@@ -21,7 +21,7 @@ One of the most significant privacy risks comes from the way personal devices se
 - **Pattern-of-Life Analysis:** By collecting data on where and when your device searches for networks, an attacker can build a detailed picture of your daily routines, travel habits, and behaviors.
 - **Evil Twin Attacks:** Cybercriminals can set up rogue networks that mimic your saved SSIDs. If your device automatically connects, it can be subjected to man-in-the-middle attacks, allowing hackers to intercept your sensitive data.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Disable WiFi when you’re not actively using it, especially in public places.
 - Regularly clear your list of saved networks to limit beacon broadcasts.
@@ -37,7 +37,7 @@ Leaving WiFi enabled increases your exposure to cyber threats. Public and unsecu
 - **Session Hijacking:** Attackers can exploit weaknesses in network encryption to take control of active sessions, potentially gaining unauthorized access to accounts.
 - **Malware Injection:** Some compromised networks push malicious software onto connected devices, infecting them with spyware, ransomware, or keyloggers.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Avoid connecting to public WiFi networks without using a VPN.
 - Disable automatic connection to open networks.
@@ -49,7 +49,7 @@ Leaving WiFi enabled increases your exposure to cyber threats. Public and unsecu
 
 Keeping WiFi enabled when not in use consumes a significant amount of battery power. Your device continuously searches for available networks and attempts to connect to known ones, draining battery life unnecessarily. In addition, background applications and system processes may use WiFi to sync data, further reducing efficiency.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Turn off WiFi when you don’t need it to conserve battery life.
 - Use power-saving modes that restrict background network activity.
@@ -65,7 +65,7 @@ Cybercriminals set up rogue access points (APs) to lure unsuspecting users into 
 - Inject malicious content into websites you visit.
 - Steal login credentials via phishing attacks.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Always verify the authenticity of the WiFi network before connecting.
 - Use mobile data or a trusted personal hotspot instead of public WiFi.
@@ -77,7 +77,7 @@ Cybercriminals set up rogue access points (APs) to lure unsuspecting users into 
 
 Many public WiFi networks, even legitimate ones, engage in data collection. Businesses and advertisers track user connections to analyze behaviors, target ads, and sell data to third parties. Even if you don’t actively connect, some networks collect information from probing devices, such as unique MAC addresses and device identifiers.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Enable MAC address randomization in your device settings.
 - Avoid using public WiFi when accessing sensitive accounts.
@@ -89,7 +89,7 @@ Many public WiFi networks, even legitimate ones, engage in data collection. Busi
 
 Leaving WiFi enabled increases the likelihood of related wireless technologies being exploited. Some sophisticated attacks use open WiFi connections to target vulnerabilities in Bluetooth and NFC (Near Field Communication), allowing attackers to gain unauthorized access to your device.
 
-### How to Mitigate This Risk:
+### Mitigation
 
 - Disable Bluetooth and NFC when not in use.
 - Use strong authentication methods such as fingerprint or PIN protection.

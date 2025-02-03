@@ -2,7 +2,7 @@
 date = '2025-02-02T23:42:43-05:00'
 draft = false
 title = 'HtB Cozyhosting'
-tags = ['writeup','hackthebox','easy']
+tags = ['writeup','hackthebox','easy','linux']
 hideToc = false
 +++
 ![HtB CozyHosting](/images/htb-CozyHosting.png)

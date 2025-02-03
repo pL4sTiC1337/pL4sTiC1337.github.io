@@ -2,7 +2,7 @@
 date = '2025-02-03T14:41:31-05:00'
 draft = false
 title = 'HtB Active'
-tags = ['writeup','hackthebox','easy','active directory']
+tags = ['writeup','hackthebox','easy','windows','active directory']
 hideToc = false
 +++
 ![HtB Active](/images/Active.png)
@@ -186,6 +186,6 @@ Administrator:500:aad3b435b51404eeaad3b435b51404ee:5ffb4aaaf9b63dc519eca04aec0e8
 Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 krbtgt:502:aad3b435b51404eeaad3b435b51404ee:b889e0d47d6fe22c8f0463a717f460dc:::
 active.htb\SVC_TGS:1103:aad3b435b51404eeaad3b435b51404ee:f54f3a1d3c38140684ff4dad029f25b5:::
-DC$:1000:aad3b435b51404eeaad3b435b51404ee:511201298238f3393c98d3e55fb9136b:::
+DC$:1000:aad3b435b51404eeaad3b435b51404ee:511201298238f3q393c98d3e55fb9136b:::
 [*] Cleaning up... 
 ```

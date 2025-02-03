@@ -1,7 +1,7 @@
 +++
 date = '2025-01-26T16:29:31-05:00'
 draft = false
-title = 'The Age of Ubiquitous Surveillance: Why Data Privacy Should Matter to You'
+title = 'The Age of Ubiquitous Surveillance'        # 'Why Data Privacy Should Matter to You'
 tags = ['UTS','data privacy']
 hideToc = false
 +++

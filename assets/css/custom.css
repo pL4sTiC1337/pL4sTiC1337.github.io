@@ -3,6 +3,10 @@ nav{
     font-size: 18px;
 }
 
+.bullet{
+    font-size: 16px;
+}
+
 /* Left side copyright and credits*/
 .footnote{
     font-size: 10px;
@@ -10,15 +14,15 @@ nav{
 
 /* Index of posts */
 time{
-    font-size: 18px;
+    font-size: 16px;
 }
 .entries{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Individual posts */
 .post{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Table of contents */
@@ -31,8 +35,8 @@ time{
 
 /* Code blocks */
 code {
-    font-size: 14px;
+    font-size: 12px;
 }
 .code-container {
-    font-size: 14px;
+    font-size: 12px;
 }

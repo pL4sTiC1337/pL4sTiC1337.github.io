@@ -1,7 +1,7 @@
 +++
 date = '2025-01-26T09:08:14-05:00'
 draft = false
-title = 'The Rfid Badge Capture'
+title = 'The RFID Badge Capture'
 tags = ['penetration testing','rfid','badge cloning']
 hideToc = false
 +++
