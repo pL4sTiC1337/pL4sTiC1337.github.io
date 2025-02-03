@@ -89,7 +89,6 @@ Groups.xml:
 ```
 
 Now let's decrypt the `cpassword` value using a tool called `gpp-decrypt`.
-
 ```sh
 ┌──(active)─(pl4stic㉿shattersec)-[~/htb/active]
 └─$ gpp-decrypt 'edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ'
