@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://pL4sTiC1337.github.io/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2025 23:42:43 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2025 14:41:31 -0500</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Directory</title>
+      <link>https://pL4sTiC1337.github.io/tags/active-directory/</link>
+      <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/tags/active-directory/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Easy</title>
-      <link>http://localhost:1313/tags/easy/</link>
-      <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>http://localhost:1313/tags/easy/</guid>
+      <link>https://pL4sTiC1337.github.io/tags/easy/</link>
+      <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/tags/easy/</guid>
       <description></description>
     </item>
     <item>
       <title>Hackthebox</title>
-      <link>http://localhost:1313/tags/hackthebox/</link>
-      <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>http://localhost:1313/tags/hackthebox/</guid>
+      <link>https://pL4sTiC1337.github.io/tags/hackthebox/</link>
+      <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/tags/hackthebox/</guid>
       <description></description>
     </item>
     <item>
       <title>Writeup</title>
-      <link>http://localhost:1313/tags/writeup/</link>
-      <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>http://localhost:1313/tags/writeup/</guid>
+      <link>https://pL4sTiC1337.github.io/tags/writeup/</link>
+      <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/tags/writeup/</guid>
       <description></description>
     </item>
     <item>
       <title>Cybersecurity</title>
-      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <link>https://pL4sTiC1337.github.io/tags/cybersecurity/</link>
       <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
-      <guid>http://localhost:1313/tags/cybersecurity/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Privacy</title>
-      <link>http://localhost:1313/tags/data-privacy/</link>
+      <link>https://pL4sTiC1337.github.io/tags/data-privacy/</link>
       <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
-      <guid>http://localhost:1313/tags/data-privacy/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/data-privacy/</guid>
       <description></description>
     </item>
     <item>
       <title>Wifi</title>
-      <link>http://localhost:1313/tags/wifi/</link>
+      <link>https://pL4sTiC1337.github.io/tags/wifi/</link>
       <pubDate>Thu, 30 Jan 2025 09:16:46 -0500</pubDate>
-      <guid>http://localhost:1313/tags/wifi/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/wifi/</guid>
       <description></description>
     </item>
     <item>
       <title>UTS</title>
-      <link>http://localhost:1313/tags/uts/</link>
+      <link>https://pL4sTiC1337.github.io/tags/uts/</link>
       <pubDate>Sun, 26 Jan 2025 16:29:31 -0500</pubDate>
-      <guid>http://localhost:1313/tags/uts/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/uts/</guid>
       <description></description>
     </item>
     <item>
       <title>Badge Cloning</title>
-      <link>http://localhost:1313/tags/badge-cloning/</link>
+      <link>https://pL4sTiC1337.github.io/tags/badge-cloning/</link>
       <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
-      <guid>http://localhost:1313/tags/badge-cloning/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/badge-cloning/</guid>
       <description></description>
     </item>
     <item>
       <title>Penetration Testing</title>
-      <link>http://localhost:1313/tags/penetration-testing/</link>
+      <link>https://pL4sTiC1337.github.io/tags/penetration-testing/</link>
       <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
-      <guid>http://localhost:1313/tags/penetration-testing/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/penetration-testing/</guid>
       <description></description>
     </item>
     <item>
       <title>Rfid</title>
-      <link>http://localhost:1313/tags/rfid/</link>
+      <link>https://pL4sTiC1337.github.io/tags/rfid/</link>
       <pubDate>Sun, 26 Jan 2025 09:08:14 -0500</pubDate>
-      <guid>http://localhost:1313/tags/rfid/</guid>
+      <guid>https://pL4sTiC1337.github.io/tags/rfid/</guid>
       <description></description>
     </item>
   </channel>

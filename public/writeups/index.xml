@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeups on </title>
-    <link>http://localhost:1313/writeups/</link>
+    <link>https://pL4sTiC1337.github.io/writeups/</link>
     <description>Recent content in Writeups on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2025 23:42:43 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2025 14:41:31 -0500</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Active</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
+      <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Cozyhosting</title>
-      <link>http://localhost:1313/writeups/htb-cozyhosting/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</link>
       <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-cozyhosting/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
