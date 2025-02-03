@@ -1,11 +1,11 @@
 +++
 date = '2025-02-02T23:42:43-05:00'
 draft = false
-title = 'Htb Cozyhosting'
+title = 'HtB Cozyhosting'
 tags = ['writeup','hackthebox','easy']
 hideToc = false
 +++
-![HTB CozyHosting](https://blog.shattersec.com/content/images/20250202100317-Pasted%20image%2020250202082056.png)
+![HtB CozyHosting](https://blog.shattersec.com/content/images/20250202100317-Pasted%20image%2020250202082056.png)
 CozyHosting is an easy-difficulty Linux machine that features a `Spring Boot` application. The application has the `Actuator` endpoint enabled. Enumerating the endpoint leads to the discovery of a user's session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application's `.jar` file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user `josh`. The user is allowed to run `ssh` as `root`, which is leveraged to fully escalate privileges.
 
 <!--more-->
