@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on </title>
-    <link>https://pL4sTiC1337.github.io/tags/windows/</link>
+    <link>http://localhost:1313/tags/windows/</link>
     <description>Recent content in Windows on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2025 14:41:31 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 08:52:13 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Hospital</title>
+      <link>http://localhost:1313/writeups/htb-hospital/</link>
+      <pubDate>Tue, 04 Feb 2025 08:52:13 -0500</pubDate>
+      <guid>http://localhost:1313/writeups/htb-hospital/</guid>
+      <description>&lt;p&gt;![[/images/Hospital.png]]&lt;/p&gt;&#xA;&lt;p&gt;Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a &lt;code&gt;RoundCube&lt;/code&gt; instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-35001&#34; target=&#34;_blank&#34;&gt;CVE-2023-35001&lt;/a&gt;. Privileged access allows &lt;code&gt;/etc/shadow&lt;/code&gt; hashes to be read and subsequently cracked, yielding credentials for the &lt;code&gt;RoundCube&lt;/code&gt; instance. Emails on the service hint towards the use of &lt;code&gt;GhostScript&lt;/code&gt;, which opens up the target to exploitation via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-36664&#34; target=&#34;_blank&#34;&gt;CVE-2023-36664&lt;/a&gt;, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture &lt;code&gt;administrator&lt;/code&gt; credentials, or by abusing misconfigured &lt;code&gt;XAMPP&lt;/code&gt; permissions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Active</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
+      <link>http://localhost:1313/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on </title>
-    <link>https://pL4sTiC1337.github.io/tags/active-directory/</link>
+    <link>http://localhost:1313/tags/active-directory/</link>
     <description>Recent content in Active Directory on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Feb 2025 14:41:31 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HtB Active</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
+      <link>http://localhost:1313/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
