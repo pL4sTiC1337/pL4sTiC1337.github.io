@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on </title>
-    <link>http://localhost:1313/tags/active-directory/</link>
+    <link>https://pL4sTiC1337.github.io/tags/active-directory/</link>
     <description>Recent content in Active Directory on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2025 14:41:31 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Feb 2025 16:43:23 -0500</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Jab</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-jab/</link>
+      <pubDate>Wed, 05 Feb 2025 16:43:23 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-jab/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Jab.png&#34; alt=&#34;Jab&#34;&gt;&#xA;Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&amp;rsquo;s password. By visiting the account&amp;rsquo;s XMPP chat rooms, another account&amp;rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Active</title>
-      <link>http://localhost:1313/writeups/htb-active/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
