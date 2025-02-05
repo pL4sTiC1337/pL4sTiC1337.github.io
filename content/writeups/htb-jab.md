@@ -2,7 +2,7 @@
 date = '2025-02-05T16:43:23-05:00'
 draft = false
 title = 'HtB Jab'
-tags = ['writeup','hackthebox','medium','Windows','Active Directory']
+tags = ['writeup','hackthebox','medium','windows','active directory']
 hideToc = false
 +++
 ![Jab](/images/Jab.png)
