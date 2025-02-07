@@ -295,7 +295,8 @@ Host script results:
 
 ### XMPP - 5269, 5270 (tcp)
 
->If you don't already have an XMPP/Jabber client, I'd recommend `Pidgin`. Install: `apt install pidgin`
+>If you don't already have an XMPP/Jabber client, I'd recommend `Pidgin`.
+>`apt install pidgin`
 
 Let's see if we're allowed to create an account.
 
@@ -344,7 +345,7 @@ Versions prior to Openfire 3.6.4 are vulnerable.
 
 ### Kerberoasting
 
-With out giant list of usernames, we should be able to see if any accounts have the `UF_DONT_REQUIRE_PREAUTH` value set, and perform a kerberoast attack.  Let's find out.
+With our giant list of usernames, we should be able to see if any accounts have the `UF_DONT_REQUIRE_PREAUTH` value set, and perform a kerberoast attack.  Let's find out.
 
 ```sh
 ┌──(pl4stic㉿shattersec)-[~/htb/jab]
