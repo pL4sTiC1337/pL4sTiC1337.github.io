@@ -835,7 +835,7 @@ Jab is a medium-difficulty Windows machine that features an Openfire XMPP server
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/iq&gt;</span> 
 </span></span></code></pre></div><h2 id="initial-access">Initial Access</h2>
 <h3 id="kerberoasting">Kerberoasting</h3>
-<p>With out giant list of usernames, we should be able to see if any accounts have the <code>UF_DONT_REQUIRE_PREAUTH</code> value set, and perform a kerberoast attack.  Let&rsquo;s find out.</p>
+<p>With our giant list of usernames, we should be able to see if any accounts have the <code>UF_DONT_REQUIRE_PREAUTH</code> value set, and perform a kerberoast attack.  Let&rsquo;s find out.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿shattersec<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/jab<span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>└─$ impacket-GetNPUsers -no-pass -usersfile usernames.txt jab.htb/ 
 </span></span><span style="display:flex;"><span>Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies
