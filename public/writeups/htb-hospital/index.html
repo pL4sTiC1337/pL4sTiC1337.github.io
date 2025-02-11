@@ -109,7 +109,7 @@
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.c60a9092a6bafd4d223d6dba69d9e5c6ffe43529809eccc8fa679ef8d1c54983.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.cca58c146f4edc10af613962d5043d66deb02f90a09c9f14c98adf9418774835.css">
 
 
     
@@ -342,6 +342,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-jab/">HtB Jab</a>
                             </li>
                         
@@ -514,6 +518,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 
   <p><img src="/images/Hospital.png" alt="HtB Hospital"></p>
 <p>Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a <code>RoundCube</code> instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-35001" target="_blank">CVE-2023-35001</a>. Privileged access allows <code>/etc/shadow</code> hashes to be read and subsequently cracked, yielding credentials for the <code>RoundCube</code> instance. Emails on the service hint towards the use of <code>GhostScript</code>, which opens up the target to exploitation via <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-36664" target="_blank">CVE-2023-36664</a>, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture <code>administrator</code> credentials, or by abusing misconfigured <code>XAMPP</code> permissions.</p>
+<hr>
 <h2 id="scanning">Scanning</h2>
 <h3 id="nmap">nmap</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>─<span style="color:#f92672">(</span>pl4stic㉿shattersec<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/hospital<span style="color:#f92672">]</span>
@@ -858,7 +863,6 @@ Unfortunately, they do not work for either of the two users on this container (<
 <img src="/images/hospital7.png" alt="Hopsital7"></p>
 <p>Upon loading in, Internet Explorer was already on the screen with a saved password prefilled on the RoundCube webmail. I clicked eye icon to unmask it, and voila, a password:</p>
 <p><code>Administrator:Th3B3stH0sp1t4l9786!</code></p>
-
   
   <hr>
 <div class="footer">

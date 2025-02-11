@@ -40,3 +40,9 @@ code {
 .code-container {
     font-size: 12px;
 }
+
+/* Block quotes */
+blockquote{
+    border-left-color: #cc0000;
+    background-color: #202020;
+}

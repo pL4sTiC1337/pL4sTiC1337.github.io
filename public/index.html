@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-02-05T16:43:23-05:00" />
+<meta property="og:updated_time" content="2025-02-11T14:32:53-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -107,7 +107,7 @@
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.c60a9092a6bafd4d223d6dba69d9e5c6ffe43529809eccc8fa679ef8d1c54983.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.cca58c146f4edc10af613962d5043d66deb02f90a09c9f14c98adf9418774835.css">
 
 
     
@@ -340,6 +340,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-jab/">HtB Jab</a>
                             </li>
                         
@@ -460,6 +464,69 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-11T14:32:53-0500" class="post-date">
+        February 11, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>9 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-medium">
+        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
+      </li>
+      
+      <li class="tag-linux">
+        <a href="https://pL4sTiC1337.github.io/tags/linux">linux</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Faculty.png" alt="HtB Faculty"></p>
+<p>Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called <code>gbyolo</code> over SSH. The user <code>gbyolo</code> has permission to run an <code>npm</code> package called <code>meta-git</code> as the <code>developer</code> user. The version of the <code>meta-git</code> installed on this box is vulnerable to code injection, whi ch can be exploited to escalate the privileges to the user <code>developer</code>. The privilege escalation to <code>root</code> can be performed by exploiting the <code>CAP_SYS_PTRACE</code> capability to inject shellcode into a process running as <code>root</code>.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-faculty/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">
