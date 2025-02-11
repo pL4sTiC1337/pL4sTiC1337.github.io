@@ -7,7 +7,7 @@ hideToc = false
 +++
 ![HtB Faculty](/images/Faculty.png)
 
-Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called `gbyolo` over SSH. The user `gbyolo` has permission to run an `npm` package called `meta-git` as the `developer` user. The version of the `meta-git` installed on this box is vulnerable to code injection, whi ch can be exploited to escalate the privileges to the user `developer`. The privilege escalation to `root` can be performed by exploiting the `CAP_SYS_PTRACE` capability to inject shellcode into a process running as `root`.
+Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called `gbyolo` over SSH. The user `gbyolo` has permission to run an `npm` package called `meta-git` as the `developer` user. The version of the `meta-git` installed on this box is vulnerable to code injection, which can be exploited to escalate the privileges to the user `developer`. The privilege escalation to `root` can be performed by exploiting the `CAP_SYS_PTRACE` capability to inject shellcode into a process running as `root`.
 
 <!--more-->
 ---
