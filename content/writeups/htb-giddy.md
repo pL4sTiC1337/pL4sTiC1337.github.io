@@ -220,3 +220,7 @@ nt authority\system
 
 C:\ProgramData\unifi-video>
 ```
+
+## Attack Flow
+
+![attack-flow](/images/HtB-Giddy.png)
