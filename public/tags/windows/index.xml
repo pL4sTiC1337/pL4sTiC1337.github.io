@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on </title>
-    <link>http://localhost:1313/tags/windows/</link>
+    <link>https://pL4sTiC1337.github.io/tags/windows/</link>
     <description>Recent content in Windows on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Feb 2025 10:46:31 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pL4sTiC1337.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HtB Giddy</title>
-      <link>http://localhost:1313/writeups/htb-giddy/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-giddy/</link>
       <pubDate>Wed, 12 Feb 2025 10:46:31 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-giddy/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Giddy.png&#34; alt=&#34;Giddy&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Giddy is a medium difficulty machine, which highlights how low privileged SQL Server logins can be used to compromise the underlying SQL Server service account. This is an issue in many environments, and depending on the configuration, the service account may have elevated privileges across the domain. It also features Windows registry enumeration and custom payload creation.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-giddy/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Giddy.png&#34; alt=&#34;Giddy&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Giddy is a medium difficulty machine, which highlights how low privileged SQL Server logins can be used to compromise the underlying SQL Server service account. This is an issue in many environments, and depending on the configuration, the service account may have elevated privileges across the domain. It also features Windows registry enumeration and custom payload creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Jab</title>
-      <link>http://localhost:1313/writeups/htb-jab/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-jab/</link>
       <pubDate>Wed, 05 Feb 2025 16:43:23 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-jab/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Jab.png&#34; alt=&#34;Jab&#34;&gt;&#xA;Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&amp;rsquo;s password. By visiting the account&amp;rsquo;s XMPP chat rooms, another account&amp;rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-jab/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Jab.png&#34; alt=&#34;Jab&#34;&gt;&#xA;Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&amp;rsquo;s password. By visiting the account&amp;rsquo;s XMPP chat rooms, another account&amp;rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Hospital</title>
-      <link>http://localhost:1313/writeups/htb-hospital/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-hospital/</link>
       <pubDate>Tue, 04 Feb 2025 08:52:13 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-hospital/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Hospital.png&#34; alt=&#34;HtB Hospital&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a &lt;code&gt;RoundCube&lt;/code&gt; instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-35001&#34; target=&#34;_blank&#34;&gt;CVE-2023-35001&lt;/a&gt;. Privileged access allows &lt;code&gt;/etc/shadow&lt;/code&gt; hashes to be read and subsequently cracked, yielding credentials for the &lt;code&gt;RoundCube&lt;/code&gt; instance. Emails on the service hint towards the use of &lt;code&gt;GhostScript&lt;/code&gt;, which opens up the target to exploitation via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-36664&#34; target=&#34;_blank&#34;&gt;CVE-2023-36664&lt;/a&gt;, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture &lt;code&gt;administrator&lt;/code&gt; credentials, or by abusing misconfigured &lt;code&gt;XAMPP&lt;/code&gt; permissions.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-hospital/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Hospital.png&#34; alt=&#34;HtB Hospital&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a &lt;code&gt;RoundCube&lt;/code&gt; instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-35001&#34; target=&#34;_blank&#34;&gt;CVE-2023-35001&lt;/a&gt;. Privileged access allows &lt;code&gt;/etc/shadow&lt;/code&gt; hashes to be read and subsequently cracked, yielding credentials for the &lt;code&gt;RoundCube&lt;/code&gt; instance. Emails on the service hint towards the use of &lt;code&gt;GhostScript&lt;/code&gt;, which opens up the target to exploitation via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-36664&#34; target=&#34;_blank&#34;&gt;CVE-2023-36664&lt;/a&gt;, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture &lt;code&gt;administrator&lt;/code&gt; credentials, or by abusing misconfigured &lt;code&gt;XAMPP&lt;/code&gt; permissions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Active</title>
-      <link>http://localhost:1313/writeups/htb-active/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:31 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
