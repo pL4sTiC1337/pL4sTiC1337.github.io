@@ -10,6 +10,7 @@ hideToc = false
 Giddy is a medium difficulty machine, which highlights how low privileged SQL Server logins can be used to compromise the underlying SQL Server service account. This is an issue in many environments, and depending on the configuration, the service account may have elevated privileges across the domain. It also features Windows registry enumeration and custom payload creation.
 
 <!--more-->
+---
 
 ## Scanning
 

