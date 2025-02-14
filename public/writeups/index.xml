@@ -6,8 +6,15 @@
     <description>Recent content in Writeups on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2025 08:55:42 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 11:11:01 -0500</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Htb Bounty</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-bounty/</link>
+      <pubDate>Fri, 14 Feb 2025 11:11:01 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-bounty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Bounty.png&#34; alt=&#34;HtB-Bounty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Cascade</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-cascade/</link>

