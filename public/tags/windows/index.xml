@@ -6,8 +6,15 @@
     <description>Recent content in Windows on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Feb 2025 11:21:41 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 08:55:42 -0500</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Cascade</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cascade/</link>
+      <pubDate>Fri, 14 Feb 2025 08:55:42 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cascade/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Cascade.png&#34; alt=&#34;HtB-Cascade&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user &lt;code&gt;r.thompson&lt;/code&gt;, which gives access to a &lt;code&gt;TightVNC&lt;/code&gt; registry backup. The backup is decrypted to gain the password for &lt;code&gt;s.smith&lt;/code&gt;. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the &lt;code&gt;ArkSvc&lt;/code&gt; account. This account belongs to the &lt;code&gt;AD Recycle Bin&lt;/code&gt; group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Escape</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-escape/</link>

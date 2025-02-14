@@ -3,30 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pL4sTiC1337.github.io/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/active-directory/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/hackthebox/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
-    <loc>https://pL4sTiC1337.github.io/writeups/htb-escape/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <loc>https://pL4sTiC1337.github.io/writeups/htb-cascade/</loc>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/medium/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/windows/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/writeup/</loc>
-    <lastmod>2025-02-13T11:21:41-05:00</lastmod>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/</loc>
+    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/writeups/htb-escape/</loc>
     <lastmod>2025-02-13T11:21:41-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/htb-giddy/</loc>
@@ -86,9 +89,13 @@
     <loc>https://pL4sTiC1337.github.io/posts/the-rfid-badge-capture/</loc>
     <lastmod>2025-01-26T09:08:14-05:00</lastmod>
   </url><url>
+    <loc>https://pL4sTiC1337.github.io/images/htb---cascade/</loc>
+  </url><url>
     <loc>https://pL4sTiC1337.github.io/about/</loc>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/about/about/</loc>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/images/</loc>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/series/</loc>
   </url>
