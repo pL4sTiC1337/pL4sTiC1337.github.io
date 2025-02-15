@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-02-14T11:11:01-05:00" />
+<meta property="og:updated_time" content="2025-02-15T09:17:33-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -349,6 +349,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-forest/">HtB Forest</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-bounty/">Htb Bounty</a>
                             </li>
                         
@@ -362,10 +366,6 @@
                         
                             <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-giddy/">HtB Giddy</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="https://pL4sTiC1337.github.io/writeups/htb-faculty/">HtB Faculty</a>
                             </li>
                         
                     
@@ -473,6 +473,73 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-forest/">HtB Forest</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-15T09:17:33-0500" class="post-date">
+        February 15, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>6 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-easy">
+        <a href="https://pL4sTiC1337.github.io/tags/easy">easy</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+      <li class="tag-active directory">
+        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Forest.png" alt="HtB-Forest"></p>
+<p>Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-forest/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">
@@ -1052,66 +1119,6 @@ CozyHosting is an easy-difficulty Linux machine that features a <code>Spring Boo
         
         <div class="read-more-link">
             <a href="/writeups/htb-cozyhosting/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://pL4sTiC1337.github.io/posts/dark-side-of-wifi/">The Dark Side of WiFi</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      
-      <time datetime=" 2025-01-30T09:16:46-0500" class="post-date">
-        January 30, 2025
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>4 mins read</span>
-      </span>
-    </div>
-
-    
-    <ul class="tags">
-      
-      <li class="tag-wifi">
-        <a href="https://pL4sTiC1337.github.io/tags/wifi">wifi</a>
-      </li>
-      
-      <li class="tag-data privacy">
-        <a href="https://pL4sTiC1337.github.io/tags/data-privacy">data privacy</a>
-      </li>
-      
-      <li class="tag-cybersecurity">
-        <a href="https://pL4sTiC1337.github.io/tags/cybersecurity">cybersecurity</a>
-      </li>
-      
-    </ul>
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        <p><img src="/images/wifi-danger.png" alt="Wifi Dangers"></p>
-<p><strong>Your phone could be revealing your home WiFi information—and your location—to hackers without you even realizing it!</strong></p>
-<p>In the digital age, convenience often comes at the cost of security and privacy. One overlooked yet serious risk is leaving WiFi enabled on personal devices when they are not in use. While having WiFi turned on might seem harmless, it can expose you to numerous cyber threats and privacy invasions. Below, we delve into the dangers of keeping WiFi enabled on your smartphone, laptop, or tablet and why it’s a habit you should reconsider.</p>
-        
-        <div class="read-more-link">
-            <a href="/posts/dark-side-of-wifi/">Read More…</a>
         </div>
         
         

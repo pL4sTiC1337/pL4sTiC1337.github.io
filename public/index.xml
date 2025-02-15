@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2025 11:11:01 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 09:17:33 -0500</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Forest</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-forest/</link>
+      <pubDate>Sat, 15 Feb 2025 09:17:33 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-forest/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Forest.png&#34; alt=&#34;HtB-Forest&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Htb Bounty</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-bounty/</link>
