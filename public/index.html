@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-02-15T14:01:17-05:00" />
+<meta property="og:updated_time" content="2025-02-17T19:00:06-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -349,6 +349,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-sightless/">Htb Sightless</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-cicada/">HtB Cicada</a>
                             </li>
                         
@@ -362,10 +366,6 @@
                         
                             <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-cascade/">HtB Cascade</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="https://pL4sTiC1337.github.io/writeups/htb-escape/">HtB Escape</a>
                             </li>
                         
                     
@@ -473,6 +473,69 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-sightless/">Htb Sightless</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-17T19:00:06-0500" class="post-date">
+        February 17, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>7 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-easy">
+        <a href="https://pL4sTiC1337.github.io/tags/easy">easy</a>
+      </li>
+      
+      <li class="tag-linux">
+        <a href="https://pL4sTiC1337.github.io/tags/linux">linux</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Sightless.png" alt="HtB-Sightless"></p>
+<p><code>Sightless</code> is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an <code>SQLPad</code> instance vulnerable to template injection <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0944" target="_blank">CVE-2022-0944</a>, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the <code>/etc/shadow</code> file with a password hash, which is cracked to reveal the password, granting <code>SSH</code> access to the host. Post-exploitation enumeration reveals a <code>Froxlor</code> instance vulnerable to Blind <code>XSS</code> <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34070" target="_blank">CVE-2024-34070</a>. This is leveraged to gain access to the <code>FTP</code> service, which contains a <code>KeePass</code> database. Accessing the database reveals the root <code>SSH</code> keys, leading to a privileged shell on the host.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-sightless/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">
@@ -1056,73 +1119,6 @@ Jab is a medium-difficulty Windows machine that features an Openfire XMPP server
         
         <div class="read-more-link">
             <a href="/writeups/htb-hospital/">Read More…</a>
-        </div>
-        
-        
-    </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://pL4sTiC1337.github.io/writeups/htb-active/">HtB Active</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      
-      <time datetime=" 2025-02-03T14:41:31-0500" class="post-date">
-        February 3, 2025
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>3 mins read</span>
-      </span>
-    </div>
-
-    
-    <ul class="tags">
-      
-      <li class="tag-writeup">
-        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
-      </li>
-      
-      <li class="tag-hackthebox">
-        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
-      </li>
-      
-      <li class="tag-easy">
-        <a href="https://pL4sTiC1337.github.io/tags/easy">easy</a>
-      </li>
-      
-      <li class="tag-windows">
-        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
-      </li>
-      
-      <li class="tag-active directory">
-        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
-      </li>
-      
-    </ul>
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        <p><img src="/images/Active.png" alt="HtB Active"></p>
-<p>Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.</p>
-        
-        <div class="read-more-link">
-            <a href="/writeups/htb-active/">Read More…</a>
         </div>
         
         

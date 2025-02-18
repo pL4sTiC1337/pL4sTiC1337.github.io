@@ -6,8 +6,15 @@
     <description>Recent content in Writeups on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Feb 2025 14:01:17 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 19:00:06 -0500</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Htb Sightless</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-sightless/</link>
+      <pubDate>Mon, 17 Feb 2025 19:00:06 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-sightless/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Cicada</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-cicada/</link>
