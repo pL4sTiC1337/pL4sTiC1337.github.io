@@ -1,2 +1,4 @@
 .DS_Store
 /themes/hugo-theme-m10c
+.vscode
+.vscode/tasks.json
