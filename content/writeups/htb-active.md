@@ -1,5 +1,5 @@
 +++
-date = '2025-02-03T14:41:31-05:00'
+date = '2025-02-03T14:41:33-05:00'
 draft = false
 title = 'HtB Active'
 tags = ['writeup','hackthebox','easy','windows','active directory']
