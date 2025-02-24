@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pL4sTiC1337.github.io/</loc>
-    <lastmod>2025-02-17T19:00:06-05:00</lastmod>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/tags/hack-the-box/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/tags/linux/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/tags/medium/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/tags/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/tags/writeup/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
+  </url><url>
+    <loc>https://pL4sTiC1337.github.io/writeups/</loc>
+    <lastmod>2025-02-23T23:16:24-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/easy/</loc>
     <lastmod>2025-02-17T19:00:06-05:00</lastmod>
@@ -12,18 +33,6 @@
     <lastmod>2025-02-17T19:00:06-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/htb-sightless/</loc>
-    <lastmod>2025-02-17T19:00:06-05:00</lastmod>
-  </url><url>
-    <loc>https://pL4sTiC1337.github.io/tags/linux/</loc>
-    <lastmod>2025-02-17T19:00:06-05:00</lastmod>
-  </url><url>
-    <loc>https://pL4sTiC1337.github.io/tags/</loc>
-    <lastmod>2025-02-17T19:00:06-05:00</lastmod>
-  </url><url>
-    <loc>https://pL4sTiC1337.github.io/tags/writeup/</loc>
-    <lastmod>2025-02-17T19:00:06-05:00</lastmod>
-  </url><url>
-    <loc>https://pL4sTiC1337.github.io/writeups/</loc>
     <lastmod>2025-02-17T19:00:06-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/tags/active-directory/</loc>
@@ -44,9 +53,6 @@
     <loc>https://pL4sTiC1337.github.io/writeups/htb-cascade/</loc>
     <lastmod>2025-02-14T08:55:42-05:00</lastmod>
   </url><url>
-    <loc>https://pL4sTiC1337.github.io/tags/medium/</loc>
-    <lastmod>2025-02-14T08:55:42-05:00</lastmod>
-  </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/htb-escape/</loc>
     <lastmod>2025-02-13T11:21:41-05:00</lastmod>
   </url><url>
@@ -63,7 +69,7 @@
     <lastmod>2025-02-04T08:52:13-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/htb-active/</loc>
-    <lastmod>2025-02-03T14:41:31-05:00</lastmod>
+    <lastmod>2025-02-03T14:41:33-05:00</lastmod>
   </url><url>
     <loc>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</loc>
     <lastmod>2025-02-02T23:42:43-05:00</lastmod>

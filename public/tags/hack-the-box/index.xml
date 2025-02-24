@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hack the Box on </title>
+    <link>https://pL4sTiC1337.github.io/tags/hack-the-box/</link>
+    <description>Recent content in Hack the Box on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2025 23:16:24 -0500</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/tags/hack-the-box/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Popcorn</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</link>
+      <pubDate>Sun, 23 Feb 2025 23:16:24 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
