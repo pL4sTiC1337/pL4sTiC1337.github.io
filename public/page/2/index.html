@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-02-23T23:16:24-05:00" />
+<meta property="og:updated_time" content="2025-02-24T22:28:29-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -251,6 +251,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -327,6 +329,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -353,6 +357,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-vault/">HtB Vault</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-popcorn/">HtB Popcorn</a>
                             </li>
                         
@@ -366,10 +374,6 @@
                         
                             <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-forest/">HtB Forest</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="https://pL4sTiC1337.github.io/writeups/htb-bounty/">Htb Bounty</a>
                             </li>
                         
                     
@@ -410,6 +414,22 @@
                         
                 
                         
+                
+                        
+                            <li class="heading">
+                                <a href="/writeups/">Writeups</a>
+                            </li>
+                            
+                            <li class="sub-heading">
+                                Recent
+                            </li>
+                            
+                                <li class="bullet">
+                                    <a href="https://pL4sTiC1337.github.io/writeups/htb-vault/">HtB Vault</a>
+                                </li>
+                            
+                        
+                    
                 
             
         
@@ -479,6 +499,73 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-jab/">HtB Jab</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-05T16:43:23-0500" class="post-date">
+        February 5, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>13 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-medium">
+        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+      <li class="tag-active directory">
+        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Jab.png" alt="Jab">
+Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&rsquo;s password. By visiting the account&rsquo;s XMPP chat rooms, another account&rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-jab/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">

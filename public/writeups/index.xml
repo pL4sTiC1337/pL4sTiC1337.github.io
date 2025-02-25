@@ -6,8 +6,15 @@
     <description>Recent content in Writeups on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Feb 2025 23:16:24 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 22:28:29 -0500</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Vault</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-vault/</link>
+      <pubDate>Mon, 24 Feb 2025 22:28:29 -0500</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-vault/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Popcorn</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</link>
