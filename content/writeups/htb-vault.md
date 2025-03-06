@@ -2,7 +2,7 @@
 date = '2025-02-24T22:28:29-05:00'
 draft = false
 title = 'HtB Vault'
-tags = ['writeups','hack the box','medium','linux']
+tags = ['writeup','hack the box','medium','linux']
 hideToc = false
 +++
 ![HtB-Vault](/images/Vault.png)
