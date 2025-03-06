@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on </title>
-    <link>https://pL4sTiC1337.github.io/tags/linux/</link>
+    <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Feb 2025 22:28:29 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HtB Vault</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-vault/</link>
+      <link>http://localhost:1313/writeups/htb-vault/</link>
       <pubDate>Mon, 24 Feb 2025 22:28:29 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-vault/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-vault/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Popcorn</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</link>
+      <link>http://localhost:1313/writeups/htb-popcorn/</link>
       <pubDate>Sun, 23 Feb 2025 23:16:24 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-popcorn/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Htb Sightless</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-sightless/</link>
+      <link>http://localhost:1313/writeups/htb-sightless/</link>
       <pubDate>Mon, 17 Feb 2025 19:00:06 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-sightless/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-sightless/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Faculty</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-faculty/</link>
+      <link>http://localhost:1313/writeups/htb-faculty/</link>
       <pubDate>Tue, 11 Feb 2025 14:32:53 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-faculty/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Faculty.png&#34; alt=&#34;HtB Faculty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called &lt;code&gt;gbyolo&lt;/code&gt; over SSH. The user &lt;code&gt;gbyolo&lt;/code&gt; has permission to run an &lt;code&gt;npm&lt;/code&gt; package called &lt;code&gt;meta-git&lt;/code&gt; as the &lt;code&gt;developer&lt;/code&gt; user. The version of the &lt;code&gt;meta-git&lt;/code&gt; installed on this box is vulnerable to code injection, which can be exploited to escalate the privileges to the user &lt;code&gt;developer&lt;/code&gt;. The privilege escalation to &lt;code&gt;root&lt;/code&gt; can be performed by exploiting the &lt;code&gt;CAP_SYS_PTRACE&lt;/code&gt; capability to inject shellcode into a process running as &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-faculty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Faculty.png&#34; alt=&#34;HtB Faculty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called &lt;code&gt;gbyolo&lt;/code&gt; over SSH. The user &lt;code&gt;gbyolo&lt;/code&gt; has permission to run an &lt;code&gt;npm&lt;/code&gt; package called &lt;code&gt;meta-git&lt;/code&gt; as the &lt;code&gt;developer&lt;/code&gt; user. The version of the &lt;code&gt;meta-git&lt;/code&gt; installed on this box is vulnerable to code injection, which can be exploited to escalate the privileges to the user &lt;code&gt;developer&lt;/code&gt;. The privilege escalation to &lt;code&gt;root&lt;/code&gt; can be performed by exploiting the &lt;code&gt;CAP_SYS_PTRACE&lt;/code&gt; capability to inject shellcode into a process running as &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cozyhosting</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</link>
+      <link>http://localhost:1313/writeups/htb-cozyhosting/</link>
       <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-cozyhosting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

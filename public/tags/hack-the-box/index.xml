@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hack the Box on </title>
-    <link>https://pL4sTiC1337.github.io/tags/hack-the-box/</link>
+    <link>http://localhost:1313/tags/hack-the-box/</link>
     <description>Recent content in Hack the Box on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Feb 2025 22:59:51 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/hack-the-box/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hack-the-box/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HtB Sizzle</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-sizzle/</link>
+      <link>http://localhost:1313/writeups/htb-sizzle/</link>
       <pubDate>Fri, 28 Feb 2025 22:59:51 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-sizzle/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sizzle.png&#34; alt=&#34;HtB-Sizzle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sizzle is an Insane difficulty WIndows box with an Active Directory environment. A writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the Certificate Services Portal. A self signed certificate can be created using the CA and used for PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to have Replication rights which can be abused to get Administrator hashes via DCSync.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-sizzle/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Sizzle.png&#34; alt=&#34;HtB-Sizzle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sizzle is an Insane difficulty WIndows box with an Active Directory environment. A writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the Certificate Services Portal. A self signed certificate can be created using the CA and used for PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to have Replication rights which can be abused to get Administrator hashes via DCSync.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Vault</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-vault/</link>
+      <link>http://localhost:1313/writeups/htb-vault/</link>
       <pubDate>Mon, 24 Feb 2025 22:28:29 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-vault/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-vault/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Popcorn</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</link>
+      <link>http://localhost:1313/writeups/htb-popcorn/</link>
       <pubDate>Sun, 23 Feb 2025 23:16:24 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-popcorn/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
