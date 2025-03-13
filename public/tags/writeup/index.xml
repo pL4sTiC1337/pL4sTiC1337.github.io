@@ -2,116 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writeup on </title>
-    <link>http://localhost:1313/tags/writeup/</link>
+    <link>https://pL4sTiC1337.github.io/tags/writeup/</link>
     <description>Recent content in Writeup on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 22:59:51 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Mar 2025 13:19:43 -0400</lastBuildDate>
+    <atom:link href="https://pL4sTiC1337.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Json</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-json/</link>
+      <pubDate>Thu, 13 Mar 2025 13:19:43 -0400</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-json/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Json.png&#34; alt=&#34;HtB-JSON&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;JSON is a medium difficulty Windows machine running an IIS server with an ASP.NET application. The application is found to be vulnerable to .NET deserialization, which is exploited using ysoserial.net. A custom .NET program is found to be installed, which on reverse engineering reveals encrypted credentials for an administrator. These credentials can be decrypted and used to gain access to the FTP folder.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Sizzle</title>
-      <link>http://localhost:1313/writeups/htb-sizzle/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-sizzle/</link>
       <pubDate>Fri, 28 Feb 2025 22:59:51 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-sizzle/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Sizzle.png&#34; alt=&#34;HtB-Sizzle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sizzle is an Insane difficulty WIndows box with an Active Directory environment. A writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the Certificate Services Portal. A self signed certificate can be created using the CA and used for PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to have Replication rights which can be abused to get Administrator hashes via DCSync.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-sizzle/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sizzle.png&#34; alt=&#34;HtB-Sizzle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sizzle is an Insane difficulty WIndows box with an Active Directory environment. A writable directory in an SMB share allows to steal NTLM hashes which can be cracked to access the Certificate Services Portal. A self signed certificate can be created using the CA and used for PSRemoting. A SPN associated with a user allows a kerberoast attack on the box. The user is found to have Replication rights which can be abused to get Administrator hashes via DCSync.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Vault</title>
-      <link>http://localhost:1313/writeups/htb-vault/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-vault/</link>
       <pubDate>Mon, 24 Feb 2025 22:28:29 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-vault/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-vault/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Vault.png&#34; alt=&#34;HtB-Vault&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Vault is medium to hard difficulty machine, which requires bypassing host and file upload restrictions, tunneling, creating malicious OpenVPN configuration files and PGP decryption.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Popcorn</title>
-      <link>http://localhost:1313/writeups/htb-popcorn/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</link>
       <pubDate>Sun, 23 Feb 2025 23:16:24 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-popcorn/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-popcorn/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Popcorn.png&#34; alt=&#34;HtB-Popcorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Popcorn, while not overly complicated, contains quite a bit of content and it can be difficult for some users to locate the proper attack vector at first. This machine mainly focuses on different methods of web exploitation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Htb Sightless</title>
-      <link>http://localhost:1313/writeups/htb-sightless/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-sightless/</link>
       <pubDate>Mon, 17 Feb 2025 19:00:06 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-sightless/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-sightless/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cicada</title>
-      <link>http://localhost:1313/writeups/htb-cicada/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cicada/</link>
       <pubDate>Sat, 15 Feb 2025 14:01:17 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-cicada/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Cicada.png&#34; alt=&#34;HtB-Cicada&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cicada is an easy-difficult Windows machine that focuses on beginner Active Directory enumeration and exploitation. In this machine, players will enumerate the domain, identify users, navigate shares, uncover plaintext passwords stored in files, execute a password spray, and use the &lt;code&gt;SeBackupPrivilege&lt;/code&gt; to achieve full system compromise.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cicada/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Cicada.png&#34; alt=&#34;HtB-Cicada&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cicada is an easy-difficult Windows machine that focuses on beginner Active Directory enumeration and exploitation. In this machine, players will enumerate the domain, identify users, navigate shares, uncover plaintext passwords stored in files, execute a password spray, and use the &lt;code&gt;SeBackupPrivilege&lt;/code&gt; to achieve full system compromise.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Forest</title>
-      <link>http://localhost:1313/writeups/htb-forest/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-forest/</link>
       <pubDate>Sat, 15 Feb 2025 09:17:33 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-forest/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Forest.png&#34; alt=&#34;HtB-Forest&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-forest/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Forest.png&#34; alt=&#34;HtB-Forest&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Htb Bounty</title>
-      <link>http://localhost:1313/writeups/htb-bounty/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-bounty/</link>
       <pubDate>Fri, 14 Feb 2025 11:11:01 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-bounty/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Bounty.png&#34; alt=&#34;HtB-Bounty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-bounty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Bounty.png&#34; alt=&#34;HtB-Bounty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cascade</title>
-      <link>http://localhost:1313/writeups/htb-cascade/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cascade/</link>
       <pubDate>Fri, 14 Feb 2025 08:55:42 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-cascade/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Cascade.png&#34; alt=&#34;HtB-Cascade&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user &lt;code&gt;r.thompson&lt;/code&gt;, which gives access to a &lt;code&gt;TightVNC&lt;/code&gt; registry backup. The backup is decrypted to gain the password for &lt;code&gt;s.smith&lt;/code&gt;. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the &lt;code&gt;ArkSvc&lt;/code&gt; account. This account belongs to the &lt;code&gt;AD Recycle Bin&lt;/code&gt; group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cascade/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Cascade.png&#34; alt=&#34;HtB-Cascade&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user &lt;code&gt;r.thompson&lt;/code&gt;, which gives access to a &lt;code&gt;TightVNC&lt;/code&gt; registry backup. The backup is decrypted to gain the password for &lt;code&gt;s.smith&lt;/code&gt;. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the &lt;code&gt;ArkSvc&lt;/code&gt; account. This account belongs to the &lt;code&gt;AD Recycle Bin&lt;/code&gt; group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Escape</title>
-      <link>http://localhost:1313/writeups/htb-escape/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-escape/</link>
       <pubDate>Thu, 13 Feb 2025 11:21:41 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-escape/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Escape.png&#34; alt=&#34;HtB-Escape&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Escape is a Medium difficulty Windows Active Directory machine that starts with an SMB share that guest authenticated users can download a sensitive PDF file. Inside the PDF file temporary credentials are available for accessing an MSSQL service running on the machine. An attacker is able to force the MSSQL service to authenticate to his machine and capture the hash. It turns out that the service is running under a user account and the hash is crackable. Having a valid set of credentials an attacker is able to get command execution on the machine using WinRM. Enumerating the machine, a log file reveals the credentials for the user &lt;code&gt;ryan.cooper&lt;/code&gt;. Further enumeration of the machine, reveals that a Certificate Authority is present and one certificate template is vulnerable to the ESC1 attack, meaning that users who are legible to use this template can request certificates for any other user on the domain including Domain Administrators. Thus, by exploiting the ESC1 vulnerability, an attacker is able to obtain a valid certificate for the Administrator account and then use it to get the hash of the administrator user.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-escape/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Escape.png&#34; alt=&#34;HtB-Escape&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Escape is a Medium difficulty Windows Active Directory machine that starts with an SMB share that guest authenticated users can download a sensitive PDF file. Inside the PDF file temporary credentials are available for accessing an MSSQL service running on the machine. An attacker is able to force the MSSQL service to authenticate to his machine and capture the hash. It turns out that the service is running under a user account and the hash is crackable. Having a valid set of credentials an attacker is able to get command execution on the machine using WinRM. Enumerating the machine, a log file reveals the credentials for the user &lt;code&gt;ryan.cooper&lt;/code&gt;. Further enumeration of the machine, reveals that a Certificate Authority is present and one certificate template is vulnerable to the ESC1 attack, meaning that users who are legible to use this template can request certificates for any other user on the domain including Domain Administrators. Thus, by exploiting the ESC1 vulnerability, an attacker is able to obtain a valid certificate for the Administrator account and then use it to get the hash of the administrator user.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Giddy</title>
-      <link>http://localhost:1313/writeups/htb-giddy/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-giddy/</link>
       <pubDate>Wed, 12 Feb 2025 10:46:31 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-giddy/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Giddy.png&#34; alt=&#34;Giddy&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Giddy is a medium difficulty machine, which highlights how low privileged SQL Server logins can be used to compromise the underlying SQL Server service account. This is an issue in many environments, and depending on the configuration, the service account may have elevated privileges across the domain. It also features Windows registry enumeration and custom payload creation.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-giddy/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Giddy.png&#34; alt=&#34;Giddy&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Giddy is a medium difficulty machine, which highlights how low privileged SQL Server logins can be used to compromise the underlying SQL Server service account. This is an issue in many environments, and depending on the configuration, the service account may have elevated privileges across the domain. It also features Windows registry enumeration and custom payload creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Faculty</title>
-      <link>http://localhost:1313/writeups/htb-faculty/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-faculty/</link>
       <pubDate>Tue, 11 Feb 2025 14:32:53 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-faculty/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Faculty.png&#34; alt=&#34;HtB Faculty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called &lt;code&gt;gbyolo&lt;/code&gt; over SSH. The user &lt;code&gt;gbyolo&lt;/code&gt; has permission to run an &lt;code&gt;npm&lt;/code&gt; package called &lt;code&gt;meta-git&lt;/code&gt; as the &lt;code&gt;developer&lt;/code&gt; user. The version of the &lt;code&gt;meta-git&lt;/code&gt; installed on this box is vulnerable to code injection, which can be exploited to escalate the privileges to the user &lt;code&gt;developer&lt;/code&gt;. The privilege escalation to &lt;code&gt;root&lt;/code&gt; can be performed by exploiting the &lt;code&gt;CAP_SYS_PTRACE&lt;/code&gt; capability to inject shellcode into a process running as &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-faculty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Faculty.png&#34; alt=&#34;HtB Faculty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Faculty is a medium Linux machine that features a PHP web application that uses a library which is vulnerable to local file inclusion. Exploiting the LFi in this library reveals a password which can be used to log in as a low-level user called &lt;code&gt;gbyolo&lt;/code&gt; over SSH. The user &lt;code&gt;gbyolo&lt;/code&gt; has permission to run an &lt;code&gt;npm&lt;/code&gt; package called &lt;code&gt;meta-git&lt;/code&gt; as the &lt;code&gt;developer&lt;/code&gt; user. The version of the &lt;code&gt;meta-git&lt;/code&gt; installed on this box is vulnerable to code injection, which can be exploited to escalate the privileges to the user &lt;code&gt;developer&lt;/code&gt;. The privilege escalation to &lt;code&gt;root&lt;/code&gt; can be performed by exploiting the &lt;code&gt;CAP_SYS_PTRACE&lt;/code&gt; capability to inject shellcode into a process running as &lt;code&gt;root&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Jab</title>
-      <link>http://localhost:1313/writeups/htb-jab/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-jab/</link>
       <pubDate>Wed, 05 Feb 2025 16:43:23 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-jab/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Jab.png&#34; alt=&#34;Jab&#34;&gt;&#xA;Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&amp;rsquo;s password. By visiting the account&amp;rsquo;s XMPP chat rooms, another account&amp;rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-jab/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Jab.png&#34; alt=&#34;Jab&#34;&gt;&#xA;Jab is a medium-difficulty Windows machine that features an Openfire XMPP server, hosted on a Domain Controller (DC). Public registration on the XMPP server allows the user to register an account. Then, by retrieving a list of all the users on the domain, a kerberoastable account is found, which allows the attacker to crack the retrieved hash for the user&amp;rsquo;s password. By visiting the account&amp;rsquo;s XMPP chat rooms, another account&amp;rsquo;s password is retrieved. This new account has DCOM privileges over the DC, thus granting the attacker local access on the machine. Finally, a malicious plugin uploaded through the locally-hosted Openfire Administration Panel gives the user SYSTEM access.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Hospital</title>
-      <link>http://localhost:1313/writeups/htb-hospital/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-hospital/</link>
       <pubDate>Tue, 04 Feb 2025 08:52:13 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-hospital/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Hospital.png&#34; alt=&#34;HtB Hospital&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a &lt;code&gt;RoundCube&lt;/code&gt; instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-35001&#34; target=&#34;_blank&#34;&gt;CVE-2023-35001&lt;/a&gt;. Privileged access allows &lt;code&gt;/etc/shadow&lt;/code&gt; hashes to be read and subsequently cracked, yielding credentials for the &lt;code&gt;RoundCube&lt;/code&gt; instance. Emails on the service hint towards the use of &lt;code&gt;GhostScript&lt;/code&gt;, which opens up the target to exploitation via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-36664&#34; target=&#34;_blank&#34;&gt;CVE-2023-36664&lt;/a&gt;, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture &lt;code&gt;administrator&lt;/code&gt; credentials, or by abusing misconfigured &lt;code&gt;XAMPP&lt;/code&gt; permissions.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-hospital/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Hospital.png&#34; alt=&#34;HtB Hospital&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hospital is a medium-difficulty Windows machine that hosts an Active Directory environment, a web server, and a &lt;code&gt;RoundCube&lt;/code&gt; instance. The web application has a file upload vulnerability that allows the execution of arbitrary PHP code, leading to a reverse shell on the Linux virtual machine hosting the service. Enumerating the system reveals an outdated Linux kernel that can be exploited to gain root privileges, via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-35001&#34; target=&#34;_blank&#34;&gt;CVE-2023-35001&lt;/a&gt;. Privileged access allows &lt;code&gt;/etc/shadow&lt;/code&gt; hashes to be read and subsequently cracked, yielding credentials for the &lt;code&gt;RoundCube&lt;/code&gt; instance. Emails on the service hint towards the use of &lt;code&gt;GhostScript&lt;/code&gt;, which opens up the target to exploitation via &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2023-36664&#34; target=&#34;_blank&#34;&gt;CVE-2023-36664&lt;/a&gt;, a vulnerability exploited by crafting a malicious Embedded PostScript (EPS) file to achieve remote code execution on the Windows host. System access is then obtained by either of two ways: using a keylogger to capture &lt;code&gt;administrator&lt;/code&gt; credentials, or by abusing misconfigured &lt;code&gt;XAMPP&lt;/code&gt; permissions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Active</title>
-      <link>http://localhost:1313/writeups/htb-active/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:33 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cozyhosting</title>
-      <link>http://localhost:1313/writeups/htb-cozyhosting/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</link>
       <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>http://localhost:1313/writeups/htb-cozyhosting/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
