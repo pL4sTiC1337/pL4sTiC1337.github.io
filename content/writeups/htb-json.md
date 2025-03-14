@@ -329,7 +329,7 @@ Password:
 
 ## JuicyPotato
 
-As we suspected before, our privileges and the state of system patches leaves this box susceptible to the Juicy Potato attack. [Download Here](https://github.com/ohpe/juicy-potato/releases)
+As we suspected before, our privileges and the state of system patches leaves this box susceptible to the Juicy Potato attack. [Download Here](https://github.com/ohpe/juicy-potato/releases). Feel free to run this alternate path to `root`.
 
 ```PowerShell
 C:\Program Files\Sync2Ftp>systeminfo
