@@ -6,8 +6,15 @@
     <description>Recent content in Writeups on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 13:19:43 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 16:25:52 -0400</lastBuildDate>
     <atom:link href="https://pL4sTiC1337.github.io/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HtB Monitors</title>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-monitors/</link>
+      <pubDate>Fri, 14 Mar 2025 16:25:52 -0400</pubDate>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-monitors/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Monitors.png&#34; alt=&#34;HTB-Monitors&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Monitors is a hard Linux machine that involves &lt;code&gt;WordPress plugin&lt;/code&gt; exploitation leading to a &lt;code&gt;command injection&lt;/code&gt; via &lt;code&gt;SQL injection&lt;/code&gt; through a well known network management web application in order to get a shell on the system. Then by performing basic service file enumeration one can gain the user password and thus a foothold to the system through SSH. The root stage consists of a &lt;code&gt;Java based XML RPC deserialization&lt;/code&gt; attack against &lt;code&gt;Apache OFBiz&lt;/code&gt; to gain a shell in a Docker container. Then it is possible by abusing the &lt;code&gt;CAP_SYS_MODULE&lt;/code&gt; capability to load a malicious kernel module against the host and escalate privileges to root.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HtB Json</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-json/</link>

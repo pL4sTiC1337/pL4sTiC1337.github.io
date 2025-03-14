@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-03-13T13:19:43-04:00" />
+<meta property="og:updated_time" content="2025-03-14T16:25:52-04:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -257,6 +257,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -343,6 +345,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -369,6 +373,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-monitors/">HtB Monitors</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-json/">HtB Json</a>
                             </li>
                         
@@ -384,10 +392,6 @@
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-popcorn/">HtB Popcorn</a>
                             </li>
                         
-                            <li class="bullet">
-                                <a href="https://pL4sTiC1337.github.io/writeups/htb-sightless/">Htb Sightless</a>
-                            </li>
-                        
                     
                 
             
@@ -396,6 +400,8 @@
                 
             
                 
+                
+                        
                 
                         
                 
@@ -501,6 +507,69 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-monitors/">HtB Monitors</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-03-14T16:25:52-0400" class="post-date">
+        March 14, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>7 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-hard">
+        <a href="https://pL4sTiC1337.github.io/tags/hard">hard</a>
+      </li>
+      
+      <li class="tag-linux">
+        <a href="https://pL4sTiC1337.github.io/tags/linux">linux</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Monitors.png" alt="HTB-Monitors"></p>
+<p>Monitors is a hard Linux machine that involves <code>WordPress plugin</code> exploitation leading to a <code>command injection</code> via <code>SQL injection</code> through a well known network management web application in order to get a shell on the system. Then by performing basic service file enumeration one can gain the user password and thus a foothold to the system through SSH. The root stage consists of a <code>Java based XML RPC deserialization</code> attack against <code>Apache OFBiz</code> to gain a shell in a Docker container. Then it is possible by abusing the <code>CAP_SYS_MODULE</code> capability to load a malicious kernel module against the host and escalate privileges to root.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-monitors/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">
@@ -1076,73 +1145,6 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
         
         
     </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://pL4sTiC1337.github.io/writeups/htb-cascade/">HtB Cascade</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      
-      <time datetime=" 2025-02-14T08:55:42-0500" class="post-date">
-        February 14, 2025
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>10 mins read</span>
-      </span>
-    </div>
-
-    
-    <ul class="tags">
-      
-      <li class="tag-writeup">
-        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
-      </li>
-      
-      <li class="tag-hackthebox">
-        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
-      </li>
-      
-      <li class="tag-medium">
-        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
-      </li>
-      
-      <li class="tag-windows">
-        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
-      </li>
-      
-      <li class="tag-active directory">
-        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
-      </li>
-      
-    </ul>
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        <p><img src="/images/Cascade.png" alt="HtB-Cascade"></p>
-<p>Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user <code>r.thompson</code>, which gives access to a <code>TightVNC</code> registry backup. The backup is decrypted to gain the password for <code>s.smith</code>. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the <code>ArkSvc</code> account. This account belongs to the <code>AD Recycle Bin</code> group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.</p>
-        
-        <div class="read-more-link">
-            <a href="/writeups/htb-cascade/">Read More…</a>
-        </div>
-        
-        
-    </article>
 </div>
 
 
@@ -1158,6 +1160,10 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
     
     <a href="/page/2/">2</a>
+    
+    
+    
+    <a href="/page/3/">3</a>
     
     
 

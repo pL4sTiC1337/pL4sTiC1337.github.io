@@ -74,7 +74,7 @@
 <meta property="og:url" content="https://pL4sTiC1337.github.io/" />
 
 
-<meta property="og:updated_time" content="2025-03-13T13:19:43-04:00" />
+<meta property="og:updated_time" content="2025-03-14T16:25:52-04:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
@@ -257,6 +257,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -343,6 +345,8 @@
                 
                         
                 
+                        
+                
             
         
         
@@ -369,6 +373,10 @@
                         </li>
                         
                             <li class="bullet">
+                                <a href="https://pL4sTiC1337.github.io/writeups/htb-monitors/">HtB Monitors</a>
+                            </li>
+                        
+                            <li class="bullet">
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-json/">HtB Json</a>
                             </li>
                         
@@ -384,10 +392,6 @@
                                 <a href="https://pL4sTiC1337.github.io/writeups/htb-popcorn/">HtB Popcorn</a>
                             </li>
                         
-                            <li class="bullet">
-                                <a href="https://pL4sTiC1337.github.io/writeups/htb-sightless/">Htb Sightless</a>
-                            </li>
-                        
                     
                 
             
@@ -396,6 +400,8 @@
                 
             
                 
+                
+                        
                 
                         
                 
@@ -501,6 +507,73 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="posts">
     
     
+    <article class="post">
+        <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-cascade/">HtB Cascade</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-02-14T08:55:42-0500" class="post-date">
+        February 14, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>10 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-medium">
+        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
+      </li>
+      
+      <li class="tag-windows">
+        <a href="https://pL4sTiC1337.github.io/tags/windows">windows</a>
+      </li>
+      
+      <li class="tag-active directory">
+        <a href="https://pL4sTiC1337.github.io/tags/active-directory">active directory</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+        
+        <p><img src="/images/Cascade.png" alt="HtB-Cascade"></p>
+<p>Cascade is a medium difficulty Windows machine configured as a Domain Controller. LDAP anonymous binds are enabled, and enumeration yields the password for user <code>r.thompson</code>, which gives access to a <code>TightVNC</code> registry backup. The backup is decrypted to gain the password for <code>s.smith</code>. This user has access to a .NET executable, which after decompilation and source code analysis reveals the password for the <code>ArkSvc</code> account. This account belongs to the <code>AD Recycle Bin</code> group, and is able to view deleted Active Directory objects. One of the deleted user accounts is found to contain a hardcoded password, which can be reused to login as the primary domain administrator.</p>
+        
+        <div class="read-more-link">
+            <a href="/writeups/htb-cascade/">Read More…</a>
+        </div>
+        
+        
+    </article>
     <article class="post">
         <div class="info">
   <h1 class="post-title">
@@ -1069,65 +1142,6 @@ CozyHosting is an easy-difficulty Linux machine that features a <code>Spring Boo
         
         
     </article>
-    <article class="post">
-        <div class="info">
-  <h1 class="post-title">
-    <a href="https://pL4sTiC1337.github.io/posts/the-rfid-badge-capture/">The RFID Badge Capture</a>
-  </h1>
-
-  <div class="headline">
-    <div>
-      
-      
-      <time datetime=" 2025-01-26T09:08:14-0500" class="post-date">
-        January 26, 2025
-      </time>
-      
-      <span> - </span>
-      <span class="reading-time">
-        
-          
-        
-
-        <span>4 mins read</span>
-      </span>
-    </div>
-
-    
-    <ul class="tags">
-      
-      <li class="tag-penetration testing">
-        <a href="https://pL4sTiC1337.github.io/tags/penetration-testing">penetration testing</a>
-      </li>
-      
-      <li class="tag-rfid">
-        <a href="https://pL4sTiC1337.github.io/tags/rfid">rfid</a>
-      </li>
-      
-      <li class="tag-badge cloning">
-        <a href="https://pL4sTiC1337.github.io/tags/badge-cloning">badge cloning</a>
-      </li>
-      
-    </ul>
-    
-  </div>
-
-  
-  
-
-  
-</div>
-
-        
-        <p><img src="/images/rfid-badge.png" alt="RFID badge being scanned"></p>
-<p>As a penetration tester, the thrill of outwitting security systems is met with numerous challenges, especially when tasked with capturing and cloning an RFID badge. From maintaining stealth to overcoming technological limitations, the path is fraught with obstacles.</p>
-        
-        <div class="read-more-link">
-            <a href="/posts/the-rfid-badge-capture/">Read More…</a>
-        </div>
-        
-        
-    </article>
 </div>
 
 
@@ -1147,7 +1161,13 @@ CozyHosting is an easy-difficulty Linux machine that features a <code>Spring Boo
     <span class="page-number current">2</span>
     
     
+    
+    <a href="/page/3/">3</a>
+    
+    
 
+    
+    <a href="/page/3/" rel="next" class="extend next"> Next &raquo;</a>
     
 </div>
 
