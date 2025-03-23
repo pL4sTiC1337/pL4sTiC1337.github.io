@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Social Engineering on </title>
-    <link>https://pL4sTiC1337.github.io/tags/social-engineering/</link>
+    <link>http://localhost:1313/tags/social-engineering/</link>
     <description>Recent content in Social Engineering on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Mar 2025 11:16:42 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/social-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/social-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Politeness Trap</title>
-      <link>https://pL4sTiC1337.github.io/posts/the-politeness-trap/</link>
+      <link>http://localhost:1313/posts/the-politeness-trap/</link>
       <pubDate>Thu, 06 Mar 2025 11:16:42 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/posts/the-politeness-trap/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/PolitenessTrap.png&#34; alt=&#34;Politeness-Trap&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In an era where cyber threats dominate headlines, physical security is often overlooked. However, one of the most effective tools in an attacker’s arsenal isn’t a zero-day exploit or advanced malware—it’s human nature. More specifically, it’s the natural inclination of employees to be courteous. This well-intentioned trait, while essential for a healthy work culture, can become a serious liability when it comes to security.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/the-politeness-trap/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/PolitenessTrap.png&#34; alt=&#34;Politeness-Trap&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In an era where cyber threats dominate headlines, physical security is often overlooked. However, one of the most effective tools in an attacker’s arsenal isn’t a zero-day exploit or advanced malware—it’s human nature. More specifically, it’s the natural inclination of employees to be courteous. This well-intentioned trait, while essential for a healthy work culture, can become a serious liability when it comes to security.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

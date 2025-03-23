@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Easy on </title>
-    <link>https://pL4sTiC1337.github.io/tags/easy/</link>
+    <link>http://localhost:1313/tags/easy/</link>
     <description>Recent content in Easy on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Feb 2025 19:00:06 -0500</lastBuildDate>
-    <atom:link href="https://pL4sTiC1337.github.io/tags/easy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/easy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Htb Sightless</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-sightless/</link>
+      <link>http://localhost:1313/writeups/htb-sightless/</link>
       <pubDate>Mon, 17 Feb 2025 19:00:06 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-sightless/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-sightless/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Sightless.png&#34; alt=&#34;HtB-Sightless&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Sightless&lt;/code&gt; is an easy-difficulty Linux machine featuring a website for a company offering various services. Enumeration of the website reveals an &lt;code&gt;SQLPad&lt;/code&gt; instance vulnerable to template injection &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2022-0944&#34; target=&#34;_blank&#34;&gt;CVE-2022-0944&lt;/a&gt;, which is leveraged to gain a foothold inside a Docker container. Further enumeration reveals the &lt;code&gt;/etc/shadow&lt;/code&gt; file with a password hash, which is cracked to reveal the password, granting &lt;code&gt;SSH&lt;/code&gt; access to the host. Post-exploitation enumeration reveals a &lt;code&gt;Froxlor&lt;/code&gt; instance vulnerable to Blind &lt;code&gt;XSS&lt;/code&gt; &lt;a href=&#34;https://nvd.nist.gov/vuln/detail/CVE-2024-34070&#34; target=&#34;_blank&#34;&gt;CVE-2024-34070&lt;/a&gt;. This is leveraged to gain access to the &lt;code&gt;FTP&lt;/code&gt; service, which contains a &lt;code&gt;KeePass&lt;/code&gt; database. Accessing the database reveals the root &lt;code&gt;SSH&lt;/code&gt; keys, leading to a privileged shell on the host.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cicada</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-cicada/</link>
+      <link>http://localhost:1313/writeups/htb-cicada/</link>
       <pubDate>Sat, 15 Feb 2025 14:01:17 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-cicada/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Cicada.png&#34; alt=&#34;HtB-Cicada&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cicada is an easy-difficult Windows machine that focuses on beginner Active Directory enumeration and exploitation. In this machine, players will enumerate the domain, identify users, navigate shares, uncover plaintext passwords stored in files, execute a password spray, and use the &lt;code&gt;SeBackupPrivilege&lt;/code&gt; to achieve full system compromise.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-cicada/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Cicada.png&#34; alt=&#34;HtB-Cicada&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Cicada is an easy-difficult Windows machine that focuses on beginner Active Directory enumeration and exploitation. In this machine, players will enumerate the domain, identify users, navigate shares, uncover plaintext passwords stored in files, execute a password spray, and use the &lt;code&gt;SeBackupPrivilege&lt;/code&gt; to achieve full system compromise.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Forest</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-forest/</link>
+      <link>http://localhost:1313/writeups/htb-forest/</link>
       <pubDate>Sat, 15 Feb 2025 09:17:33 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-forest/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Forest.png&#34; alt=&#34;HtB-Forest&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-forest/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Forest.png&#34; alt=&#34;HtB-Forest&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Forest in an easy difficulty Windows Domain Controller (DC), for a domain in which Exchange Server has been installed. The DC is found to allow anonymous LDAP binds, which is used to enumerate domain objects. The password for a service account with Kerberos pre-authentication disabled can be cracked to gain a foothold. The service account is found to be a member of the Account Operators group, which can be used to add users to privileged Exchange groups. The Exchange group membership is leveraged to gain DCSync privileges on the domain and dump the NTLM hashes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Htb Bounty</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-bounty/</link>
+      <link>http://localhost:1313/writeups/htb-bounty/</link>
       <pubDate>Fri, 14 Feb 2025 11:11:01 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-bounty/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Bounty.png&#34; alt=&#34;HtB-Bounty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-bounty/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Bounty.png&#34; alt=&#34;HtB-Bounty&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bounty is an easy to medium difficulty machine, which features an interesting technique to bypass file uploader protections and achieve code execution. This machine also highlights the importance of keeping systems updated with the latest security patches.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Active</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-active/</link>
+      <link>http://localhost:1313/writeups/htb-active/</link>
       <pubDate>Mon, 03 Feb 2025 14:41:33 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-active/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-active/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Active.png&#34; alt=&#34;HtB Active&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Active is an easy to medium difficulty machine, which features two very prevalent techniques to gain privileges within an Active Directory environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Cozyhosting</title>
-      <link>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</link>
+      <link>http://localhost:1313/writeups/htb-cozyhosting/</link>
       <pubDate>Sun, 02 Feb 2025 23:42:43 -0500</pubDate>
-      <guid>https://pL4sTiC1337.github.io/writeups/htb-cozyhosting/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/writeups/htb-cozyhosting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/htb-CozyHosting.png&#34; alt=&#34;HtB CozyHosting&#34;&gt;&#xA;CozyHosting is an easy-difficulty Linux machine that features a &lt;code&gt;Spring Boot&lt;/code&gt; application. The application has the &lt;code&gt;Actuator&lt;/code&gt; endpoint enabled. Enumerating the endpoint leads to the discovery of a user&amp;rsquo;s session cookie, leading to authenticated access to the main dashboard. The application is vulnerable to command injection, which is leveraged to gain a reverse shell on the remote machine. Enumerating the application&amp;rsquo;s &lt;code&gt;.jar&lt;/code&gt; file, hardcoded credentials are discovered and used to log into the local database. The database contains a hashed password, which once cracked is used to log into the machine as the user &lt;code&gt;josh&lt;/code&gt;. The user is allowed to run &lt;code&gt;ssh&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt;, which is leveraged to fully escalate privileges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
