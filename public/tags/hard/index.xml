@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hard on </title>
-    <link>http://localhost:1313/tags/hard/</link>
+    <link>https://pL4sTiC1337.github.io/tags/hard/</link>
     <description>Recent content in Hard on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Mar 2025 15:45:37 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hard/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pL4sTiC1337.github.io/tags/hard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Htb Zipper</title>
-      <link>http://localhost:1313/writeups/htb-zipper/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-zipper/</link>
       <pubDate>Sun, 23 Mar 2025 15:45:37 -0400</pubDate>
-      <guid>http://localhost:1313/writeups/htb-zipper/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Zipper.png&#34; alt=&#34;htb-zipper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Zipper is a medium difficulty machine that highlights how privileged API access can be leveraged to gain RCE, and the risk of unauthenticated agent access. It also provides an interesting challenge in terms of overcoming command processing timeouts, and also highlights the dangers of not specifying absolute paths in privileged admin scripts/binaries.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-zipper/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Zipper.png&#34; alt=&#34;htb-zipper&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Zipper is a medium difficulty machine that highlights how privileged API access can be leveraged to gain RCE, and the risk of unauthenticated agent access. It also provides an interesting challenge in terms of overcoming command processing timeouts, and also highlights the dangers of not specifying absolute paths in privileged admin scripts/binaries.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HtB Monitors</title>
-      <link>http://localhost:1313/writeups/htb-monitors/</link>
+      <link>https://pL4sTiC1337.github.io/writeups/htb-monitors/</link>
       <pubDate>Fri, 14 Mar 2025 16:25:52 -0400</pubDate>
-      <guid>http://localhost:1313/writeups/htb-monitors/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Monitors.png&#34; alt=&#34;HTB-Monitors&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Monitors is a hard Linux machine that involves &lt;code&gt;WordPress plugin&lt;/code&gt; exploitation leading to a &lt;code&gt;command injection&lt;/code&gt; via &lt;code&gt;SQL injection&lt;/code&gt; through a well known network management web application in order to get a shell on the system. Then by performing basic service file enumeration one can gain the user password and thus a foothold to the system through SSH. The root stage consists of a &lt;code&gt;Java based XML RPC deserialization&lt;/code&gt; attack against &lt;code&gt;Apache OFBiz&lt;/code&gt; to gain a shell in a Docker container. Then it is possible by abusing the &lt;code&gt;CAP_SYS_MODULE&lt;/code&gt; capability to load a malicious kernel module against the host and escalate privileges to root.&lt;/p&gt;</description>
+      <guid>https://pL4sTiC1337.github.io/writeups/htb-monitors/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Monitors.png&#34; alt=&#34;HTB-Monitors&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Monitors is a hard Linux machine that involves &lt;code&gt;WordPress plugin&lt;/code&gt; exploitation leading to a &lt;code&gt;command injection&lt;/code&gt; via &lt;code&gt;SQL injection&lt;/code&gt; through a well known network management web application in order to get a shell on the system. Then by performing basic service file enumeration one can gain the user password and thus a foothold to the system through SSH. The root stage consists of a &lt;code&gt;Java based XML RPC deserialization&lt;/code&gt; attack against &lt;code&gt;Apache OFBiz&lt;/code&gt; to gain a shell in a Docker container. Then it is possible by abusing the &lt;code&gt;CAP_SYS_MODULE&lt;/code&gt; capability to load a malicious kernel module against the host and escalate privileges to root.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
