@@ -1,7 +1,7 @@
 +++
 date = '2025-04-11T10:54:25-05:00'
 draft = false
-title = 'HtB - Celestial'
+title = 'HtB Celestial'
 tags = ['writeup', 'hackthebox', 'medium', 'linux']
 hideToc = false
 +++
