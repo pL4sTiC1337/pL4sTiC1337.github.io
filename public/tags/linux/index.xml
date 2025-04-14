@@ -16,7 +16,7 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://pL4sTiC1337.github.io/images/Celestial.png&#34; alt=&#34;HtB-Celestial&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Celestial is a medium difficulty machine which focuses on deserialization exploits. It is not the most realistic, however it provides a practical example of abusing client-size serialized objects in NodeJS framework.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Htb Zipper</title>
+      <title>HtB Zipper</title>
       <link>https://pL4sTiC1337.github.io/writeups/htb-zipper/</link>
       <pubDate>Sun, 23 Mar 2025 15:45:37 -0400</pubDate>
       <guid>https://pL4sTiC1337.github.io/writeups/htb-zipper/</guid>

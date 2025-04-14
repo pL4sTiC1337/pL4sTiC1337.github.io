@@ -1,7 +1,7 @@
 +++
 date = '2025-03-23T15:45:37-04:00'
 draft = false
-title = 'Htb Zipper'
+title = 'HtB Zipper'
 tags = ['writeup', 'hackthebox', 'hard', 'linux']
 hideToc = false
 +++
